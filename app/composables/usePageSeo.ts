@@ -1,28 +1,40 @@
+import { locales, pagePath, type PageName } from '#shared/locales'
+
 interface PageSeoOptions {
-  title: string
-  description: string
-  /** Cesta stránky, např. "/sluzby". Z ní se skládá kanonická URL. */
-  path: string
+  /** Texty jako getter (např. () => t('…')), aby se při přepnutí jazyka aktualizovaly. */
+  title: MaybeRefOrGetter<string>
+  description: MaybeRefOrGetter<string>
+  /** Stránka – z ní se skládá kanonická URL a odkazy na jazykové verze (hreflang). */
+  page: PageName
 }
 
 /**
- * Jednotná SEO metadata stránky. Kanonická URL a og:url se generují jen tehdy,
- * když je nastavena doména (NUXT_PUBLIC_SITE_URL) – doménu nevymýšlíme.
+ * Jednotná SEO metadata stránky. Kanonická URL, og:url a hreflang odkazy na jazykové verze se generují
+ * jen tehdy, když je nastavena doména (NUXT_PUBLIC_SITE_URL) – doménu nevymýšlíme a hreflang musí být absolutní.
  */
-export function usePageSeo({ title, description, path }: PageSeoOptions) {
+export function usePageSeo({ title, description, page }: PageSeoOptions) {
   const siteUrl = useRuntimeConfig().public.siteUrl.replace(/\/$/, '')
-  const url = siteUrl ? `${siteUrl}${path === '/' ? '' : path}` : undefined
+  const { locale } = useI18n()
+  const absolute = (path: string) => `${siteUrl}${path === '/' ? '' : path}` || '/'
+  const url = computed(() => (siteUrl ? absolute(pagePath(page, locale.value)) : undefined))
 
   useSeoMeta({
     title,
     description,
-    ogTitle: `${title} | Silverdahl`,
+    ogTitle: () => `${toValue(title)} | Silverdahl`,
     ogDescription: description,
     ogUrl: url,
     twitterCard: 'summary',
   })
 
   useHead({
-    link: url ? [{ rel: 'canonical', href: url }] : [],
+    link: () =>
+      siteUrl
+        ? [
+            { rel: 'canonical', href: url.value },
+            ...locales.map((l) => ({ rel: 'alternate', hreflang: l, href: absolute(pagePath(page, l)) })),
+            { rel: 'alternate', hreflang: 'x-default', href: absolute(pagePath(page, 'cs')) },
+          ]
+        : [],
   })
 }

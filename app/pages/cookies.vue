@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import { consentCategories, cookieList } from '~/data/cookies'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 usePageSeo({
-  title: 'Zásady cookies',
-  description: 'Jaké cookies web Silverdahl používá, k čemu slouží a jak můžete svůj souhlas kdykoli změnit.',
-  path: '/cookies',
+  title: () => t('cookies.page.seo.title'),
+  description: () => t('cookies.page.seo.description'),
+  page: 'cookies',
 })
 
 const { openSettings } = useCookieConsent()
-const categoryTitle = (id: string) => consentCategories.find((c) => c.id === id)?.title ?? id
 
 // TODO: Doplnit odkaz na zásady ochrany osobních údajů a kontakt na správce (název, sídlo, IČO, e-mail),
 // až budou k dispozici. Podklady je zatím neobsahují.
@@ -16,75 +18,67 @@ const categoryTitle = (id: string) => consentCategories.find((c) => c.id === id)
 
 <template>
   <div>
-    <PageIntro eyebrow="Právní informace" title="Zásady používání cookies">
-      <p>Na této stránce najdete, jaké cookies web používá, k čemu slouží a jak můžete svůj souhlas změnit.</p>
+    <PageIntro :eyebrow="$t('cookies.page.eyebrow')" :title="$t('cookies.page.title')">
+      <p>{{ $t('cookies.page.intro') }}</p>
     </PageIntro>
 
     <section class="section">
       <div class="container container--narrow prose policy">
-        <h2>Co jsou cookies</h2>
-        <p>
-          Cookies jsou malé textové soubory, které web ukládá do vašeho prohlížeče. Umožňují například zapamatovat si
-          vaše nastavení nebo zjistit, jak návštěvníci web používají.
-        </p>
+        <h2>{{ $t('cookies.page.whatTitle') }}</h2>
+        <p>{{ $t('cookies.page.whatText') }}</p>
 
-        <h2>Kategorie cookies</h2>
+        <h2>{{ $t('cookies.page.categoriesTitle') }}</h2>
         <dl class="policy__categories">
           <div v-for="category in consentCategories" :key="category.id">
             <dt>
-              {{ category.title }}
-              <span v-if="category.required" class="policy__badge">vždy aktivní</span>
-              <span v-else class="policy__badge policy__badge--optional">jen se souhlasem</span>
+              {{ $t(`cookies.categories.${category.id}.title`) }}
+              <span v-if="category.required" class="policy__badge">{{ $t('cookies.page.badgeRequired') }}</span>
+              <span v-else class="policy__badge policy__badge--optional">{{ $t('cookies.page.badgeOptional') }}</span>
             </dt>
-            <dd>{{ category.description }}</dd>
+            <dd>{{ $t(`cookies.categories.${category.id}.description`) }}</dd>
           </div>
         </dl>
 
-        <h2>Jaké cookies používáme</h2>
-        <p>
-          Web sám používá pouze nezbytnou cookie, která si pamatuje vaši volbu. Na stránce Kontakt můžete se souhlasem
-          zobrazit mapu Google – teprve pak Google ukládá své cookies. Analytické ani marketingové nástroje zatím
-          nevyužíváme; pokud je v budoucnu zapojíme, uvedeme je v této tabulce a spustí se jen s vaším souhlasem.
-        </p>
+        <h2>{{ $t('cookies.page.usedTitle') }}</h2>
+        <p>{{ $t('cookies.page.usedText') }}</p>
         <div class="policy__table-wrap">
           <table class="policy__table">
-            <caption class="visually-hidden">Přehled používaných cookies</caption>
+            <caption class="visually-hidden">{{ $t('cookies.page.tableCaption') }}</caption>
             <thead>
               <tr>
-                <th scope="col">Název</th>
-                <th scope="col">Kategorie</th>
-                <th scope="col">Poskytovatel</th>
-                <th scope="col">Účel</th>
-                <th scope="col">Platnost</th>
+                <th scope="col">{{ $t('cookies.page.colName') }}</th>
+                <th scope="col">{{ $t('cookies.page.colCategory') }}</th>
+                <th scope="col">{{ $t('cookies.page.colProvider') }}</th>
+                <th scope="col">{{ $t('cookies.page.colPurpose') }}</th>
+                <th scope="col">{{ $t('cookies.page.colExpiry') }}</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="cookie in cookieList" :key="cookie.name">
-                <td><code>{{ cookie.name }}</code></td>
-                <td>{{ categoryTitle(cookie.category) }}</td>
-                <td>{{ cookie.provider }}</td>
-                <td>{{ cookie.purpose }}</td>
-                <td>{{ cookie.expiry }}</td>
+              <tr v-for="cookie in cookieList" :key="cookie.key">
+                <td>
+                  <code v-if="cookie.name">{{ cookie.name }}</code>
+                  <template v-else>{{ $t(`cookies.list.${cookie.key}.name`) }}</template>
+                </td>
+                <td>{{ $t(`cookies.categories.${cookie.category}.title`) }}</td>
+                <td>{{ $t(`cookies.list.${cookie.key}.provider`) }}</td>
+                <td>{{ $t(`cookies.list.${cookie.key}.purpose`) }}</td>
+                <td>{{ $t(`cookies.list.${cookie.key}.expiry`) }}</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <h2>Jak souhlas změnit nebo odvolat</h2>
-        <p>
-          Svou volbu můžete kdykoli změnit nebo souhlas odvolat – stejně snadno, jako jste ho udělili. Stačí otevřít
-          nastavení cookies (odkaz je také v patičce každé stránky).
-        </p>
+        <h2>{{ $t('cookies.page.changeTitle') }}</h2>
+        <p>{{ $t('cookies.page.changeText') }}</p>
         <ClientOnly>
-          <BaseButton class="policy__btn" @click="openSettings">Otevřít nastavení cookies</BaseButton>
+          <BaseButton class="policy__btn" @click="openSettings">{{ $t('cookies.page.openSettings') }}</BaseButton>
         </ClientOnly>
-        <p>
-          Cookies můžete také smazat nebo zablokovat v nastavení svého prohlížeče. Zablokování nezbytných cookies může
-          omezit fungování webu – lišta se souhlasem se pak bude zobrazovat při každé návštěvě.
-        </p>
-        <p>
-          S dotazy se na nás obraťte prostřednictvím <NuxtLink to="/kontakt">kontaktního formuláře</NuxtLink>.
-        </p>
+        <p>{{ $t('cookies.page.browserText') }}</p>
+        <i18n-t keypath="cookies.page.questions" tag="p" scope="global">
+          <template #link>
+            <NuxtLink :to="localePath('kontakt')">{{ $t('cookies.page.questionsLink') }}</NuxtLink>
+          </template>
+        </i18n-t>
       </div>
     </section>
   </div>

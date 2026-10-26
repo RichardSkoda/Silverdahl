@@ -1,0 +1,442 @@
+{
+  "meta": {
+    "ogLocale": "en_GB"
+  },
+  "a11y": {
+    "skipLink": "Skip to content"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "caseStudy": "Case study",
+    "about": "About us",
+    "contact": "Contact",
+    "mainLabel": "Main navigation",
+    "footerLabel": "Footer navigation",
+    "homeLink": "Silverdahl – home page",
+    "menu": "Menu",
+    "close": "Close",
+    "menuSuffix": "main navigation",
+    "languageLabel": "Language"
+  },
+  "footer": {
+    "about": "We help international companies enter new markets, find reliable partners and manage local operations.",
+    "pages": "Pages",
+    "services": "Services",
+    "cookiePolicy": "Cookie policy",
+    "cookieSettings": "Cookie settings"
+  },
+  "logo": {
+    "alt": "Silverdahl – Marketing and Customer Service"
+  },
+  "common": {
+    "moreAboutService": "More about this service",
+    "benefitTitle": "What you gain",
+    "newWindow": "(opens in a new window)"
+  },
+  "cta": {
+    "title": "Let’s grow your business together",
+    "text": "We would be glad to discuss your needs and propose how we could work together.",
+    "button": "Contact us"
+  },
+  "home": {
+    "seo": {
+      "title": "Your partner for European markets",
+      "description": "Silverdahl helps international companies enter new markets, find reliable partners and manage local operations."
+    },
+    "hero": {
+      "eyebrow": "Your partner for European markets",
+      "title1": "From strategy",
+      "title2": "to successful operations",
+      "lead": "We help international companies enter new markets, find reliable partners and manage local operational processes.",
+      "cta": "See how we can help"
+    },
+    "steps": {
+      "heading": "Our services – three steps of cooperation"
+    },
+    "strengths": {
+      "heading": "Why Silverdahl",
+      "items": [
+        { "title": "Local know-how", "text": "Many years of experience in European markets." },
+        { "title": "Proven business partners", "text": "A network of reliable suppliers across industries." },
+        { "title": "End-to-end responsibility", "text": "From market entry preparation to day-to-day operations." },
+        { "title": "Regular reporting", "text": "Clear overview of results and cost control." }
+      ]
+    },
+    "message": {
+      "eyebrow": "Silverdahl",
+      "title": "Your Local Operations Partner in Central Europe",
+      "question": "Are you planning to do business in the Czech Republic or expand into other European markets?",
+      "strong": "You don’t need to build your own team here or find and manage a whole range of local suppliers yourself.",
+      "text": "We help you find the right partners and set up the necessary processes – and we take care of their coordination, control and regular reporting."
+    },
+    "responsibility": {
+      "eyebrow": "How we work",
+      "title": "Our work does not end with selecting the right suppliers",
+      "text": "We take responsibility for coordinating the processes entrusted to us, continuously monitor how they perform and report regularly to your management. You can focus on growing your business while Silverdahl handles the day-to-day operations."
+    },
+    "case": {
+      "eyebrow": "Case study / Reference",
+      "subtitle": "Long-term management and coordination of business processes in Central European markets",
+      "text": "The Swiss trading company Courlux International SA relies on Silverdahl as its long-term partner for business and operational activities in the Czech Republic, Slovakia, Poland and Hungary.",
+      "button": "Read the case study",
+      "statYears": "years of long-term partnership",
+      "statMarkets": "markets – Czech Republic, Slovakia, Poland and Hungary",
+      "statHq": "Swiss headquarters and Central Europe"
+    }
+  },
+  "services": {
+    "seo": {
+      "title": "Our services",
+      "description": "Market Entry Support, Partner Sourcing & Management and Local Operations Management – from market entry to day-to-day operations."
+    },
+    "intro": {
+      "eyebrow": "Our services",
+      "title": "From market entry to day-to-day operations management",
+      "p1": "We help companies grow their business in European markets without having to build their own local operational structure.",
+      "p2": "Based on each client’s individual needs, we design a suitable solution, find specialised business partners and take over the coordination of the related processes. We handle communication, performance monitoring and regular reporting so that our clients can focus on their core business goals."
+    },
+    "overview": {
+      "title": "How Silverdahl supports your growth in new markets",
+      "text": "From market entry and partner selection to long-term operations management.",
+      "areas": "Possible areas: {areas}."
+    },
+    "detail": {
+      "weProvide": "What we do for you:",
+      "benefitLabel": "What you gain – {name}"
+    },
+    "needs": {
+      "title": "Cooperation tailored to your needs",
+      "p1": "Every business project is different. That is why we do not only offer predefined service packages.",
+      "p2": "We can help you with a one-off supplier selection, handle the complete preparation of your entry into a new market, or take over the long-term management and coordination of your local business processes.",
+      "statement": "You set the business goals. We help you build and run the operational background needed to achieve them."
+    },
+    "list": {
+      "marketEntry": {
+        "subtitle": "Support for entering new markets",
+        "tagline": "Support for entering new markets",
+        "summary": "We help you prepare and carry out your entry into the Czech and other European markets, and design an efficient operating model without the need to build your own local team.",
+        "intro": [
+          "Entering a new market brings a number of organisational, administrative and commercial challenges. Getting to know the local environment, finding suitable suppliers and setting up operational processes correctly can take considerable time and staff capacity.",
+          "Silverdahl helps international companies prepare and carry out their entry into the Czech and other European markets. Our goal is to design an efficient way of operating locally without the need to build your own operations team."
+        ],
+        "items": [
+          { "title": "Project needs analysis", "text": "understanding the client’s business model, goals and requirements for local operations." },
+          { "title": "Operating model design", "text": "identifying the necessary processes, supplier services and responsibilities." },
+          { "title": "Market entry preparation", "text": "creating a timeline and coordinating preparatory activities and the partners involved." },
+          { "title": "Setting up local support", "text": "securing the external experts and services needed to start operations." },
+          { "title": "Implementation coordination", "text": "managing the individual steps, monitoring deadlines and resolving operational issues." },
+          { "title": "Support for expanding existing activities", "text": "helping companies already active in the market to develop or optimise their processes." }
+        ],
+        "benefit": [
+          "A local partner who knows the business environment and helps you set up the necessary processes faster, reduce the organisational burden of expansion and limit the need to build your own administrative and operational capacity."
+        ],
+        "benefitShort": "Faster market entry, less organisational effort and less need to build your own local team."
+      },
+      "partnerSourcing": {
+        "subtitle": "Finding and securing specialised business partners",
+        "tagline": "Finding and securing business partners",
+        "summary": "We find, vet and secure reliable service providers, compare offers, help negotiate the best terms and organise the start of the cooperation.",
+        "intro": [
+          "Reliable business partners are the foundation of every successful project. However, finding them, comparing offers and agreeing on terms can be time-consuming for a foreign company, especially one unfamiliar with the local environment.",
+          "Based on the client’s specific requirements, Silverdahl identifies and approaches suitable service providers, organises tenders and coordinates the start of the cooperation.",
+          "We are not limited to areas in which we already have experience. Depending on the nature of the project, we can map the market and find suitable specialised providers in other fields as well."
+        ],
+        "items": [
+          { "title": "Defining requirements", "text": "preparing the brief and the required service parameters." },
+          { "title": "Supplier search", "text": "identifying potential partners in the local market." },
+          { "title": "Requests for proposals and tenders", "text": "approaching providers, collecting and evaluating offers." },
+          { "title": "Comparing commercial terms", "text": "assessing prices, scope of services, capacity and other relevant parameters." },
+          { "title": "Coordinating negotiations", "text": "communicating with potential partners and supporting the agreement of terms." },
+          { "title": "Implementing the cooperation", "text": "organising the start of services, setting up communication and handing over operational requirements." }
+        ],
+        "areas": {
+          "title": "In which areas can we find partners?",
+          "text": "For example customer and contact centres, marketing and advertising services, printing and distribution, logistics, transport, warehousing, fulfilment, IT, accounting and tax services, legal advice, customs services, translation, localisation and HR services.",
+          "note": "The list is not exhaustive and is always adapted to the client’s individual needs."
+        },
+        "areasShort": "call centres, marketing, logistics, IT, accounting and tax, legal, customs, translation, HR and more",
+        "benefit": [
+          "One partner who organises the search for and selection of suitable providers on your behalf, compares the available options and helps you build a functioning network of local suppliers."
+        ],
+        "benefitShort": "A single point of contact for selecting and building a functioning network of local suppliers."
+      },
+      "localOperations": {
+        "subtitle": "External management and coordination of operational processes",
+        "tagline": "External management and coordination of operations",
+        "summary": "We take over the coordination of entrusted processes, communication with suppliers and supervision of their work. We provide regular reporting and help optimise both costs and service quality.",
+        "intro": [
+          "Our work does not end with selecting the right business partners.",
+          "Silverdahl can take long-term responsibility for coordinating entrusted operational processes, communicating with suppliers and continuously monitoring their performance.",
+          "We act as your local operations partner and the central point of contact between the company’s management abroad and the individual service providers."
+        ],
+        "items": [
+          { "title": "Project and operations management", "text": "organising and managing day-to-day activities within the entrusted projects." },
+          { "title": "Coordinating business partners", "text": "regular communication, assigning tasks and checking their completion." },
+          { "title": "Contract compliance monitoring", "text": "checking adherence to the agreed scope of services, deadlines and required quality." },
+          { "title": "Resolving operational issues", "text": "prompt handling of complications and coordination of corrective measures." },
+          { "title": "Cost control", "text": "evaluating service costs and checking supplier invoices." },
+          { "title": "Reporting and KPI evaluation", "text": "a regular overview of project progress, supplier performance and results achieved." },
+          { "title": "Process optimisation", "text": "identifying opportunities to increase efficiency, improve quality or reduce costs." },
+          { "title": "Communication with headquarters", "text": "regularly providing information, recommendations and input for management decisions." }
+        ],
+        "benefit": [
+          "External operations management that takes care of the day-to-day running of entrusted processes, coordinates the individual suppliers and gives you a regular overview of the results.",
+          "Instead of dealing with many providers, you have one accountable point of contact – so your management can spend more time on business and strategic priorities."
+        ],
+        "benefitShort": "External operations management, regular reporting and more time for your business priorities."
+      }
+    }
+  },
+  "caseStudy": {
+    "seo": {
+      "title": "Case study: Courlux International SA",
+      "description": "More than 30 years of comprehensive operational support in four European markets – the Czech Republic, Slovakia, Poland and Hungary."
+    },
+    "intro": {
+      "eyebrow": "Case study / Reference",
+      "subtitle": "More than 30 years of comprehensive operational support in four European markets",
+      "text": "The Swiss trading company Courlux International SA relies on Silverdahl as its long-term partner for business and operational activities in the Czech Republic, Slovakia, Poland and Hungary."
+    },
+    "task": {
+      "heading": "Our task",
+      "statement": "Our task is to find suitable local suppliers, set up the cooperation and then manage the entrusted processes so that their day-to-day coordination does not burden the Swiss headquarters."
+    },
+    "story": {
+      "eyebrow": "History of the cooperation",
+      "title": "From the first business partners to comprehensive operations management",
+      "p1": "The cooperation began with customer service, the localisation of marketing materials and the search for partners to acquire new customers. Initially these were mainly newspaper and magazine publishers through which Courlux ran its marketing campaigns.",
+      "p2": "As the market evolved, we gradually found and contracted external call centres. For each country we organised the supplier selection, compared offers, negotiated commercial terms and then took over the coordination of their work and the evaluation of results.",
+      "highlightLabel": "Period of the largest scope of cooperation",
+      "highlightTag": "Historical peak",
+      "highlight": "During the most intensive campaigns we coordinated up to four call centres in a single market, with total customer acquisition exceeding 30,000 new customers per month.",
+      "p3": "Over time, we secured other specialised partners in a similar way – for example for IT support, customs declarations, postal and logistics services and legal advice."
+    },
+    "today": {
+      "eyebrow": "Today",
+      "title": "How the cooperation works today",
+      "p1": "Today Silverdahl independently coordinates most of Courlux’s local business and operational processes in all four markets.",
+      "p2": "We manage the cooperation with external suppliers, continuously monitor their quality and costs, resolve operational issues and respond to changes in business requirements and legislation. One example is the successful implementation of GDPR-related processes.",
+      "p3": "Our responsibilities also include preparing business budgets and evaluating them regularly. We provide the Swiss headquarters with daily, weekly and monthly reporting, including a comparison of actual results against the plan.",
+      "p4": "Within approved budgets and delegated powers, we handle operational matters independently. The headquarters retains strategic and financial decisions, inventory management and the distribution of goods from Switzerland."
+    },
+    "model": {
+      "hqDesc": "Swiss headquarters – business strategy and decision-making",
+      "silverdahlDesc": "Project coordination · Partner management · Control · Reporting",
+      "partners": ["Customer centres", "Marketing partners", "Logistics and transport", "Professional and other services"],
+      "caption": "Simplified illustration of the model for managing and coordinating external providers."
+    },
+    "stats": {
+      "eyebrow": "Facts",
+      "title": "The cooperation in numbers",
+      "items": [
+        { "value": "30+", "label": "years of long-term partnership", "period": "Long-term" },
+        { "value": "4", "label": "markets – Czech Republic, Slovakia, Poland and Hungary", "period": "Long-term" },
+        { "value": "up to 4", "label": "call centres in a single market at the peak of the cooperation", "period": "Historical peak" },
+        { "value": "30,000+", "label": "new customers per month in the most intensive campaigns", "period": "Historical peak" },
+        { "value": "Thousands", "label": "of customer contacts per month in current operations", "period": "Current operations" }
+      ]
+    },
+    "benefit": {
+      "title": "What does Courlux gain from the cooperation?",
+      "p1": "For its four European markets, Courlux has one accountable operations partner who runs a network of specialised suppliers and coordinates their services day to day.",
+      "p2": "Thanks to this model, Courlux does not need to build large local teams of its own or manage individual providers directly from Switzerland – while keeping continuous control over costs, quality and business results through regular reporting.",
+      "statement": "Our cooperation with Courlux demonstrates our ability not only to find and secure suitable business partners, but also to take over the long-term management of entrusted processes and adapt them to the client’s changing needs."
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "About us",
+      "description": "Silverdahl s.r.o. – a Czech company with many years of experience in supporting international trade, managing operational processes and coordinating suppliers."
+    },
+    "intro": {
+      "eyebrow": "About us",
+      "title": "Experience, local knowledge and personal responsibility",
+      "text": "Silverdahl s.r.o. is a Czech company with many years of experience in supporting international trade, managing operational processes and coordinating specialised suppliers in European markets."
+    },
+    "experience": {
+      "title": "Experience in international business",
+      "p1": "Our experience comes above all from more than thirty years of cooperation with the Swiss company {company}, for which we provide comprehensive operational support in the Czech Republic, Slovakia, Poland and Hungary.",
+      "p2": "Over this time we have gained extensive experience in finding business partners, negotiating terms of cooperation, managing projects, controlling costs and reporting results to headquarters abroad.",
+      "statement": "Our aim is to offer this experience to other companies that want to grow their business in European markets without having to build large local teams of their own."
+    },
+    "approach": {
+      "title": "How we work",
+      "p1": "We believe that successful international cooperation is built on reliable business partners, good communication and clearly defined responsibilities.",
+      "p2": "By taking over the coordination of entrusted processes, we ensure they run smoothly day to day, monitor the results and give the client a regular overview of the activities carried out.",
+      "statement": "Our greatest strength is combining knowledge of the local environment with long-standing experience of what international companies require."
+    },
+    "team": {
+      "eyebrow": "People",
+      "title": "Our management",
+      "kouril": {
+        "role": "Managing Director",
+        "focus": "Strategy, business development, international partnerships and company management.",
+        "bio": [
+          "Tomáš has led Silverdahl since it was founded in 1994 and shapes its strategic direction, the development of business relationships and the management of long-term cooperation with international partners.",
+          "His role focuses mainly on business negotiations, developing the partner network, setting the terms of cooperation and overseeing the company’s financial, personnel and operational performance.",
+          "Drawing on his experience of the international business environment and service outsourcing, he helps build long-term, stable business relationships."
+        ]
+      },
+      "tauchman": {
+        "role": "Project Manager",
+        "focus": "Project management, supplier coordination, operational reporting and process optimisation.",
+        "bio": [
+          "Michal has many years of experience in project management, coordinating business partners and providing operational support for international business activities.",
+          "He has worked at Silverdahl since 2008. During his career he has been involved in managing business and marketing projects, coordinating external suppliers and running operational processes for international business partners.",
+          "He specialises in organising and managing projects, coordinating cooperation between headquarters abroad and local suppliers, and operational controlling. His focus is on preparing and managing budgets, regular reporting, evaluating business results and monitoring the cost-effectiveness of individual activities.",
+          "He holds a bachelor’s degree in Marketing Communication and a master’s degree in Economics and Management, which he completed with honours. In his work he combines economic and management expertise with marketing know-how."
+        ]
+      }
+    },
+    "quote": {
+      "label": "Quote",
+      "text": "“Silverdahl is not an anonymous service organisation, but a team of experienced people who understand international business, can run operations independently and take personal responsibility for the projects entrusted to them.”"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact",
+      "description": "Planning to enter a new market, looking for reliable business partners or need someone to manage your local operations? Contact Silverdahl."
+    },
+    "intro": {
+      "eyebrow": "Contact",
+      "title": "Let’s grow your business together",
+      "text": "Are you planning to enter a new market, looking for reliable business partners or need someone to manage your local operational processes?"
+    },
+    "statement": "We would be glad to discuss your needs and propose how we could work together.",
+    "body": "Get in touch and together we will find a solution that lets you focus on your business goals while we take care of organising and coordinating the services you need.",
+    "details": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "E-mail",
+      "country": "Czech Republic"
+    },
+    "map": {
+      "eyebrow": "Where to find us"
+    },
+    "form": {
+      "title": "Write to us",
+      "notConfiguredTitle": "Sending the form is not active yet.",
+      "notConfiguredText": "The form is ready to be connected to message delivery – until then, messages cannot be sent.",
+      "requiredHint": "Fields marked {star} are required.",
+      "requiredStar": "with an asterisk",
+      "name": "Full name",
+      "company": "Company",
+      "optional": "(optional)",
+      "email": "E-mail",
+      "subject": "Your enquiry concerns",
+      "subjectPlaceholder": "Select a service",
+      "subjectOther": "Other enquiry",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "status": {
+        "odeslano": { "title": "Thank you, your message has been sent.", "text": "We have received your message and will get back to you." },
+        "nenapojeno": { "title": "Your message was not sent.", "text": "The online form is not yet connected to message delivery. We apologise for the inconvenience." },
+        "chyba": { "title": "Your message could not be sent.", "text": "A technical error occurred. Please try again later." },
+        "neplatne": { "title": "The form contains errors.", "text": "Please check the highlighted fields and submit the form again." }
+      },
+      "errors": {
+        "name": { "required": "Please enter your name.", "tooLong": "The name can be at most {max} characters long." },
+        "company": { "tooLong": "The company name can be at most {max} characters long." },
+        "email": { "required": "Please enter your e-mail address.", "invalid": "Please enter a valid e-mail address, e.g. name{'@'}company.com." },
+        "subject": { "required": "Please select what your enquiry concerns." },
+        "message": {
+          "required": "Please write us a message.",
+          "tooShort": "The message should be at least {min} characters long.",
+          "tooLong": "The message can be at most {max} characters long."
+        }
+      }
+    }
+  },
+  "map": {
+    "frameTitle": "Map – {label}",
+    "text": "The map is loaded from Google Maps, which stores cookies and receives your IP address. That is why we only display it with your consent.",
+    "show": "Show map",
+    "open": "Open in Google Maps",
+    "note": "You can withdraw your consent at any time in the cookie settings in the website footer."
+  },
+  "cookies": {
+    "banner": {
+      "title": "Cookies on this website",
+      "settingsTitle": "Cookie settings",
+      "text": "Necessary cookies keep the website working. We will not use analytics or marketing cookies, or content from other services (such as Google Maps), without your consent. You can change your choice at any time in the website footer.",
+      "settingsText": "Choose which categories of cookies we may use. Necessary cookies are always active.",
+      "policyLink": "Cookie policy",
+      "categoriesLegend": "Cookie categories",
+      "alwaysActive": "Always active",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject all",
+      "settings": "Settings",
+      "save": "Save selection"
+    },
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "They ensure the basic functioning of the website, for example storing your cookie choice. The website cannot work properly without them, so they cannot be switched off."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "They help us understand how visitors use the website – for example how many visits there are and which pages are read most. We evaluate the data in aggregate."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "They are used to measure the effectiveness of advertising campaigns and to show relevant advertising on other websites."
+      },
+      "external": {
+        "title": "External content",
+        "description": "They allow content from other services to be displayed directly on the website – for example the Google map on the Contact page. These services may store their own cookies and process your IP address."
+      }
+    },
+    "list": {
+      "consent": {
+        "provider": "Silverdahl (this website)",
+        "purpose": "Stores your cookie choice so that the banner does not appear on every visit.",
+        "expiry": "6 months"
+      },
+      "google": {
+        "name": "NID and other Google cookies",
+        "provider": "Google Ireland Ltd. (Google Maps)",
+        "purpose": "Set by Google when the embedded map on the Contact page is displayed – to store preferences, for security and for Google’s own purposes. The map is only loaded with your consent.",
+        "expiry": "according to Google’s policy (NID 6 months)"
+      }
+    },
+    "page": {
+      "seo": {
+        "title": "Cookie policy",
+        "description": "Which cookies the Silverdahl website uses, what they are for and how you can change your consent at any time."
+      },
+      "eyebrow": "Legal information",
+      "title": "Cookie policy",
+      "intro": "On this page you will find out which cookies the website uses, what they are for and how you can change your consent.",
+      "whatTitle": "What are cookies",
+      "whatText": "Cookies are small text files that a website stores in your browser. They make it possible, for example, to remember your settings or to find out how visitors use the website.",
+      "categoriesTitle": "Cookie categories",
+      "badgeRequired": "always active",
+      "badgeOptional": "with consent only",
+      "usedTitle": "Which cookies we use",
+      "usedText": "The website itself only uses one necessary cookie that remembers your choice. On the Contact page you can display a Google map with your consent – only then does Google store its cookies. We do not currently use any analytics or marketing tools; if we add them in the future, we will list them in this table and they will only run with your consent.",
+      "tableCaption": "Overview of cookies used",
+      "colName": "Name",
+      "colCategory": "Category",
+      "colProvider": "Provider",
+      "colPurpose": "Purpose",
+      "colExpiry": "Expiry",
+      "changeTitle": "How to change or withdraw your consent",
+      "changeText": "You can change your choice or withdraw your consent at any time – just as easily as you gave it. Simply open the cookie settings (the link is also in the footer of every page).",
+      "openSettings": "Open cookie settings",
+      "browserText": "You can also delete or block cookies in your browser settings. Blocking necessary cookies may limit how the website works – the consent banner will then appear on every visit.",
+      "questions": "If you have any questions, please get in touch via our {link}.",
+      "questionsLink": "contact form"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Page not found",
+    "errorTitle": "Something went wrong",
+    "errorHeadTitle": "Error",
+    "notFoundText": "The page you are looking for does not exist or has been moved.",
+    "errorText": "We are sorry, an unexpected error occurred.",
+    "back": "Back to the home page"
+  }
+}

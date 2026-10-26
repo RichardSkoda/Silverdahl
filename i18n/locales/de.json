@@ -1,0 +1,442 @@
+{
+  "meta": {
+    "ogLocale": "de_DE"
+  },
+  "a11y": {
+    "skipLink": "Zum Inhalt springen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "caseStudy": "Fallstudie",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "mainLabel": "Hauptnavigation",
+    "footerLabel": "Navigation in der Fußzeile",
+    "homeLink": "Silverdahl – Startseite",
+    "menu": "Menü",
+    "close": "Schließen",
+    "menuSuffix": "Hauptnavigation",
+    "languageLabel": "Sprache"
+  },
+  "footer": {
+    "about": "Wir unterstützen internationale Unternehmen beim Eintritt in neue Märkte, bei der Suche nach zuverlässigen Partnern und bei der Steuerung lokaler Betriebsabläufe.",
+    "pages": "Seiten",
+    "services": "Leistungen",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "cookieSettings": "Cookie-Einstellungen"
+  },
+  "logo": {
+    "alt": "Silverdahl – Marketing and Customer Service"
+  },
+  "common": {
+    "moreAboutService": "Mehr zur Leistung",
+    "benefitTitle": "Ihr Nutzen",
+    "newWindow": "(öffnet in einem neuen Fenster)"
+  },
+  "cta": {
+    "title": "Lassen Sie uns Ihr Geschäft gemeinsam weiterentwickeln",
+    "text": "Gerne besprechen wir Ihre Anforderungen und schlagen Ihnen Möglichkeiten der Zusammenarbeit vor.",
+    "button": "Kontakt aufnehmen"
+  },
+  "home": {
+    "seo": {
+      "title": "Ihr Partner für europäische Märkte",
+      "description": "Silverdahl unterstützt internationale Unternehmen beim Eintritt in neue Märkte, bei der Suche nach zuverlässigen Partnern und bei der Steuerung lokaler Betriebsabläufe."
+    },
+    "hero": {
+      "eyebrow": "Ihr Partner für europäische Märkte",
+      "title1": "Von der Strategie",
+      "title2": "zum erfolgreichen Betrieb",
+      "lead": "Wir unterstützen internationale Unternehmen beim Eintritt in neue Märkte, bei der Suche nach zuverlässigen Partnern und bei der Steuerung lokaler Betriebsabläufe.",
+      "cta": "So können wir helfen"
+    },
+    "steps": {
+      "heading": "Unsere Leistungen – drei Schritte der Zusammenarbeit"
+    },
+    "strengths": {
+      "heading": "Warum Silverdahl",
+      "items": [
+        { "title": "Kenntnis des lokalen Umfelds", "text": "Langjährige Erfahrung auf europäischen Märkten." },
+        { "title": "Bewährte Geschäftspartner", "text": "Ein Netzwerk zuverlässiger Dienstleister aus verschiedenen Branchen." },
+        { "title": "Umfassende Verantwortung", "text": "Von der Vorbereitung des Markteintritts bis zum laufenden Betrieb." },
+        { "title": "Regelmäßiges Reporting", "text": "Überblick über Ergebnisse und Kostenkontrolle." }
+      ]
+    },
+    "message": {
+      "eyebrow": "Silverdahl",
+      "title": "Your Local Operations Partner in Central Europe",
+      "question": "Möchten Sie in Tschechien geschäftlich tätig werden oder Ihre Aktivitäten auf weitere europäische Märkte ausweiten?",
+      "strong": "Sie müssen hier weder ein eigenes Team aufbauen noch selbst zahlreiche lokale Dienstleister suchen und steuern.",
+      "text": "Wir helfen Ihnen, geeignete Partner zu finden und die notwendigen Prozesse aufzusetzen – und übernehmen deren Koordination, Kontrolle und regelmäßiges Reporting."
+    },
+    "responsibility": {
+      "eyebrow": "So arbeiten wir",
+      "title": "Unsere Zusammenarbeit endet nicht mit der Auswahl geeigneter Dienstleister",
+      "text": "Wir übernehmen die Verantwortung für die Koordination der uns anvertrauten Prozesse, überwachen laufend deren Funktionieren und Ergebnisse und berichten regelmäßig an die Geschäftsleitung. So können Sie sich auf die Entwicklung Ihres Geschäfts konzentrieren, während Silverdahl das operative Tagesgeschäft übernimmt."
+    },
+    "case": {
+      "eyebrow": "Fallstudie / Referenz",
+      "subtitle": "Langfristige Steuerung und Koordination von Geschäftsprozessen auf den Märkten Mitteleuropas",
+      "text": "Das Schweizer Handelsunternehmen Courlux International SA setzt Silverdahl als langjährigen Partner für seine geschäftlichen und operativen Aktivitäten in Tschechien, der Slowakei, Polen und Ungarn ein.",
+      "button": "Zur Fallstudie",
+      "statYears": "Jahre langfristige Partnerschaft",
+      "statMarkets": "Märkte – Tschechien, Slowakei, Polen und Ungarn",
+      "statHq": "Schweizer Zentrale und Mitteleuropa"
+    }
+  },
+  "services": {
+    "seo": {
+      "title": "Unsere Leistungen",
+      "description": "Market Entry Support, Partner Sourcing & Management und Local Operations Management – vom Markteintritt bis zur täglichen Betriebssteuerung."
+    },
+    "intro": {
+      "eyebrow": "Unsere Leistungen",
+      "title": "Vom Markteintritt bis zur täglichen Betriebssteuerung",
+      "p1": "Wir unterstützen Unternehmen dabei, ihre Geschäftstätigkeit auf europäischen Märkten auszubauen, ohne eine eigene lokale Betriebsstruktur aufbauen zu müssen.",
+      "p2": "Auf Basis der individuellen Anforderungen unserer Kunden entwickeln wir eine passende Lösung, finden spezialisierte Geschäftspartner und übernehmen die Koordination der zugehörigen Prozesse. Wir kümmern uns um Kommunikation, Leistungskontrolle und regelmäßiges Reporting, damit sich unsere Kunden auf ihre wichtigsten Geschäftsziele konzentrieren können."
+    },
+    "overview": {
+      "title": "Wie Silverdahl Ihr Wachstum auf neuen Märkten unterstützt",
+      "text": "Vom Markteintritt über die Partnerauswahl bis zur langfristigen Betriebssteuerung.",
+      "areas": "Mögliche Bereiche: {areas}."
+    },
+    "detail": {
+      "weProvide": "Was wir für Sie übernehmen:",
+      "benefitLabel": "Ihr Nutzen – {name}"
+    },
+    "needs": {
+      "title": "Zusammenarbeit nach Ihrem Bedarf",
+      "p1": "Jedes Geschäftsprojekt hat seine Besonderheiten. Deshalb bieten wir nicht nur vordefinierte Leistungspakete an.",
+      "p2": "Wir unterstützen Sie bei einer einmaligen Lieferantenauswahl, übernehmen die komplette Vorbereitung Ihres Eintritts in einen neuen Markt oder steuern und koordinieren langfristig Ihre lokalen Geschäftsprozesse.",
+      "statement": "Sie bestimmen die Geschäftsziele. Wir helfen Ihnen, die dafür nötige operative Basis aufzubauen und zu führen."
+    },
+    "list": {
+      "marketEntry": {
+        "subtitle": "Unterstützung beim Eintritt in neue Märkte",
+        "tagline": "Unterstützung beim Eintritt in neue Märkte",
+        "summary": "Wir helfen Ihnen, den Eintritt in den tschechischen und weitere europäische Märkte vorzubereiten und umzusetzen, und entwickeln ein effizientes Betriebsmodell – ohne eigenes lokales Team.",
+        "intro": [
+          "Der Eintritt in einen neuen Markt bringt zahlreiche organisatorische, administrative und geschäftliche Herausforderungen mit sich. Sich im lokalen Umfeld zurechtzufinden, geeignete Dienstleister zu suchen und die Betriebsprozesse richtig aufzusetzen, kann erhebliche zeitliche und personelle Kapazitäten erfordern.",
+          "Silverdahl unterstützt internationale Unternehmen dabei, den Eintritt in den tschechischen und weitere europäische Märkte vorzubereiten und umzusetzen. Unser Ziel ist ein effizientes lokales Betriebsmodell – ohne dass Sie ein eigenes operatives Team aufbauen müssen."
+        ],
+        "items": [
+          { "title": "Bedarfsanalyse des Projekts", "text": "Kennenlernen des Geschäftsmodells, der Ziele und der Anforderungen des Kunden an den lokalen Betrieb." },
+          { "title": "Konzept des Betriebsmodells", "text": "Festlegung der erforderlichen Prozesse, Dienstleistungen und Verantwortlichkeiten." },
+          { "title": "Vorbereitung des Markteintritts", "text": "Erstellung eines Zeitplans, Koordination der vorbereitenden Aktivitäten und der benötigten Partner." },
+          { "title": "Aufbau der lokalen Basis", "text": "Bereitstellung externer Fachleute und Dienstleistungen für den Start der Tätigkeit." },
+          { "title": "Koordination der Umsetzung", "text": "Steuerung der einzelnen Schritte, Terminkontrolle und Lösung operativer Probleme." },
+          { "title": "Unterstützung beim Ausbau bestehender Aktivitäten", "text": "Hilfe für Unternehmen, die bereits am Markt tätig sind und ihre Prozesse weiterentwickeln oder optimieren möchten." }
+        ],
+        "benefit": [
+          "Einen lokalen Partner mit Kenntnis des Geschäftsumfelds, der Ihnen hilft, die nötigen Prozesse schneller aufzusetzen, den organisatorischen Aufwand der Expansion zu senken und den Bedarf an eigenen administrativen und operativen Kapazitäten zu begrenzen."
+        ],
+        "benefitShort": "Schnellerer Markteintritt, weniger organisatorischer Aufwand und weniger Bedarf an einem eigenen lokalen Team."
+      },
+      "partnerSourcing": {
+        "subtitle": "Suche und Gewinnung spezialisierter Geschäftspartner",
+        "tagline": "Suche und Gewinnung von Geschäftspartnern",
+        "summary": "Wir finden, prüfen und gewinnen zuverlässige Dienstleister, vergleichen Angebote, helfen bei der Verhandlung der besten Konditionen und organisieren den Start der Zusammenarbeit.",
+        "intro": [
+          "Zuverlässige Geschäftspartner sind die Grundlage für den Erfolg jedes Projekts. Ihre Suche, der Vergleich von Angeboten und die Vereinbarung der Konditionen können für ein ausländisches Unternehmen jedoch zeitaufwendig sein – vor allem, wenn es das lokale Umfeld nicht kennt.",
+          "Auf Basis der konkreten Anforderungen des Kunden sucht Silverdahl geeignete Dienstleister, spricht sie an, organisiert Ausschreibungen und koordiniert den Start der Zusammenarbeit.",
+          "Dabei beschränken wir uns nicht auf Bereiche, in denen wir bereits Erfahrung haben. Je nach Projekt können wir den Markt analysieren und geeignete spezialisierte Anbieter auch in weiteren Branchen finden."
+        ],
+        "items": [
+          { "title": "Definition der Anforderungen", "text": "Erstellung der Aufgabenstellung und der geforderten Leistungsparameter." },
+          { "title": "Lieferantensuche", "text": "Identifizierung potenzieller Partner auf dem lokalen Markt." },
+          { "title": "Anfragen und Ausschreibungen", "text": "Ansprache der Anbieter, Einholung und Bewertung der Angebote." },
+          { "title": "Vergleich der Konditionen", "text": "Bewertung von Preisen, Leistungsumfang, Kapazitäten und weiteren relevanten Parametern." },
+          { "title": "Koordination der Verhandlungen", "text": "Kommunikation mit potenziellen Partnern und Unterstützung bei der Festlegung der Konditionen." },
+          { "title": "Umsetzung der Zusammenarbeit", "text": "Organisation des Leistungsstarts, Einrichtung der Kommunikation und Übergabe der operativen Anforderungen." }
+        ],
+        "areas": {
+          "title": "In welchen Bereichen können wir Partner gewinnen?",
+          "text": "Zum Beispiel Kunden- und Kontaktcenter, Marketing- und Werbedienstleistungen, Druck und Distribution, Logistik, Transport, Lagerhaltung, Fulfillment, IT, Buchhaltung und Steuerberatung, Rechtsberatung, Zolldienstleistungen, Übersetzungen, Lokalisierung sowie Personaldienstleistungen.",
+          "note": "Die Auswahl der Bereiche ist nicht abschließend und richtet sich immer nach dem individuellen Bedarf des Kunden."
+        },
+        "areasShort": "Callcenter, Marketing, Logistik, IT, Buchhaltung und Steuern, Recht, Zoll, Übersetzungen, Personal und mehr",
+        "benefit": [
+          "Einen Partner, der für Sie die Suche und Auswahl geeigneter Anbieter organisiert, die verfügbaren Möglichkeiten vergleicht und Ihnen hilft, ein funktionierendes Netzwerk lokaler Dienstleister aufzubauen."
+        ],
+        "benefitShort": "Ein Ansprechpartner für die Auswahl und den Aufbau eines funktionierenden Netzwerks lokaler Dienstleister."
+      },
+      "localOperations": {
+        "subtitle": "Externe Steuerung und Koordination von Betriebsprozessen",
+        "tagline": "Externe Steuerung und Koordination des Betriebs",
+        "summary": "Wir übernehmen die Koordination der anvertrauten Prozesse, die Kommunikation mit den Dienstleistern und die Kontrolle ihrer Tätigkeit. Wir liefern regelmäßiges Reporting und helfen, Kosten und Servicequalität zu optimieren.",
+        "intro": [
+          "Unsere Zusammenarbeit endet nicht mit der Auswahl geeigneter Geschäftspartner.",
+          "Silverdahl kann langfristig die Verantwortung für die Koordination anvertrauter Betriebsprozesse, die Kommunikation mit Dienstleistern und die laufende Kontrolle ihrer Tätigkeit übernehmen.",
+          "Wir agieren als lokaler Betriebspartner und zentrale Anlaufstelle zwischen der ausländischen Unternehmensleitung und den einzelnen Dienstleistern."
+        ],
+        "items": [
+          { "title": "Projekt- und Betriebsmanagement", "text": "Organisation und Steuerung der täglichen Aktivitäten im Rahmen der anvertrauten Projekte." },
+          { "title": "Koordination der Geschäftspartner", "text": "regelmäßige Kommunikation, Vergabe von Aufgaben und Kontrolle ihrer Erfüllung." },
+          { "title": "Kontrolle der Vertragsbedingungen", "text": "Überwachung des vereinbarten Leistungsumfangs, der Termine und der geforderten Qualität." },
+          { "title": "Lösung operativer Situationen", "text": "schnelle Behebung von Problemen und Koordination von Korrekturmaßnahmen." },
+          { "title": "Kostenkontrolle", "text": "Bewertung der Servicekosten und Prüfung der Lieferantenrechnungen." },
+          { "title": "Reporting und KPI-Auswertung", "text": "regelmäßiger Überblick über Projektverlauf, Lieferantenleistung und erzielte Ergebnisse." },
+          { "title": "Prozessoptimierung", "text": "Identifizierung von Möglichkeiten zur Effizienzsteigerung, Qualitätsverbesserung oder Kostensenkung." },
+          { "title": "Kommunikation mit der Zentrale", "text": "regelmäßige Weitergabe von Informationen, Empfehlungen und Entscheidungsgrundlagen für das Management." }
+        ],
+        "benefit": [
+          "Ein externes Betriebsmanagement, das sich um das tägliche Funktionieren der anvertrauten Prozesse kümmert, die einzelnen Dienstleister koordiniert und Ihnen regelmäßig einen Überblick über die Ergebnisse gibt.",
+          "Statt mit vielen Anbietern zu kommunizieren, haben Sie einen verantwortlichen Ansprechpartner. So kann Ihre Geschäftsleitung mehr Zeit für geschäftliche und strategische Prioritäten aufwenden."
+        ],
+        "benefitShort": "Externes Betriebsmanagement, regelmäßiges Reporting und mehr Zeit für Ihre geschäftlichen Prioritäten."
+      }
+    }
+  },
+  "caseStudy": {
+    "seo": {
+      "title": "Fallstudie: Courlux International SA",
+      "description": "Mehr als 30 Jahre umfassende operative Unterstützung auf vier europäischen Märkten – Tschechien, Slowakei, Polen und Ungarn."
+    },
+    "intro": {
+      "eyebrow": "Fallstudie / Referenz",
+      "subtitle": "Mehr als 30 Jahre umfassende operative Unterstützung auf vier europäischen Märkten",
+      "text": "Das Schweizer Handelsunternehmen Courlux International SA setzt Silverdahl als langjährigen Partner für seine geschäftlichen und operativen Aktivitäten in Tschechien, der Slowakei, Polen und Ungarn ein."
+    },
+    "task": {
+      "heading": "Unsere Aufgabe",
+      "statement": "Unsere Aufgabe ist es, geeignete lokale Dienstleister zu finden, die Zusammenarbeit aufzusetzen und die anvertrauten Prozesse anschließend so zu steuern, dass ihre tägliche Koordination die Schweizer Zentrale nicht belastet."
+    },
+    "story": {
+      "eyebrow": "Geschichte der Zusammenarbeit",
+      "title": "Von den ersten Geschäftspartnern zur umfassenden Betriebssteuerung",
+      "p1": "Die Zusammenarbeit begann mit dem Kundenservice, der Lokalisierung von Marketingmaterialien und der Suche nach Partnern für die Neukundengewinnung. Anfangs waren dies vor allem Zeitungs- und Zeitschriftenverlage, über die Courlux seine Marketingkampagnen umsetzte.",
+      "p2": "Mit der Entwicklung des Marktes haben wir schrittweise externe Callcenter gefunden und unter Vertrag genommen. Für die einzelnen Länder organisierten wir die Lieferantenauswahl, verglichen Angebote, verhandelten die Konditionen und übernahmen anschließend die Koordination ihrer Tätigkeit sowie die Auswertung der Ergebnisse.",
+      "highlightLabel": "Zeitraum des größten Umfangs der Zusammenarbeit",
+      "highlightTag": "Historischer Höchststand",
+      "highlight": "In den intensivsten Kampagnenphasen koordinierten wir bis zu vier Callcenter auf einem einzigen Markt; die Neukundengewinnung lag insgesamt bei über 30.000 Kunden pro Monat.",
+      "p3": "Nach und nach gewannen wir auf ähnliche Weise weitere spezialisierte Partner, zum Beispiel für IT-Support, Zollanmeldungen, Post- und Logistikdienstleistungen sowie Rechtsberatung."
+    },
+    "today": {
+      "eyebrow": "Heute",
+      "title": "Wie die Zusammenarbeit heute funktioniert",
+      "p1": "Heute koordiniert Silverdahl eigenständig den Großteil der lokalen Geschäfts- und Betriebsprozesse von Courlux auf allen vier Märkten.",
+      "p2": "Wir steuern die Zusammenarbeit mit externen Dienstleistern, überwachen laufend deren Qualität und Kosten, lösen operative Probleme und reagieren auf Änderungen der geschäftlichen Anforderungen und der Gesetzgebung. Ein Beispiel ist die erfolgreiche Umsetzung der DSGVO-bezogenen Prozesse.",
+      "p3": "Zu unseren Aufgaben gehören auch die Erstellung der Geschäftsbudgets und deren regelmäßige Auswertung. Die Schweizer Zentrale erhält von uns tägliche, wöchentliche und monatliche Berichte einschließlich eines Soll-Ist-Vergleichs.",
+      "p4": "Im Rahmen genehmigter Budgets und übertragener Befugnisse erledigen wir operative Angelegenheiten selbstständig. Die Zentrale behält strategische und finanzielle Entscheidungen, die Bestandsverwaltung und den Warenversand aus der Schweiz."
+    },
+    "model": {
+      "hqDesc": "Schweizer Zentrale – Geschäftsstrategie und Entscheidungen",
+      "silverdahlDesc": "Projektkoordination · Partnersteuerung · Kontrolle · Reporting",
+      "partners": ["Kundencenter", "Marketingpartner", "Logistik und Transport", "Fach- und sonstige Dienstleistungen"],
+      "caption": "Vereinfachte Darstellung des Modells zur Steuerung und Koordination externer Dienstleister."
+    },
+    "stats": {
+      "eyebrow": "Fakten",
+      "title": "Die Zusammenarbeit in Zahlen",
+      "items": [
+        { "value": "30+", "label": "Jahre langfristige Partnerschaft", "period": "Langfristig" },
+        { "value": "4", "label": "Märkte – Tschechien, Slowakei, Polen und Ungarn", "period": "Langfristig" },
+        { "value": "bis zu 4", "label": "Callcenter auf einem Markt zur Zeit des größten Umfangs der Zusammenarbeit", "period": "Historischer Höchststand" },
+        { "value": "30.000+", "label": "Neukunden pro Monat in den intensivsten Kampagnen", "period": "Historischer Höchststand" },
+        { "value": "Tausende", "label": "Kundenkontakte pro Monat im laufenden Betrieb", "period": "Laufender Betrieb" }
+      ]
+    },
+    "benefit": {
+      "title": "Was gewinnt Courlux durch die Zusammenarbeit?",
+      "p1": "Courlux hat für vier europäische Märkte einen verantwortlichen Betriebspartner, der das Netzwerk spezialisierter Dienstleister betreibt und deren Leistungen täglich koordiniert.",
+      "p2": "Dank dieses Modells muss Courlux weder eigene große lokale Teams aufbauen noch einzelne Anbieter direkt aus der Schweiz steuern – und behält durch regelmäßiges Reporting dennoch laufend die Kontrolle über Kosten, Qualität und Geschäftsergebnisse.",
+      "statement": "Die Zusammenarbeit mit Courlux belegt unsere Fähigkeit, nicht nur geeignete Geschäftspartner zu finden und zu gewinnen, sondern auch die Steuerung anvertrauter Prozesse langfristig zu übernehmen und sie an die sich ändernden Bedürfnisse des Kunden anzupassen."
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "Über uns",
+      "description": "Silverdahl s.r.o. – ein tschechisches Unternehmen mit langjähriger Erfahrung in der Unterstützung des internationalen Handels, der Steuerung von Betriebsprozessen und der Koordination von Dienstleistern."
+    },
+    "intro": {
+      "eyebrow": "Über uns",
+      "title": "Erfahrung, lokale Kenntnis und persönliche Verantwortung",
+      "text": "Silverdahl s.r.o. ist ein tschechisches Unternehmen mit langjähriger Erfahrung in der Unterstützung des internationalen Handels, der Steuerung von Betriebsprozessen und der Koordination spezialisierter Dienstleister auf europäischen Märkten."
+    },
+    "experience": {
+      "title": "Erfahrung im internationalen Geschäft",
+      "p1": "Unsere Erfahrung beruht vor allem auf der mehr als dreißigjährigen Zusammenarbeit mit dem Schweizer Unternehmen {company}, für das wir umfassende operative Unterstützung in Tschechien, der Slowakei, Polen und Ungarn leisten.",
+      "p2": "In dieser Zeit haben wir umfangreiche Erfahrung in der Suche nach Geschäftspartnern, der Verhandlung von Konditionen, im Projektmanagement, in der Kostenkontrolle und im Reporting an ausländische Zentralen gesammelt.",
+      "statement": "Unser Ziel ist es, diese Erfahrung weiteren Unternehmen anzubieten, die ihr Geschäft auf europäischen Märkten ausbauen möchten, ohne große eigene lokale Teams aufbauen zu müssen."
+    },
+    "approach": {
+      "title": "So arbeiten wir",
+      "p1": "Wir sind überzeugt, dass erfolgreiche internationale Zusammenarbeit auf zuverlässigen Geschäftspartnern, guter Kommunikation und klar definierten Verantwortlichkeiten beruht.",
+      "p2": "Indem wir die Koordination anvertrauter Prozesse übernehmen, sorgen wir für ihr tägliches Funktionieren, kontrollieren die Ergebnisse und geben dem Kunden regelmäßig einen Überblick über die durchgeführten Aktivitäten.",
+      "statement": "Unsere größte Stärke ist die Verbindung von Kenntnis des lokalen Umfelds mit langjähriger Erfahrung mit den Anforderungen ausländischer Unternehmen."
+    },
+    "team": {
+      "eyebrow": "Menschen",
+      "title": "Unser Management",
+      "kouril": {
+        "role": "Geschäftsführer",
+        "focus": "Strategie, Geschäftsentwicklung, internationale Partnerschaften und Unternehmensführung.",
+        "bio": [
+          "Tomáš leitet Silverdahl seit der Gründung im Jahr 1994 und prägt die strategische Ausrichtung, die Entwicklung der Geschäftsbeziehungen und die Steuerung der langfristigen Zusammenarbeit mit ausländischen Partnern.",
+          "Zu seinen Aufgaben gehören vor allem Geschäftsverhandlungen, der Ausbau des Partnernetzwerks, die Festlegung der Konditionen der Zusammenarbeit sowie die Aufsicht über die wirtschaftlichen, personellen und operativen Abläufe des Unternehmens.",
+          "Mit seiner Erfahrung im internationalen Geschäftsumfeld und im Outsourcing von Dienstleistungen trägt er zum Aufbau langfristiger und stabiler Geschäftsbeziehungen bei."
+        ]
+      },
+      "tauchman": {
+        "role": "Projektmanager",
+        "focus": "Projektmanagement, Lieferantenkoordination, operatives Reporting und Prozessoptimierung.",
+        "bio": [
+          "Michal verfügt über langjährige Erfahrung im Projektmanagement, in der Koordination von Geschäftspartnern und in der operativen Unterstützung internationaler Geschäftsaktivitäten.",
+          "Er ist seit 2008 bei Silverdahl tätig. Im Laufe seiner beruflichen Laufbahn hat er an der Steuerung von Geschäfts- und Marketingprojekten, der Koordination externer Dienstleister und der Abwicklung von Betriebsprozessen für ausländische Geschäftspartner mitgewirkt.",
+          "Sein Schwerpunkt liegt in der Organisation und Steuerung von Projekten, der Koordination der Zusammenarbeit zwischen ausländischer Zentrale und lokalen Dienstleistern sowie im operativen Controlling. Er konzentriert sich auf die Erstellung und Verwaltung von Budgets, regelmäßiges Reporting, die Auswertung der Geschäftsergebnisse und die Kontrolle der Wirtschaftlichkeit einzelner Aktivitäten.",
+          "Er hat einen Bachelorabschluss in Marketingkommunikation und einen Masterabschluss in Wirtschaft und Management, den er mit Auszeichnung abschloss. In seiner beruflichen Praxis verbindet er wirtschaftliches und betriebswirtschaftliches Wissen mit Marketingkompetenz."
+        ]
+      }
+    },
+    "quote": {
+      "label": "Zitat",
+      "text": "„Hinter Silverdahl steht keine anonyme Serviceorganisation, sondern erfahrene Menschen, die das internationale Geschäft verstehen, den Betrieb selbstständig steuern können und persönlich für die anvertrauten Projekte verantwortlich sind.“"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Kontakt",
+      "description": "Planen Sie den Eintritt in einen neuen Markt, suchen Sie zuverlässige Geschäftspartner oder brauchen Sie jemanden, der Ihre lokalen Betriebsabläufe steuert? Kontaktieren Sie Silverdahl."
+    },
+    "intro": {
+      "eyebrow": "Kontakt",
+      "title": "Lassen Sie uns Ihr Geschäft gemeinsam weiterentwickeln",
+      "text": "Planen Sie den Eintritt in einen neuen Markt, suchen Sie zuverlässige Geschäftspartner oder brauchen Sie jemanden, der Ihre lokalen Betriebsprozesse steuert?"
+    },
+    "statement": "Gerne besprechen wir Ihre Anforderungen und schlagen Ihnen Möglichkeiten der Zusammenarbeit vor.",
+    "body": "Nehmen Sie Kontakt mit uns auf – gemeinsam finden wir eine Lösung, mit der Sie sich auf Ihre Geschäftsziele konzentrieren können, während wir die Organisation und Koordination der benötigten Leistungen übernehmen.",
+    "details": {
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "country": "Tschechische Republik"
+    },
+    "map": {
+      "eyebrow": "So finden Sie uns"
+    },
+    "form": {
+      "title": "Schreiben Sie uns",
+      "notConfiguredTitle": "Der Versand des Formulars ist noch nicht aktiv.",
+      "notConfiguredText": "Das Formular ist für die Anbindung an die Nachrichtenzustellung vorbereitet – bis dahin können keine Nachrichten gesendet werden.",
+      "requiredHint": "Mit {star} gekennzeichnete Felder sind Pflichtfelder.",
+      "requiredStar": "Sternchen",
+      "name": "Vor- und Nachname",
+      "company": "Unternehmen",
+      "optional": "(optional)",
+      "email": "E-Mail",
+      "subject": "Ihre Anfrage betrifft",
+      "subjectPlaceholder": "Leistung auswählen",
+      "subjectOther": "Sonstige Anfrage",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "status": {
+        "odeslano": { "title": "Vielen Dank, Ihre Nachricht wurde gesendet.", "text": "Wir haben Ihre Nachricht erhalten und melden uns bei Ihnen." },
+        "nenapojeno": { "title": "Ihre Nachricht wurde nicht gesendet.", "text": "Das Online-Formular ist noch nicht an die Nachrichtenzustellung angebunden. Wir bitten um Entschuldigung." },
+        "chyba": { "title": "Ihre Nachricht konnte nicht gesendet werden.", "text": "Es ist ein technischer Fehler aufgetreten. Bitte versuchen Sie es später erneut." },
+        "neplatne": { "title": "Das Formular enthält Fehler.", "text": "Bitte prüfen Sie die markierten Felder und senden Sie das Formular erneut." }
+      },
+      "errors": {
+        "name": { "required": "Bitte geben Sie Ihren Namen ein.", "tooLong": "Der Name darf höchstens {max} Zeichen lang sein." },
+        "company": { "tooLong": "Der Firmenname darf höchstens {max} Zeichen lang sein." },
+        "email": { "required": "Bitte geben Sie Ihre E-Mail-Adresse ein.", "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name{'@'}firma.de." },
+        "subject": { "required": "Bitte wählen Sie, worauf sich Ihre Anfrage bezieht." },
+        "message": {
+          "required": "Bitte schreiben Sie uns eine Nachricht.",
+          "tooShort": "Die Nachricht sollte mindestens {min} Zeichen lang sein.",
+          "tooLong": "Die Nachricht darf höchstens {max} Zeichen lang sein."
+        }
+      }
+    }
+  },
+  "map": {
+    "frameTitle": "Karte – {label}",
+    "text": "Die Karte wird von Google Maps geladen. Dabei speichert Google Cookies und erhält Ihre IP-Adresse. Deshalb zeigen wir sie erst mit Ihrer Einwilligung an.",
+    "show": "Karte anzeigen",
+    "open": "In Google Maps öffnen",
+    "note": "Sie können Ihre Einwilligung jederzeit in den Cookie-Einstellungen in der Fußzeile widerrufen."
+  },
+  "cookies": {
+    "banner": {
+      "title": "Cookies auf dieser Website",
+      "settingsTitle": "Cookie-Einstellungen",
+      "text": "Notwendige Cookies sorgen für das Funktionieren der Website. Analyse- und Marketing-Cookies sowie Inhalte anderer Dienste (z. B. Google Maps) verwenden wir nur mit Ihrer Einwilligung. Ihre Auswahl können Sie jederzeit in der Fußzeile ändern.",
+      "settingsText": "Wählen Sie, welche Cookie-Kategorien wir verwenden dürfen. Notwendige Cookies sind immer aktiv.",
+      "policyLink": "Cookie-Richtlinie",
+      "categoriesLegend": "Cookie-Kategorien",
+      "alwaysActive": "Immer aktiv",
+      "acceptAll": "Alle akzeptieren",
+      "rejectAll": "Alle ablehnen",
+      "settings": "Einstellungen",
+      "save": "Auswahl speichern"
+    },
+    "categories": {
+      "necessary": {
+        "title": "Notwendig",
+        "description": "Sie stellen die Grundfunktionen der Website sicher, zum Beispiel die Speicherung Ihrer Cookie-Auswahl. Ohne sie kann die Website nicht richtig funktionieren, daher lassen sie sich nicht deaktivieren."
+      },
+      "analytics": {
+        "title": "Analyse",
+        "description": "Sie helfen uns zu verstehen, wie Besucher die Website nutzen – zum Beispiel, wie viele Besuche es gibt und welche Seiten am häufigsten gelesen werden. Die Daten werten wir zusammengefasst aus."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Sie dienen dazu, die Wirksamkeit von Werbekampagnen zu messen und auf anderen Websites relevante Werbung anzuzeigen."
+      },
+      "external": {
+        "title": "Externe Inhalte",
+        "description": "Sie ermöglichen es, Inhalte anderer Dienste direkt auf der Website anzuzeigen – zum Beispiel die Google-Karte auf der Kontaktseite. Diese Dienste können eigene Cookies speichern und Ihre IP-Adresse verarbeiten."
+      }
+    },
+    "list": {
+      "consent": {
+        "provider": "Silverdahl (diese Website)",
+        "purpose": "Speichert Ihre Cookie-Auswahl, damit der Hinweis nicht bei jedem Besuch erscheint.",
+        "expiry": "6 Monate"
+      },
+      "google": {
+        "name": "NID und weitere Google-Cookies",
+        "provider": "Google Ireland Ltd. (Google Maps)",
+        "purpose": "Werden von Google gesetzt, wenn die eingebettete Karte auf der Kontaktseite angezeigt wird – zum Speichern von Einstellungen, zur Sicherheit und für eigene Zwecke von Google. Die Karte wird nur mit Ihrer Einwilligung geladen.",
+        "expiry": "gemäß den Richtlinien von Google (NID 6 Monate)"
+      }
+    },
+    "page": {
+      "seo": {
+        "title": "Cookie-Richtlinie",
+        "description": "Welche Cookies die Website von Silverdahl verwendet, wozu sie dienen und wie Sie Ihre Einwilligung jederzeit ändern können."
+      },
+      "eyebrow": "Rechtliche Informationen",
+      "title": "Cookie-Richtlinie",
+      "intro": "Auf dieser Seite erfahren Sie, welche Cookies die Website verwendet, wozu sie dienen und wie Sie Ihre Einwilligung ändern können.",
+      "whatTitle": "Was sind Cookies",
+      "whatText": "Cookies sind kleine Textdateien, die eine Website in Ihrem Browser speichert. Sie ermöglichen es zum Beispiel, sich Ihre Einstellungen zu merken oder festzustellen, wie Besucher die Website nutzen.",
+      "categoriesTitle": "Cookie-Kategorien",
+      "badgeRequired": "immer aktiv",
+      "badgeOptional": "nur mit Einwilligung",
+      "usedTitle": "Welche Cookies wir verwenden",
+      "usedText": "Die Website selbst verwendet nur ein notwendiges Cookie, das sich Ihre Auswahl merkt. Auf der Kontaktseite können Sie mit Ihrer Einwilligung eine Google-Karte anzeigen – erst dann speichert Google seine Cookies. Analyse- oder Marketing-Tools setzen wir derzeit nicht ein; sollten wir sie künftig einbinden, führen wir sie in dieser Tabelle auf und sie werden nur mit Ihrer Einwilligung aktiviert.",
+      "tableCaption": "Übersicht der verwendeten Cookies",
+      "colName": "Name",
+      "colCategory": "Kategorie",
+      "colProvider": "Anbieter",
+      "colPurpose": "Zweck",
+      "colExpiry": "Speicherdauer",
+      "changeTitle": "So ändern oder widerrufen Sie Ihre Einwilligung",
+      "changeText": "Sie können Ihre Auswahl jederzeit ändern oder Ihre Einwilligung widerrufen – genauso einfach, wie Sie sie erteilt haben. Öffnen Sie dazu die Cookie-Einstellungen (der Link befindet sich auch in der Fußzeile jeder Seite).",
+      "openSettings": "Cookie-Einstellungen öffnen",
+      "browserText": "Sie können Cookies auch in den Einstellungen Ihres Browsers löschen oder blockieren. Das Blockieren notwendiger Cookies kann die Funktion der Website einschränken – der Einwilligungshinweis erscheint dann bei jedem Besuch.",
+      "questions": "Bei Fragen wenden Sie sich bitte über unser {link} an uns.",
+      "questionsLink": "Kontaktformular"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Seite nicht gefunden",
+    "errorTitle": "Etwas ist schiefgelaufen",
+    "errorHeadTitle": "Fehler",
+    "notFoundText": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "errorText": "Es tut uns leid, es ist ein unerwarteter Fehler aufgetreten.",
+    "back": "Zurück zur Startseite"
+  }
+}

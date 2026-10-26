@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { mainNavigation } from '~/data/navigation'
-import { services } from '~/data/services'
+import { serviceDefs } from '~/data/services'
 
 const year = new Date().getFullYear()
+const localePath = useLocalePath()
 const { openSettings } = useCookieConsent()
 </script>
 
@@ -11,30 +12,27 @@ const { openSettings } = useCookieConsent()
     <div class="container footer__grid">
       <div class="footer__about">
         <SiteLogo inverse />
-        <p>
-          Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální
-          provozní procesy.
-        </p>
+        <p>{{ $t('footer.about') }}</p>
         <!--
           TODO: Doplnit ověřené kontaktní a firemní údaje (sídlo, IČO, DIČ, zápis v obchodním rejstříku,
           telefon, e-mail, případně profily na sociálních sítích). Podklady je zatím neobsahují.
         -->
       </div>
 
-      <nav aria-label="Navigace v patičce">
-        <h2 class="footer__title">Stránky</h2>
+      <nav :aria-label="$t('nav.footerLabel')">
+        <h2 class="footer__title">{{ $t('footer.pages') }}</h2>
         <ul class="footer__list">
-          <li v-for="item in mainNavigation" :key="item.to">
-            <NuxtLink :to="item.to">{{ item.label }}</NuxtLink>
+          <li v-for="item in mainNavigation" :key="item.page">
+            <NuxtLink :to="localePath(item.page)">{{ $t(item.labelKey) }}</NuxtLink>
           </li>
         </ul>
       </nav>
 
       <div>
-        <h2 class="footer__title">Služby</h2>
+        <h2 class="footer__title">{{ $t('footer.services') }}</h2>
         <ul class="footer__list">
-          <li v-for="service in services" :key="service.id">
-            <NuxtLink :to="`/sluzby#${service.id}`">{{ service.name }}</NuxtLink>
+          <li v-for="service in serviceDefs" :key="service.id">
+            <NuxtLink :to="localePath({ name: 'sluzby', hash: `#${service.id}` })">{{ service.name }}</NuxtLink>
           </li>
         </ul>
       </div>
@@ -43,11 +41,11 @@ const { openSettings } = useCookieConsent()
     <div class="container footer__bottom">
       <p>© {{ year }} Silverdahl s.r.o.</p>
       <ul class="footer__legal">
-        <li><NuxtLink to="/cookies">Zásady cookies</NuxtLink></li>
+        <li><NuxtLink :to="localePath('cookies')">{{ $t('footer.cookiePolicy') }}</NuxtLink></li>
         <!-- Tlačítko funguje jen s JavaScriptem, bez něj se lišta ani nezobrazuje. -->
         <ClientOnly>
           <li>
-            <button type="button" class="footer__link-btn" @click="openSettings">Nastavení cookies</button>
+            <button type="button" class="footer__link-btn" @click="openSettings">{{ $t('footer.cookieSettings') }}</button>
           </li>
         </ClientOnly>
       </ul>

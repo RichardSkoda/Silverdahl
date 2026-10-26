@@ -21,11 +21,14 @@ export async function deliverContactMessage(data: ContactPayload): Promise<void>
     auth: config.smtpUser ? { user: config.smtpUser, pass: config.smtpPass } : undefined,
   })
 
+  // E-mail pro firmu je česky; jazyk webu napoví, v jakém jazyce odpovědět.
+  const subject = data.subject === 'other' ? 'Jiný dotaz' : data.subject
   const lines = [
     `Jméno: ${data.name}`,
     `Firma: ${data.company || '—'}`,
     `E-mail: ${data.email}`,
-    `Předmět: ${data.subject}`,
+    `Předmět: ${subject}`,
+    `Jazyk webu: ${data.locale.toUpperCase()}`,
     '',
     data.message,
   ]
@@ -34,7 +37,7 @@ export async function deliverContactMessage(data: ContactPayload): Promise<void>
     from: config.contactFrom,
     to: config.contactTo,
     replyTo: data.email,
-    subject: `Web Silverdahl – ${data.subject}`,
+    subject: `Web Silverdahl – ${subject}`,
     text: lines.join('\n'),
   })
 }

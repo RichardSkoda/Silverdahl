@@ -5,6 +5,7 @@ import { allChoices, type ConsentChoices } from '~/composables/useCookieConsent'
 // Lišta se souhlasem s cookies. Přijetí i odmítnutí je stejně snadné (jedno kliknutí, stejně výrazná tlačítka),
 // volitelné kategorie jsou ve výchozím stavu vypnuté. Bez JavaScriptu se nezobrazuje – nic se pak ani nenačítá.
 const { isReady, hasDecided, settingsOpen, currentChoices, save, acceptAll, rejectAll } = useCookieConsent()
+const localePath = useLocalePath()
 
 const detail = ref(false)
 const choices = reactive<ConsentChoices>(allChoices(false))
@@ -60,29 +61,28 @@ function onEscape() {
       @keydown.esc="onEscape"
     >
       <h2 id="cookie-nadpis" ref="headingRef" tabindex="-1" class="cookie__title">
-        {{ detail ? 'Nastavení cookies' : 'Cookies na tomto webu' }}
+        {{ detail ? $t('cookies.banner.settingsTitle') : $t('cookies.banner.title') }}
       </h2>
 
-      <p v-if="detail" id="cookie-popis" class="cookie__text">
-        Vyberte, které kategorie cookies smíme používat. Nezbytné cookies jsou aktivní vždy.
-      </p>
+      <p v-if="detail" id="cookie-popis" class="cookie__text">{{ $t('cookies.banner.settingsText') }}</p>
       <p v-else id="cookie-popis" class="cookie__text">
-        Nezbytné cookies zajišťují fungování webu. Analytické a marketingové cookies ani obsah jiných služeb (např.
-        mapu Google) bez vašeho souhlasu nepoužijeme. Volbu můžete kdykoli změnit v patičce webu.
-        <NuxtLink to="/cookies">Zásady cookies</NuxtLink>
+        {{ $t('cookies.banner.text') }}
+        <NuxtLink :to="localePath('cookies')">{{ $t('cookies.banner.policyLink') }}</NuxtLink>
       </p>
 
       <form v-if="detail" class="cookie__form" @submit.prevent="finish(() => save({ ...choices }))">
         <fieldset class="cookie__categories">
-          <legend class="visually-hidden">Kategorie cookies</legend>
+          <legend class="visually-hidden">{{ $t('cookies.banner.categoriesLegend') }}</legend>
           <div v-for="category in consentCategories" :key="category.id" class="cookie__category">
             <div class="cookie__category-head">
               <template v-if="category.required">
-                <span class="cookie__category-title">{{ category.title }}</span>
-                <span class="cookie__always">Vždy aktivní</span>
+                <span class="cookie__category-title">{{ $t(`cookies.categories.${category.id}.title`) }}</span>
+                <span class="cookie__always">{{ $t('cookies.banner.alwaysActive') }}</span>
               </template>
               <template v-else>
-                <label :for="`cookie-${category.id}`" class="cookie__category-title">{{ category.title }}</label>
+                <label :for="`cookie-${category.id}`" class="cookie__category-title">
+                  {{ $t(`cookies.categories.${category.id}.title`) }}
+                </label>
                 <input
                   :id="`cookie-${category.id}`"
                   v-model="choices[category.id as keyof ConsentChoices]"
@@ -93,20 +93,22 @@ function onEscape() {
                 />
               </template>
             </div>
-            <p :id="`cookie-${category.id}-popis`" class="cookie__category-text">{{ category.description }}</p>
+            <p :id="`cookie-${category.id}-popis`" class="cookie__category-text">
+              {{ $t(`cookies.categories.${category.id}.description`) }}
+            </p>
           </div>
         </fieldset>
 
         <div class="cookie__actions">
-          <BaseButton type="submit">Uložit výběr</BaseButton>
-          <BaseButton @click="finish(acceptAll)">Přijmout vše</BaseButton>
+          <BaseButton type="submit">{{ $t('cookies.banner.save') }}</BaseButton>
+          <BaseButton @click="finish(acceptAll)">{{ $t('cookies.banner.acceptAll') }}</BaseButton>
         </div>
       </form>
 
       <div v-else class="cookie__actions">
-        <BaseButton @click="finish(acceptAll)">Přijmout vše</BaseButton>
-        <BaseButton @click="finish(rejectAll)">Odmítnout vše</BaseButton>
-        <BaseButton variant="secondary" @click="openDetail">Nastavení</BaseButton>
+        <BaseButton @click="finish(acceptAll)">{{ $t('cookies.banner.acceptAll') }}</BaseButton>
+        <BaseButton @click="finish(rejectAll)">{{ $t('cookies.banner.rejectAll') }}</BaseButton>
+        <BaseButton variant="secondary" @click="openDetail">{{ $t('cookies.banner.settings') }}</BaseButton>
       </div>
     </section>
   </Transition>

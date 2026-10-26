@@ -1,21 +1,22 @@
 <script setup lang="ts">
-import { services } from '~/data/services'
 import type { IconName } from '~/components/ServiceIcon.vue'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+const services = useServices()
+const { records } = useMessageList()
+
 usePageSeo({
-  title: 'Váš partner pro evropské trhy',
-  description:
-    'Silverdahl pomáhá zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy.',
-  path: '/',
+  title: () => t('home.seo.title'),
+  description: () => t('home.seo.description'),
+  page: 'index',
 })
 
-// Přednosti z grafického návrhu domovské stránky v podkladech.
-const strengths: { title: string; text: string; icon: IconName }[] = [
-  { title: 'Znalost lokálního prostředí', text: 'Dlouholeté zkušenosti s evropskými trhy.', icon: 'globe' },
-  { title: 'Ověření obchodní partneři', text: 'Síť spolehlivých dodavatelů z různých oborů.', icon: 'people' },
-  { title: 'Komplexní odpovědnost', text: 'Od přípravy vstupu na trh po každodenní provoz.', icon: 'gear' },
-  { title: 'Pravidelný reporting', text: 'Přehled o výsledcích a kontrole nákladů.', icon: 'bars' },
-]
+// Přednosti z grafického návrhu domovské stránky v podkladech (texty v překladech home.strengths.items).
+const strengthIcons: IconName[] = ['globe', 'people', 'gear', 'bars']
+const strengths = computed(() =>
+  records('home.strengths.items', ['title', 'text'] as const).map((item, i) => ({ ...item, icon: strengthIcons[i] ?? 'globe' })),
+)
 </script>
 
 <template>
@@ -27,16 +28,13 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
         <img src="/images/hero-budova.webp" alt="" class="hero__building" width="260" height="744" />
       </div>
       <div class="container hero__content">
-        <p class="eyebrow hero__eyebrow">Váš partner pro evropské trhy</p>
+        <p class="eyebrow hero__eyebrow">{{ $t('home.hero.eyebrow') }}</p>
         <h1 id="hero-nadpis" class="hero__title">
-          Od strategie <span class="hero__line">k&nbsp;úspěšnému provozu</span>
+          {{ $t('home.hero.title1') }} <span class="hero__line">{{ $t('home.hero.title2') }}</span>
         </h1>
-        <p class="hero__lead">
-          Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální
-          provozní procesy.
-        </p>
-        <BaseButton to="/sluzby" class="hero__cta">
-          Zjistěte, jak můžeme pomoci
+        <p class="hero__lead">{{ $t('home.hero.lead') }}</p>
+        <BaseButton :to="localePath('sluzby')" class="hero__cta">
+          {{ $t('home.hero.cta') }}
           <svg class="hero__cta-arrow" viewBox="0 0 28 12" aria-hidden="true" focusable="false">
             <path d="M0 6h26M21 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4" />
           </svg>
@@ -47,7 +45,7 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
     <!-- Tři kroky spolupráce -->
     <section class="steps" aria-labelledby="sluzby-nadpis">
       <div class="container">
-        <h2 id="sluzby-nadpis" class="visually-hidden">Naše služby – tři kroky spolupráce</h2>
+        <h2 id="sluzby-nadpis" class="visually-hidden">{{ $t('home.steps.heading') }}</h2>
         <ol class="steps__list">
           <li v-for="(service, i) in services" :key="service.id" class="step" :class="`step--${i + 1}`">
             <div class="step__media">
@@ -60,8 +58,8 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
             <h3 class="step__title">{{ service.name }}</h3>
             <p class="step__tagline">{{ service.tagline }}</p>
             <p class="step__text">{{ service.summary }}</p>
-            <NuxtLink :to="`/sluzby#${service.id}`" class="step__link">
-              Více o službě<span class="visually-hidden"> {{ service.name }}</span>
+            <NuxtLink :to="localePath({ name: 'sluzby', hash: `#${service.id}` })" class="step__link">
+              {{ $t('common.moreAboutService') }}<span class="visually-hidden"> {{ service.name }}</span>
               <span aria-hidden="true">→</span>
             </NuxtLink>
             <svg v-if="i < services.length - 1" class="step__arrow" viewBox="0 0 48 16" aria-hidden="true" focusable="false">
@@ -74,7 +72,7 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
 
     <!-- Přednosti -->
     <section class="strengths" aria-labelledby="prednosti-nadpis">
-      <h2 id="prednosti-nadpis" class="visually-hidden">Proč Silverdahl</h2>
+      <h2 id="prednosti-nadpis" class="visually-hidden">{{ $t('home.strengths.heading') }}</h2>
       <ul class="container strengths__list">
         <li v-for="item in strengths" :key="item.title" class="strength">
           <ServiceIcon :name="item.icon" class="strength__icon" />
@@ -89,18 +87,11 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
     <!-- Hlavní sdělení -->
     <section class="section section--muted" aria-labelledby="sdeleni-nadpis">
       <div class="container message">
-        <p class="eyebrow">Silverdahl</p>
-        <h2 id="sdeleni-nadpis" class="message__title">Your Local Operations Partner in Central Europe</h2>
-        <p class="message__question">
-          Chcete začít podnikat v České republice nebo rozšířit své aktivity na další evropské trhy?
-        </p>
-        <p class="message__strong">
-          Nemusíte zde budovat vlastní tým ani sami vyhledávat a řídit řadu lokálních dodavatelů.
-        </p>
-        <p class="message__text">
-          Pomůžeme vám najít vhodné partnery, nastavit potřebné procesy a zajistíme jejich koordinaci, kontrolu a
-          pravidelný reporting.
-        </p>
+        <p class="eyebrow">{{ $t('home.message.eyebrow') }}</p>
+        <h2 id="sdeleni-nadpis" class="message__title">{{ $t('home.message.title') }}</h2>
+        <p class="message__question">{{ $t('home.message.question') }}</p>
+        <p class="message__strong">{{ $t('home.message.strong') }}</p>
+        <p class="message__text">{{ $t('home.message.text') }}</p>
       </div>
     </section>
 
@@ -108,14 +99,10 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
     <section class="section section--navy" aria-labelledby="odpovednost-nadpis">
       <div class="container responsibility">
         <div>
-          <p class="eyebrow">Jak spolupracujeme</p>
-          <h2 id="odpovednost-nadpis">Naše spolupráce nekončí výběrem vhodných dodavatelů</h2>
+          <p class="eyebrow">{{ $t('home.responsibility.eyebrow') }}</p>
+          <h2 id="odpovednost-nadpis">{{ $t('home.responsibility.title') }}</h2>
         </div>
-        <p class="responsibility__body">
-          Přebíráme odpovědnost za koordinaci svěřených procesů, průběžně kontrolujeme jejich fungování a výsledky a
-          poskytujeme pravidelný reporting vedení společnosti. Klient se tak může soustředit na rozvoj svého podnikání,
-          zatímco každodenní provozní agendu zajišťuje Silverdahl.
-        </p>
+        <p class="responsibility__body">{{ $t('home.responsibility.text') }}</p>
       </div>
     </section>
 
@@ -124,20 +111,18 @@ const strengths: { title: string; text: string; icon: IconName }[] = [
       <div class="container">
         <div class="case">
           <div class="case__content">
-            <p class="eyebrow">Case study / Reference</p>
+            <p class="eyebrow">{{ $t('home.case.eyebrow') }}</p>
             <h2 id="reference-nadpis" class="case__title">Courlux International SA</h2>
-            <p class="case__subtitle">Dlouhodobé řízení a koordinace obchodních procesů na trzích střední Evropy</p>
-            <p class="case__text">
-              Švýcarská obchodní společnost Courlux International SA využívá Silverdahl jako svého dlouhodobého
-              partnera pro zajištění obchodních a provozních aktivit v České republice, na Slovensku, v Polsku a
-              Maďarsku.
-            </p>
-            <BaseButton to="/case-study" variant="secondary" class="case__btn">Přečíst case study</BaseButton>
+            <p class="case__subtitle">{{ $t('home.case.subtitle') }}</p>
+            <p class="case__text">{{ $t('home.case.text') }}</p>
+            <BaseButton :to="localePath('case-study')" variant="secondary" class="case__btn">
+              {{ $t('home.case.button') }}
+            </BaseButton>
           </div>
           <dl class="case__stats">
-            <StatItem value="30+" label="let dlouhodobého partnerství" />
-            <StatItem value="4" label="trhy – Česká republika, Slovensko, Polsko a Maďarsko" />
-            <StatItem value="CH → CEE" label="švýcarská centrála a střední Evropa" />
+            <StatItem value="30+" :label="$t('home.case.statYears')" />
+            <StatItem value="4" :label="$t('home.case.statMarkets')" />
+            <StatItem value="CH → CEE" :label="$t('home.case.statHq')" />
           </dl>
         </div>
       </div>

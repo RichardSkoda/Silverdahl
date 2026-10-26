@@ -1,0 +1,442 @@
+{
+  "meta": {
+    "ogLocale": "cs_CZ"
+  },
+  "a11y": {
+    "skipLink": "Přeskočit na obsah"
+  },
+  "nav": {
+    "home": "Domů",
+    "services": "Služby",
+    "caseStudy": "Case study",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "mainLabel": "Hlavní navigace",
+    "footerLabel": "Navigace v patičce",
+    "homeLink": "Silverdahl – domovská stránka",
+    "menu": "Menu",
+    "close": "Zavřít",
+    "menuSuffix": "hlavní navigace",
+    "languageLabel": "Jazyk"
+  },
+  "footer": {
+    "about": "Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy.",
+    "pages": "Stránky",
+    "services": "Služby",
+    "cookiePolicy": "Zásady cookies",
+    "cookieSettings": "Nastavení cookies"
+  },
+  "logo": {
+    "alt": "Silverdahl – Marketing and Customer Service"
+  },
+  "common": {
+    "moreAboutService": "Více o službě",
+    "benefitTitle": "Co tím získáte?",
+    "newWindow": "(otevře se v novém okně)"
+  },
+  "cta": {
+    "title": "Pojďme společně rozvíjet vaše podnikání",
+    "text": "Rádi s vámi probereme vaše potřeby a navrhneme možnosti spolupráce.",
+    "button": "Kontaktujte nás"
+  },
+  "home": {
+    "seo": {
+      "title": "Váš partner pro evropské trhy",
+      "description": "Silverdahl pomáhá zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy."
+    },
+    "hero": {
+      "eyebrow": "Váš partner pro evropské trhy",
+      "title1": "Od strategie",
+      "title2": "k úspěšnému provozu",
+      "lead": "Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy.",
+      "cta": "Zjistěte, jak můžeme pomoci"
+    },
+    "steps": {
+      "heading": "Naše služby – tři kroky spolupráce"
+    },
+    "strengths": {
+      "heading": "Proč Silverdahl",
+      "items": [
+        { "title": "Znalost lokálního prostředí", "text": "Dlouholeté zkušenosti s evropskými trhy." },
+        { "title": "Ověření obchodní partneři", "text": "Síť spolehlivých dodavatelů z různých oborů." },
+        { "title": "Komplexní odpovědnost", "text": "Od přípravy vstupu na trh po každodenní provoz." },
+        { "title": "Pravidelný reporting", "text": "Přehled o výsledcích a kontrole nákladů." }
+      ]
+    },
+    "message": {
+      "eyebrow": "Silverdahl",
+      "title": "Your Local Operations Partner in Central Europe",
+      "question": "Chcete začít podnikat v České republice nebo rozšířit své aktivity na další evropské trhy?",
+      "strong": "Nemusíte zde budovat vlastní tým ani sami vyhledávat a řídit řadu lokálních dodavatelů.",
+      "text": "Pomůžeme vám najít vhodné partnery, nastavit potřebné procesy a zajistíme jejich koordinaci, kontrolu a pravidelný reporting."
+    },
+    "responsibility": {
+      "eyebrow": "Jak spolupracujeme",
+      "title": "Naše spolupráce nekončí výběrem vhodných dodavatelů",
+      "text": "Přebíráme odpovědnost za koordinaci svěřených procesů, průběžně kontrolujeme jejich fungování a výsledky a poskytujeme pravidelný reporting vedení společnosti. Klient se tak může soustředit na rozvoj svého podnikání, zatímco každodenní provozní agendu zajišťuje Silverdahl."
+    },
+    "case": {
+      "eyebrow": "Case study / Reference",
+      "subtitle": "Dlouhodobé řízení a koordinace obchodních procesů na trzích střední Evropy",
+      "text": "Švýcarská obchodní společnost Courlux International SA využívá Silverdahl jako svého dlouhodobého partnera pro zajištění obchodních a provozních aktivit v České republice, na Slovensku, v Polsku a Maďarsku.",
+      "button": "Přečíst case study",
+      "statYears": "let dlouhodobého partnerství",
+      "statMarkets": "trhy – Česká republika, Slovensko, Polsko a Maďarsko",
+      "statHq": "švýcarská centrála a střední Evropa"
+    }
+  },
+  "services": {
+    "seo": {
+      "title": "Naše služby",
+      "description": "Market Entry Support, Partner Sourcing & Management a Local Operations Management – od vstupu na trh až po každodenní řízení provozu."
+    },
+    "intro": {
+      "eyebrow": "Naše služby",
+      "title": "Od vstupu na trh až po každodenní řízení provozu",
+      "p1": "Pomáháme společnostem rozvíjet jejich obchodní aktivity na evropských trzích bez nutnosti budovat vlastní lokální provozní strukturu.",
+      "p2": "Na základě individuálních potřeb klienta připravíme vhodné řešení, vyhledáme specializované obchodní partnery a převezmeme koordinaci souvisejících procesů. Zajišťujeme komunikaci, kontrolu plnění i pravidelný reporting, aby se naši klienti mohli soustředit na své hlavní obchodní cíle."
+    },
+    "overview": {
+      "title": "Jak Silverdahl podporuje váš růst na nových trzích",
+      "text": "Od vstupu na trh přes výběr partnerů až po dlouhodobé řízení provozu.",
+      "areas": "Možné oblasti: {areas}."
+    },
+    "detail": {
+      "weProvide": "Co pro vás zajistíme:",
+      "benefitLabel": "Co tím získáte – {name}"
+    },
+    "needs": {
+      "title": "Spolupráce podle vašich potřeb",
+      "p1": "Každý obchodní projekt má svá specifika. Proto nenabízíme pouze předem definované balíčky služeb.",
+      "p2": "Můžeme vám pomoci s jednorázovým výběrem dodavatele, zajistit kompletní přípravu vstupu na nový trh nebo dlouhodobě převzít řízení a koordinaci lokálních obchodních procesů.",
+      "statement": "Vy určujete obchodní cíle. My vám pomůžeme vytvořit a řídit provozní zázemí potřebné k jejich dosažení."
+    },
+    "list": {
+      "marketEntry": {
+        "subtitle": "Podpora vstupu na nové trhy",
+        "tagline": "Podpora vstupu na nové trhy",
+        "summary": "Pomůžeme vám připravit a realizovat vstup na český a další evropské trhy. Navrhneme efektivní provozní řešení bez nutnosti budovat vlastní lokální tým.",
+        "intro": [
+          "Vstup na nový trh přináší řadu organizačních, administrativních a obchodních výzev. Zorientovat se v místním prostředí, vyhledat vhodné dodavatele a správně nastavit provozní procesy může vyžadovat značné časové i personální kapacity.",
+          "Silverdahl pomáhá zahraničním společnostem připravit a realizovat vstup na český a další evropské trhy. Naším cílem je navrhnout efektivní způsob lokálního fungování bez nutnosti budovat vlastní provozní tým."
+        ],
+        "items": [
+          { "title": "Analýza potřeb projektu", "text": "seznámení s obchodním modelem klienta, jeho cíli a požadavky na lokální provoz." },
+          { "title": "Návrh provozního řešení", "text": "identifikace potřebných procesů, dodavatelských služeb a odpovědností." },
+          { "title": "Příprava vstupu na trh", "text": "vytvoření harmonogramu, koordinace přípravných aktivit a potřebných partnerů." },
+          { "title": "Organizace lokálního zázemí", "text": "zajištění externích odborníků a služeb potřebných k zahájení činnosti." },
+          { "title": "Koordinace implementace", "text": "řízení jednotlivých kroků, kontrola termínů a řešení provozních komplikací." },
+          { "title": "Podpora rozšiřování stávajících aktivit", "text": "pomoc společnostem, které již na trhu působí a chtějí rozvíjet nebo optimalizovat své procesy." }
+        ],
+        "benefit": [
+          "Lokálního partnera se znalostí obchodního prostředí, který vám pomůže rychleji nastavit potřebné procesy, snížit organizační náročnost expanze a omezit potřebu vytváření vlastních administrativních a provozních kapacit."
+        ],
+        "benefitShort": "Rychlejší vstup na trh, nižší organizační náročnost a méně potřeby budovat vlastní lokální tým."
+      },
+      "partnerSourcing": {
+        "subtitle": "Vyhledávání a zajištění specializovaných obchodních partnerů",
+        "tagline": "Vyhledávání a zajištění obchodních partnerů",
+        "summary": "Vyhledáme, prověříme a zajistíme spolehlivé dodavatele služeb. Porovnáme nabídky, pomůžeme vyjednat nejlepší podmínky a zorganizujeme zahájení spolupráce.",
+        "intro": [
+          "Spolehliví obchodní partneři jsou základem úspěšného fungování každého projektu. Jejich vyhledání, porovnání nabídek a nastavení obchodních podmínek však může být pro zahraniční společnost časově náročné, zejména pokud nezná místní prostředí.",
+          "Silverdahl na základě konkrétních požadavků klienta vyhledává a oslovuje vhodné poskytovatele služeb, organizuje výběrová řízení a koordinuje zahájení spolupráce.",
+          "Neomezujeme se pouze na oblasti, ve kterých již máme zkušenosti. Podle povahy projektu dokážeme zmapovat možnosti trhu a vyhledat vhodné specializované poskytovatele i z dalších oborů."
+        ],
+        "items": [
+          { "title": "Definice požadavků", "text": "příprava zadání a požadovaných parametrů služby." },
+          { "title": "Vyhledávání dodavatelů", "text": "identifikace potenciálních partnerů na lokálním trhu." },
+          { "title": "Poptávková a výběrová řízení", "text": "oslovení poskytovatelů, sběr a vyhodnocování nabídek." },
+          { "title": "Porovnání obchodních podmínek", "text": "posouzení cen, rozsahu služeb, kapacit a dalších relevantních parametrů." },
+          { "title": "Koordinace obchodních jednání", "text": "komunikace s potenciálními partnery a podpora při nastavování podmínek spolupráce." },
+          { "title": "Implementace spolupráce", "text": "organizace zahájení služeb, nastavení komunikace a předání provozních požadavků." }
+        ],
+        "areas": {
+          "title": "V jakých oblastech můžeme partnery zajistit?",
+          "text": "Například zákaznická a kontaktní centra, marketingové a reklamní služby, tisk a distribuce, logistika, doprava, skladování, fulfillment, IT, účetní a daňové služby, právní poradenství, celní služby, překlady, lokalizace či personální služby.",
+          "note": "Výběr oblastí není uzavřený a vždy se přizpůsobuje individuálním potřebám klienta."
+        },
+        "areasShort": "call centra, marketing, logistika, IT, účetní a daňové služby, právo, celní služby, překlady, HR a další",
+        "benefit": [
+          "Jednoho partnera, který za vás zorganizuje vyhledání a výběr vhodných poskytovatelů, porovná dostupné možnosti a pomůže vytvořit funkční síť lokálních dodavatelů."
+        ],
+        "benefitShort": "Jedno kontaktní místo pro výběr a vytvoření funkční sítě lokálních dodavatelů."
+      },
+      "localOperations": {
+        "subtitle": "Externí řízení a koordinace provozních procesů",
+        "tagline": "Externí řízení a koordinace provozu",
+        "summary": "Převezmeme koordinaci svěřených procesů, komunikaci s dodavateli a kontrolu jejich činnosti. Poskytujeme pravidelný reporting a pomáháme optimalizovat náklady i kvalitu služeb.",
+        "intro": [
+          "Naše spolupráce nekončí výběrem vhodných obchodních partnerů.",
+          "Silverdahl může převzít dlouhodobou odpovědnost za koordinaci svěřených provozních procesů, komunikaci s dodavateli a průběžnou kontrolu jejich činnosti.",
+          "Působíme jako lokální provozní partner a centrální kontaktní místo mezi zahraničním vedením společnosti a jednotlivými poskytovateli služeb."
+        ],
+        "items": [
+          { "title": "Projektový a provozní management", "text": "organizace a řízení každodenních činností v rámci svěřených projektů." },
+          { "title": "Koordinace obchodních partnerů", "text": "pravidelná komunikace, zadávání úkolů a kontrola jejich plnění." },
+          { "title": "Kontrola smluvních podmínek", "text": "sledování dodržování sjednaného rozsahu služeb, termínů a požadované kvality." },
+          { "title": "Řešení provozních situací", "text": "operativní řešení komplikací a koordinace nápravných opatření." },
+          { "title": "Kontrola nákladů", "text": "vyhodnocování nákladovosti služeb a kontrola podkladů dodavatelských faktur." },
+          { "title": "Reporting a vyhodnocování KPI", "text": "pravidelný přehled o průběhu projektů, výkonnosti dodavatelů a dosahovaných výsledcích." },
+          { "title": "Optimalizace procesů", "text": "identifikace příležitostí ke zvýšení efektivity, zlepšení kvality nebo snížení nákladů." },
+          { "title": "Komunikace s centrálou", "text": "pravidelné předávání informací, doporučení a podkladů pro rozhodování managementu." }
+        ],
+        "benefit": [
+          "Externí provozní management, který se stará o každodenní fungování svěřených procesů, koordinuje jednotlivé dodavatele a poskytuje vám pravidelný přehled o výsledcích.",
+          "Namísto komunikace s mnoha poskytovateli máte jedno odpovědné kontaktní místo. Vaše vedení tak může věnovat více času obchodním a strategickým prioritám."
+        ],
+        "benefitShort": "Externí provozní management, pravidelný reporting a více času pro vaše obchodní priority."
+      }
+    }
+  },
+  "caseStudy": {
+    "seo": {
+      "title": "Case study: Courlux International SA",
+      "description": "Více než 30 let komplexní provozní podpory na čtyřech evropských trzích – Česká republika, Slovensko, Polsko a Maďarsko."
+    },
+    "intro": {
+      "eyebrow": "Case study / Reference",
+      "subtitle": "Více než 30 let komplexní provozní podpory na čtyřech evropských trzích",
+      "text": "Švýcarská obchodní společnost Courlux International SA využívá Silverdahl jako svého dlouhodobého partnera pro zajištění obchodních a provozních aktivit v České republice, na Slovensku, v Polsku a Maďarsku."
+    },
+    "task": {
+      "heading": "Náš úkol",
+      "statement": "Naším úkolem je vyhledávat vhodné lokální dodavatele, nastavovat spolupráci a následně řídit svěřené procesy tak, aby jejich každodenní koordinace nemusela zatěžovat švýcarskou centrálu."
+    },
+    "story": {
+      "eyebrow": "Historie spolupráce",
+      "title": "Od prvních obchodních partnerů ke komplexnímu řízení provozu",
+      "p1": "Spolupráce začala zajištěním zákaznického servisu, lokalizací marketingových materiálů a vyhledáváním partnerů pro získávání nových zákazníků. Zpočátku se jednalo především o vydavatele novin a časopisů, prostřednictvím kterých Courlux realizoval své marketingové kampaně.",
+      "p2": "S vývojem trhu jsme postupně vyhledali a zajistili spolupráci s externími call centry. Pro jednotlivé země jsme organizovali výběr dodavatelů, porovnávali nabídky, vyjednávali obchodní podmínky a následně převzali koordinaci jejich činnosti a vyhodnocování výsledků.",
+      "highlightLabel": "Období největšího rozsahu spolupráce",
+      "highlightTag": "Historické maximum",
+      "highlight": "V období nejintenzivnějších kampaní jsme koordinovali až čtyři call centra na jednom trhu, přičemž celkový nábor přesahoval 30 000 nových zákazníků měsíčně.",
+      "p3": "Postupně jsme obdobným způsobem zajistili také další specializované partnery, například v oblasti IT podpory, celní deklarace, poštovních a logistických služeb či právního poradenství."
+    },
+    "today": {
+      "eyebrow": "Současnost",
+      "title": "Jak spolupráce funguje dnes",
+      "p1": "Silverdahl dnes samostatně koordinuje většinu lokálních obchodních a provozních procesů Courluxu na všech čtyřech trzích.",
+      "p2": "Řídíme spolupráci s externími dodavateli, průběžně kontrolujeme jejich kvalitu a náklady, řešíme provozní komplikace a reagujeme na změny obchodních požadavků i legislativního prostředí. Příkladem je úspěšná implementace procesů souvisejících s GDPR.",
+      "p3": "Součástí naší odpovědnosti je také příprava obchodních rozpočtů a jejich pravidelné vyhodnocování. Švýcarské centrále poskytujeme denní, týdenní a měsíční reporting, včetně porovnání skutečných výsledků s plánem.",
+      "p4": "V rámci schválených rozpočtů a svěřených kompetencí řešíme operativní záležitosti samostatně. Centrála si ponechává strategická a finanční rozhodnutí, zajištění zásob a distribuci zboží ze Švýcarska."
+    },
+    "model": {
+      "hqDesc": "Švýcarská centrála – obchodní strategie a rozhodování",
+      "silverdahlDesc": "Koordinace projektů · Řízení partnerů · Kontrola · Reporting",
+      "partners": ["Zákaznická centra", "Marketingoví partneři", "Logistika a doprava", "Odborné a další služby"],
+      "caption": "Zjednodušené znázornění modelu řízení a koordinace externích poskytovatelů."
+    },
+    "stats": {
+      "eyebrow": "Fakta",
+      "title": "Spolupráce v číslech",
+      "items": [
+        { "value": "30+", "label": "let dlouhodobého partnerství", "period": "Dlouhodobě" },
+        { "value": "4", "label": "trhy – Česká republika, Slovensko, Polsko a Maďarsko", "period": "Dlouhodobě" },
+        { "value": "až 4", "label": "call centra na jednom trhu v období největšího rozsahu spolupráce", "period": "Historické maximum" },
+        { "value": "30 000+", "label": "nových zákazníků měsíčně v historicky nejintenzivnějších kampaních", "period": "Historické maximum" },
+        { "value": "Tisíce", "label": "zákaznických kontaktů měsíčně v rámci současného provozu", "period": "Současný provoz" }
+      ]
+    },
+    "benefit": {
+      "title": "Co Courlux díky spolupráci získává?",
+      "p1": "Courlux má pro čtyři evropské trhy jednoho odpovědného provozního partnera, který zajišťuje fungování sítě specializovaných dodavatelů a každodenní koordinaci jejich služeb.",
+      "p2": "Díky tomuto modelu nemusí budovat vlastní rozsáhlé lokální týmy ani řídit jednotlivé poskytovatele přímo ze Švýcarska. Získává přitom průběžnou kontrolu nad náklady, kvalitou a obchodními výsledky prostřednictvím pravidelného reportingu.",
+      "statement": "Spolupráce s Courluxem dokládá naši schopnost nejen vyhledat a zajistit vhodné obchodní partnery, ale také dlouhodobě převzít řízení svěřených procesů a přizpůsobovat je měnícím se potřebám klienta."
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "O nás",
+      "description": "Silverdahl s.r.o. – česká společnost s dlouholetými zkušenostmi s podporou mezinárodního obchodu, řízením provozních procesů a koordinací dodavatelů."
+    },
+    "intro": {
+      "eyebrow": "O nás",
+      "title": "Zkušenosti, lokální znalost a osobní odpovědnost",
+      "text": "Silverdahl s.r.o. je česká společnost s dlouholetými zkušenostmi s podporou mezinárodního obchodu, řízením provozních procesů a koordinací specializovaných dodavatelů na evropských trzích."
+    },
+    "experience": {
+      "title": "Zkušenosti s mezinárodním obchodem",
+      "p1": "Naše zkušenosti vycházejí především z více než třicetileté spolupráce se švýcarskou společností {company}, pro kterou zajišťujeme komplexní provozní podporu v České republice, na Slovensku, v Polsku a Maďarsku.",
+      "p2": "Za tu dobu jsme získali rozsáhlé zkušenosti s vyhledáváním obchodních partnerů, vyjednáváním podmínek spolupráce, řízením projektů, kontrolou nákladů i reportingem výsledků zahraniční centrále.",
+      "statement": "Naším cílem je tyto zkušenosti nabídnout dalším společnostem, které chtějí rozvíjet své podnikání na evropských trzích bez nutnosti budovat vlastní rozsáhlé lokální týmy."
+    },
+    "approach": {
+      "title": "Jak pracujeme",
+      "p1": "Věříme, že základem úspěšné mezinárodní spolupráce jsou spolehliví obchodní partneři, kvalitní komunikace a jasně definovaná odpovědnost.",
+      "p2": "Převzetím koordinace svěřených procesů zajišťujeme jejich každodenní fungování, kontrolujeme výsledky a poskytujeme klientovi pravidelný přehled o realizovaných aktivitách.",
+      "statement": "Naší největší výhodou je propojení znalosti lokálního prostředí s dlouholetou zkušeností s požadavky zahraničních obchodních společností."
+    },
+    "team": {
+      "eyebrow": "Lidé",
+      "title": "Náš management",
+      "kouril": {
+        "role": "Jednatel společnosti",
+        "focus": "Strategie, obchodní rozvoj, mezinárodní partnerství a vedení společnosti.",
+        "bio": [
+          "Tomáš stojí v čele společnosti Silverdahl od jejího založení v roce 1994 a podílí se na jejím strategickém směřování, rozvoji obchodních vztahů a řízení dlouhodobé spolupráce se zahraničními partnery.",
+          "Jeho role zahrnuje především obchodní jednání, rozvoj partnerské sítě, nastavování podmínek spolupráce a dohled nad ekonomickým, personálním a provozním fungováním společnosti.",
+          "Díky zkušenostem s mezinárodním obchodním prostředím a outsourcingem služeb přispívá k vytváření dlouhodobých a stabilních obchodních vztahů."
+        ]
+      },
+      "tauchman": {
+        "role": "Projektový manažer",
+        "focus": "Řízení projektů, koordinace dodavatelů, provozní reporting a optimalizace procesů.",
+        "bio": [
+          "Michal má dlouholeté zkušenosti s projektovým řízením, koordinací obchodních partnerů a provozní podporou mezinárodních obchodních aktivit.",
+          "Ve společnosti Silverdahl působí od roku 2008. Během své profesní dráhy se podílel na řízení obchodních a marketingových projektů, koordinaci externích dodavatelů a zajišťování provozních procesů pro zahraniční obchodní partnery.",
+          "Jeho specializací je organizace a řízení projektů, koordinace spolupráce mezi zahraniční centrálou a lokálními dodavateli a oblast provozního controllingu. Zaměřuje se na tvorbu a správu rozpočtů, pravidelný reporting, vyhodnocování obchodních výsledků a kontrolu ekonomické efektivity jednotlivých aktivit.",
+          "Vystudoval bakalářský program Marketingová komunikace a následně magisterský program Ekonomika a management, který absolvoval s vyznamenáním. Ve své profesní praxi propojuje ekonomické a manažerské znalosti s marketingovou odborností."
+        ]
+      }
+    },
+    "quote": {
+      "label": "Citát",
+      "text": "„Za Silverdahlem nestojí anonymní servisní organizace, ale zkušení lidé, kteří rozumějí mezinárodnímu obchodu, dokážou samostatně řídit provoz a osobně odpovídají za svěřené projekty.“"
+    }
+  },
+  "contact": {
+    "seo": {
+      "title": "Kontakt",
+      "description": "Plánujete vstup na nový trh, hledáte spolehlivé obchodní partnery nebo potřebujete zajistit řízení lokálních provozních procesů? Kontaktujte Silverdahl."
+    },
+    "intro": {
+      "eyebrow": "Kontakt",
+      "title": "Pojďme společně rozvíjet vaše podnikání",
+      "text": "Plánujete vstup na nový trh, hledáte spolehlivé obchodní partnery nebo potřebujete zajistit řízení lokálních provozních procesů?"
+    },
+    "statement": "Rádi s vámi probereme vaše potřeby a navrhneme možnosti spolupráce.",
+    "body": "Kontaktujte nás a společně najdeme řešení, které vám umožní soustředit se na vaše obchodní cíle, zatímco my se postaráme o organizaci a koordinaci potřebných služeb.",
+    "details": {
+      "address": "Adresa",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "country": "Česká republika"
+    },
+    "map": {
+      "eyebrow": "Kde nás najdete"
+    },
+    "form": {
+      "title": "Napište nám",
+      "notConfiguredTitle": "Odesílání formuláře zatím není aktivní.",
+      "notConfiguredText": "Formulář je připraven k napojení na doručování zpráv – dokud nebude zprovozněno, zprávy nelze odeslat.",
+      "requiredHint": "Pole označená {star} jsou povinná.",
+      "requiredStar": "hvězdičkou",
+      "name": "Jméno a příjmení",
+      "company": "Firma",
+      "optional": "(nepovinné)",
+      "email": "E-mail",
+      "subject": "Čeho se dotaz týká",
+      "subjectPlaceholder": "Vyberte službu",
+      "subjectOther": "Jiný dotaz",
+      "message": "Zpráva",
+      "submit": "Odeslat zprávu",
+      "sending": "Odesílám…",
+      "status": {
+        "odeslano": { "title": "Děkujeme, zpráva byla odeslána.", "text": "Vaši zprávu jsme přijali a ozveme se vám." },
+        "nenapojeno": { "title": "Zpráva nebyla odeslána.", "text": "Online formulář zatím není napojen na doručování zpráv. Omlouváme se za komplikaci." },
+        "chyba": { "title": "Zprávu se nepodařilo odeslat.", "text": "Došlo k technické chybě. Zkuste to prosím později." },
+        "neplatne": { "title": "Formulář obsahuje chyby.", "text": "Zkontrolujte prosím vyznačená pole a odešlete formulář znovu." }
+      },
+      "errors": {
+        "name": { "required": "Vyplňte prosím své jméno.", "tooLong": "Jméno může mít nejvýše {max} znaků." },
+        "company": { "tooLong": "Název firmy může mít nejvýše {max} znaků." },
+        "email": { "required": "Vyplňte prosím e-mailovou adresu.", "invalid": "Zadejte prosím platnou e-mailovou adresu, např. jmeno{'@'}firma.cz." },
+        "subject": { "required": "Vyberte prosím, čeho se dotaz týká." },
+        "message": {
+          "required": "Napište nám prosím zprávu.",
+          "tooShort": "Zpráva by měla mít alespoň {min} znaků.",
+          "tooLong": "Zpráva může mít nejvýše {max} znaků."
+        }
+      }
+    }
+  },
+  "map": {
+    "frameTitle": "Mapa – {label}",
+    "text": "Mapa se načítá ze služby Google Maps, která ukládá cookies a získá vaši IP adresu. Proto ji zobrazíme až s vaším souhlasem.",
+    "show": "Zobrazit mapu",
+    "open": "Otevřít v Google Mapách",
+    "note": "Souhlas můžete kdykoli odvolat v nastavení cookies v patičce webu."
+  },
+  "cookies": {
+    "banner": {
+      "title": "Cookies na tomto webu",
+      "settingsTitle": "Nastavení cookies",
+      "text": "Nezbytné cookies zajišťují fungování webu. Analytické a marketingové cookies ani obsah jiných služeb (např. mapu Google) bez vašeho souhlasu nepoužijeme. Volbu můžete kdykoli změnit v patičce webu.",
+      "settingsText": "Vyberte, které kategorie cookies smíme používat. Nezbytné cookies jsou aktivní vždy.",
+      "policyLink": "Zásady cookies",
+      "categoriesLegend": "Kategorie cookies",
+      "alwaysActive": "Vždy aktivní",
+      "acceptAll": "Přijmout vše",
+      "rejectAll": "Odmítnout vše",
+      "settings": "Nastavení",
+      "save": "Uložit výběr"
+    },
+    "categories": {
+      "necessary": {
+        "title": "Nezbytné",
+        "description": "Zajišťují základní fungování webu, například uložení vaší volby ohledně cookies. Bez nich web nemůže správně fungovat, proto je nelze vypnout."
+      },
+      "analytics": {
+        "title": "Analytické",
+        "description": "Pomáhají nám porozumět, jak návštěvníci web používají – například kolik je návštěv a které stránky se čtou nejvíce. Údaje vyhodnocujeme souhrnně."
+      },
+      "marketing": {
+        "title": "Marketingové",
+        "description": "Slouží k měření účinnosti reklamních kampaní a k zobrazování relevantní reklamy na jiných webech."
+      },
+      "external": {
+        "title": "Externí obsah",
+        "description": "Umožňují zobrazit obsah jiných služeb přímo na webu – například mapu Google na stránce Kontakt. Tyto služby mohou ukládat vlastní cookies a zpracovávat vaši IP adresu."
+      }
+    },
+    "list": {
+      "consent": {
+        "provider": "Silverdahl (tento web)",
+        "purpose": "Uložení vaší volby ohledně cookies, aby se lišta nezobrazovala při každé návštěvě.",
+        "expiry": "6 měsíců"
+      },
+      "google": {
+        "name": "NID a další cookies Googlu",
+        "provider": "Google Ireland Ltd. (Google Maps)",
+        "purpose": "Ukládá je Google při zobrazení vložené mapy na stránce Kontakt – k uložení předvoleb, zabezpečení a pro vlastní účely Googlu. Mapa se načte jen s vaším souhlasem.",
+        "expiry": "podle zásad Googlu (NID 6 měsíců)"
+      }
+    },
+    "page": {
+      "seo": {
+        "title": "Zásady cookies",
+        "description": "Jaké cookies web Silverdahl používá, k čemu slouží a jak můžete svůj souhlas kdykoli změnit."
+      },
+      "eyebrow": "Právní informace",
+      "title": "Zásady používání cookies",
+      "intro": "Na této stránce najdete, jaké cookies web používá, k čemu slouží a jak můžete svůj souhlas změnit.",
+      "whatTitle": "Co jsou cookies",
+      "whatText": "Cookies jsou malé textové soubory, které web ukládá do vašeho prohlížeče. Umožňují například zapamatovat si vaše nastavení nebo zjistit, jak návštěvníci web používají.",
+      "categoriesTitle": "Kategorie cookies",
+      "badgeRequired": "vždy aktivní",
+      "badgeOptional": "jen se souhlasem",
+      "usedTitle": "Jaké cookies používáme",
+      "usedText": "Web sám používá pouze nezbytnou cookie, která si pamatuje vaši volbu. Na stránce Kontakt můžete se souhlasem zobrazit mapu Google – teprve pak Google ukládá své cookies. Analytické ani marketingové nástroje zatím nevyužíváme; pokud je v budoucnu zapojíme, uvedeme je v této tabulce a spustí se jen s vaším souhlasem.",
+      "tableCaption": "Přehled používaných cookies",
+      "colName": "Název",
+      "colCategory": "Kategorie",
+      "colProvider": "Poskytovatel",
+      "colPurpose": "Účel",
+      "colExpiry": "Platnost",
+      "changeTitle": "Jak souhlas změnit nebo odvolat",
+      "changeText": "Svou volbu můžete kdykoli změnit nebo souhlas odvolat – stejně snadno, jako jste ho udělili. Stačí otevřít nastavení cookies (odkaz je také v patičce každé stránky).",
+      "openSettings": "Otevřít nastavení cookies",
+      "browserText": "Cookies můžete také smazat nebo zablokovat v nastavení svého prohlížeče. Zablokování nezbytných cookies může omezit fungování webu – lišta se souhlasem se pak bude zobrazovat při každé návštěvě.",
+      "questions": "S dotazy se na nás obraťte prostřednictvím {link}.",
+      "questionsLink": "kontaktního formuláře"
+    }
+  },
+  "error": {
+    "notFoundTitle": "Stránka nenalezena",
+    "errorTitle": "Něco se pokazilo",
+    "errorHeadTitle": "Chyba",
+    "notFoundText": "Požadovaná stránka neexistuje nebo byla přesunuta.",
+    "errorText": "Omlouváme se, došlo k neočekávané chybě.",
+    "back": "Zpět na domovskou stránku"
+  }
+}

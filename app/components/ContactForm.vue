@@ -9,6 +9,8 @@ import {
   type ContactStatus,
 } from '#shared/contact'
 
+const { t, locale } = useI18n()
+
 const props = withDefaults(
   defineProps<{
     /** Zda je na serveru nastaveno doručování zpráv. */
@@ -19,7 +21,9 @@ const props = withDefaults(
   { initialStatus: null },
 )
 
-const form = reactive<ContactPayload>({ name: '', company: '', email: '', subject: '', message: '' })
+type FormFields = Omit<ContactPayload, 'locale'>
+const form = reactive<FormFields>({ name: '', company: '', email: '', subject: '', message: '' })
+const payload = (): ContactPayload => ({ ...form, locale: locale.value })
 const honeypot = ref('')
 const errors = ref<ContactErrors>({})
 const status = ref<ContactStatus | null>(props.initialStatus)
@@ -30,28 +34,23 @@ const statusRef = ref<HTMLElement | null>(null)
 // Ve vývoji lze formulář odeslat i bez nastaveného doručování (pro test validace a chybových stavů).
 const submitDisabled = computed(() => sending.value || (!props.deliveryReady && !import.meta.dev))
 
-const messages: Record<ContactStatus, { tone: 'success' | 'warning' | 'error'; title: string; text: string }> = {
-  odeslano: {
-    tone: 'success',
-    title: 'Děkujeme, zpráva byla odeslána.',
-    text: 'Vaši zprávu jsme přijali a ozveme se vám.',
-  },
-  nenapojeno: {
-    tone: 'warning',
-    title: 'Zpráva nebyla odeslána.',
-    text: 'Online formulář zatím není napojen na doručování zpráv. Omlouváme se za komplikaci.',
-  },
-  chyba: {
-    tone: 'error',
-    title: 'Zprávu se nepodařilo odeslat.',
-    text: 'Došlo k technické chybě. Zkuste to prosím později.',
-  },
-  neplatne: {
-    tone: 'error',
-    title: 'Formulář obsahuje chyby.',
-    text: 'Zkontrolujte prosím vyznačená pole a odešlete formulář znovu.',
-  },
+// Texty stavových hlášek jsou v překladech contact.form.status.<stav>.
+const statusTone: Record<ContactStatus, 'success' | 'warning' | 'error'> = {
+  odeslano: 'success',
+  nenapojeno: 'warning',
+  chyba: 'error',
+  neplatne: 'error',
 }
+
+/** Text chybové hlášky pole podle kódu z validace. */
+function errorText(field: ContactField): string {
+  const code = errors.value[field]
+  if (!code) return ''
+  const max = field === 'subject' ? 0 : contactLimits[field]
+  return t(`contact.form.errors.${field}.${code}`, { max, min: contactLimits.messageMin })
+}
+
+const subjectLabel = (subject: string) => (subject === 'other' ? t('contact.form.subjectOther') : subject)
 
 const fieldIds: Record<ContactField, string> = {
   name: 'kontakt-jmeno',
@@ -67,7 +66,7 @@ onMounted(() => {
 
 function validateField(field: ContactField) {
   if (!(field in errors.value)) return
-  const fieldError = validateContact(form)[field]
+  const fieldError = validateContact(payload())[field]
   if (fieldError) errors.value[field] = fieldError
   else delete errors.value[field]
 }
@@ -80,7 +79,7 @@ async function showStatus(next: ContactStatus) {
 
 async function onSubmit() {
   status.value = null
-  errors.value = validateContact(form)
+  errors.value = validateContact(payload())
 
   const firstInvalid = (Object.keys(fieldIds) as ContactField[]).find((field) => errors.value[field])
   if (firstInvalid) {
@@ -93,7 +92,7 @@ async function onSubmit() {
   try {
     const response = await $fetch<{ status: ContactStatus }>('/api/contact', {
       method: 'POST',
-      body: { ...form, website: honeypot.value },
+      body: { ...payload(), website: honeypot.value },
     })
     if (response.status === 'odeslano') {
       Object.assign(form, { name: '', company: '', email: '', subject: '', message: '' })
@@ -122,23 +121,30 @@ const describedBy = (field: ContactField, hint?: string) =>
     aria-labelledby="formular-nadpis"
     @submit.prevent="onSubmit"
   >
-    <h2 id="formular-nadpis" class="form__title">Napište nám</h2>
+    <h2 id="formular-nadpis" class="form__title">{{ $t('contact.form.title') }}</h2>
+
+    <!-- Jazyk formuláře – pro přesměrování zpět na správnou jazykovou verzi při odeslání bez JavaScriptu. -->
+    <input type="hidden" name="locale" :value="locale">
 
     <div v-if="!deliveryReady" class="notice notice--warning" role="note">
-      <strong>Odesílání formuláře zatím není aktivní.</strong>
-      Formulář je připraven k napojení na doručování zpráv – dokud nebude zprovozněno, zprávy nelze odeslat.
+      <strong>{{ $t('contact.form.notConfiguredTitle') }}</strong>
+      {{ $t('contact.form.notConfiguredText') }}
     </div>
 
-    <div v-if="status" ref="statusRef" class="notice" :class="`notice--${messages[status].tone}`" role="status" tabindex="-1">
-      <strong>{{ messages[status].title }}</strong>
-      {{ messages[status].text }}
+    <div v-if="status" ref="statusRef" class="notice" :class="`notice--${statusTone[status]}`" role="status" tabindex="-1">
+      <strong>{{ $t(`contact.form.status.${status}.title`) }}</strong>
+      {{ $t(`contact.form.status.${status}.text`) }}
     </div>
 
-    <p class="form__hint">Pole označená <span aria-hidden="true">*</span><span class="visually-hidden">hvězdičkou</span> jsou povinná.</p>
+    <i18n-t keypath="contact.form.requiredHint" tag="p" class="form__hint" scope="global">
+      <template #star>
+        <span aria-hidden="true">*</span><span class="visually-hidden">{{ $t('contact.form.requiredStar') }}</span>
+      </template>
+    </i18n-t>
 
     <div class="form__row">
       <div class="field" :class="{ 'field--invalid': errors.name }">
-        <label :for="fieldIds.name">Jméno a příjmení <span aria-hidden="true">*</span></label>
+        <label :for="fieldIds.name">{{ $t('contact.form.name') }} <span aria-hidden="true">*</span></label>
         <input
           :id="fieldIds.name"
           v-model="form.name"
@@ -151,11 +157,13 @@ const describedBy = (field: ContactField, hint?: string) =>
           :aria-describedby="describedBy('name')"
           @blur="validateField('name')"
         >
-        <p v-if="errors.name" :id="`${fieldIds.name}-chyba`" class="field__error">{{ errors.name }}</p>
+        <p v-if="errors.name" :id="`${fieldIds.name}-chyba`" class="field__error">{{ errorText('name') }}</p>
       </div>
 
       <div class="field" :class="{ 'field--invalid': errors.company }">
-        <label :for="fieldIds.company">Firma <span class="field__optional">(nepovinné)</span></label>
+        <label :for="fieldIds.company">
+          {{ $t('contact.form.company') }} <span class="field__optional">{{ $t('contact.form.optional') }}</span>
+        </label>
         <input
           :id="fieldIds.company"
           v-model="form.company"
@@ -166,13 +174,13 @@ const describedBy = (field: ContactField, hint?: string) =>
           :aria-invalid="errors.company ? 'true' : undefined"
           :aria-describedby="describedBy('company')"
         >
-        <p v-if="errors.company" :id="`${fieldIds.company}-chyba`" class="field__error">{{ errors.company }}</p>
+        <p v-if="errors.company" :id="`${fieldIds.company}-chyba`" class="field__error">{{ errorText('company') }}</p>
       </div>
     </div>
 
     <div class="form__row">
       <div class="field" :class="{ 'field--invalid': errors.email }">
-        <label :for="fieldIds.email">E-mail <span aria-hidden="true">*</span></label>
+        <label :for="fieldIds.email">{{ $t('contact.form.email') }} <span aria-hidden="true">*</span></label>
         <input
           :id="fieldIds.email"
           v-model="form.email"
@@ -186,11 +194,11 @@ const describedBy = (field: ContactField, hint?: string) =>
           :aria-describedby="describedBy('email')"
           @blur="validateField('email')"
         >
-        <p v-if="errors.email" :id="`${fieldIds.email}-chyba`" class="field__error">{{ errors.email }}</p>
+        <p v-if="errors.email" :id="`${fieldIds.email}-chyba`" class="field__error">{{ errorText('email') }}</p>
       </div>
 
       <div class="field" :class="{ 'field--invalid': errors.subject }">
-        <label :for="fieldIds.subject">Čeho se dotaz týká <span aria-hidden="true">*</span></label>
+        <label :for="fieldIds.subject">{{ $t('contact.form.subject') }} <span aria-hidden="true">*</span></label>
         <select
           :id="fieldIds.subject"
           v-model="form.subject"
@@ -200,15 +208,15 @@ const describedBy = (field: ContactField, hint?: string) =>
           :aria-describedby="describedBy('subject')"
           @change="validateField('subject')"
         >
-          <option value="" disabled>Vyberte službu</option>
-          <option v-for="subject in contactSubjects" :key="subject" :value="subject">{{ subject }}</option>
+          <option value="" disabled>{{ $t('contact.form.subjectPlaceholder') }}</option>
+          <option v-for="subject in contactSubjects" :key="subject" :value="subject">{{ subjectLabel(subject) }}</option>
         </select>
-        <p v-if="errors.subject" :id="`${fieldIds.subject}-chyba`" class="field__error">{{ errors.subject }}</p>
+        <p v-if="errors.subject" :id="`${fieldIds.subject}-chyba`" class="field__error">{{ errorText('subject') }}</p>
       </div>
     </div>
 
     <div class="field" :class="{ 'field--invalid': errors.message }">
-      <label :for="fieldIds.message">Zpráva <span aria-hidden="true">*</span></label>
+      <label :for="fieldIds.message">{{ $t('contact.form.message') }} <span aria-hidden="true">*</span></label>
       <textarea
         :id="fieldIds.message"
         v-model="form.message"
@@ -221,7 +229,7 @@ const describedBy = (field: ContactField, hint?: string) =>
         :aria-describedby="describedBy('message')"
         @blur="validateField('message')"
       />
-      <p v-if="errors.message" :id="`${fieldIds.message}-chyba`" class="field__error">{{ errors.message }}</p>
+      <p v-if="errors.message" :id="`${fieldIds.message}-chyba`" class="field__error">{{ errorText('message') }}</p>
     </div>
 
     <!-- Antispam: pole je skryté pro lidi i asistivní technologie. -->
@@ -234,7 +242,7 @@ const describedBy = (field: ContactField, hint?: string) =>
 
     <div class="form__actions">
       <BaseButton type="submit" :disabled="submitDisabled">
-        {{ sending ? 'Odesílám…' : 'Odeslat zprávu' }}
+        {{ sending ? $t('contact.form.sending') : $t('contact.form.submit') }}
       </BaseButton>
     </div>
   </form>

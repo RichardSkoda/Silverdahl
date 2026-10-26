@@ -5,6 +5,7 @@
 const props = defineProps<{ query: string; label: string }>()
 
 const { hasConsent, allow } = useCookieConsent()
+const { locale } = useI18n()
 
 // Stránka je předgenerovaná a server souhlas nezná – mapu proto zobrazujeme až po připojení v prohlížeči,
 // aby se serverové HTML (náhled) shodovalo s prvním vykreslením v prohlížeči.
@@ -14,7 +15,8 @@ onMounted(() => (mounted.value = true))
 const showMap = computed(() => mounted.value && hasConsent('external'))
 
 const query = computed(() => encodeURIComponent(props.query))
-const embedSrc = computed(() => `https://maps.google.com/maps?q=${query.value}&hl=cs&z=16&output=embed`)
+// Popisky v mapě v jazyce stránky.
+const embedSrc = computed(() => `https://maps.google.com/maps?q=${query.value}&hl=${locale.value}&z=16&output=embed`)
 const mapsLink = computed(() => `https://www.google.com/maps/search/?api=1&query=${query.value}`)
 
 const frameRef = ref<HTMLIFrameElement | null>(null)
@@ -33,7 +35,7 @@ async function showNow() {
       v-if="showMap"
       ref="frameRef"
       :src="embedSrc"
-      :title="`Mapa – ${label}`"
+      :title="$t('map.frameTitle', { label })"
       class="map__frame"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
@@ -46,18 +48,15 @@ async function showNow() {
           <circle cx="12" cy="10" r="2.6" fill="#fff" />
         </svg>
         <p class="map__title">{{ label }}</p>
-        <p class="map__text">
-          Mapa se načítá ze služby Google Maps, která ukládá cookies a získá vaši IP adresu. Proto ji zobrazíme až s
-          vaším souhlasem.
-        </p>
+        <p class="map__text">{{ $t('map.text') }}</p>
         <div class="map__actions">
-          <BaseButton class="js-only" @click="showNow">Zobrazit mapu</BaseButton>
+          <BaseButton class="js-only" @click="showNow">{{ $t('map.show') }}</BaseButton>
           <a :href="mapsLink" class="map__link" target="_blank" rel="noopener">
-            Otevřít v Google Mapách<span class="visually-hidden"> (otevře se v novém okně)</span>
+            {{ $t('map.open') }}<span class="visually-hidden"> {{ $t('common.newWindow') }}</span>
             <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <p class="map__note js-only">Souhlas můžete kdykoli odvolat v nastavení cookies v patičce webu.</p>
+        <p class="map__note js-only">{{ $t('map.note') }}</p>
       </div>
     </div>
   </div>

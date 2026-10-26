@@ -1,69 +1,44 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const { strings, records } = useMessageList()
+
 usePageSeo({
-  title: 'Case study: Courlux International SA',
-  description:
-    'Více než 30 let komplexní provozní podpory na čtyřech evropských trzích – Česká republika, Slovensko, Polsko a Maďarsko.',
-  path: '/case-study',
+  title: () => t('caseStudy.seo.title'),
+  description: () => t('caseStudy.seo.description'),
+  page: 'case-study',
 })
 
 // Údaje přesně podle podkladů. „period“ odlišuje historické maximum od současného provozu.
-const stats = [
-  { value: '30+', label: 'let dlouhodobého partnerství', period: 'Dlouhodobě' },
-  { value: '4', label: 'trhy – Česká republika, Slovensko, Polsko a Maďarsko', period: 'Dlouhodobě' },
-  { value: 'až 4', label: 'call centra na jednom trhu v období největšího rozsahu spolupráce', period: 'Historické maximum' },
-  { value: '30 000+', label: 'nových zákazníků měsíčně v historicky nejintenzivnějších kampaních', period: 'Historické maximum' },
-  { value: 'Tisíce', label: 'zákaznických kontaktů měsíčně v rámci současného provozu', period: 'Současný provoz' },
-]
-
-const partners = ['Zákaznická centra', 'Marketingoví partneři', 'Logistika a doprava', 'Odborné a další služby']
+const stats = computed(() => records('caseStudy.stats.items', ['value', 'label', 'period'] as const))
+const partners = computed(() => strings('caseStudy.model.partners'))
 </script>
 
 <template>
   <div>
-    <PageIntro eyebrow="Case study / Reference" title="Courlux International SA">
-      <p class="cs-subtitle">Více než 30 let komplexní provozní podpory na čtyřech evropských trzích</p>
-      <p>
-        Švýcarská obchodní společnost Courlux International SA využívá Silverdahl jako svého dlouhodobého partnera pro
-        zajištění obchodních a provozních aktivit v České republice, na Slovensku, v Polsku a Maďarsku.
-      </p>
+    <PageIntro :eyebrow="$t('caseStudy.intro.eyebrow')" title="Courlux International SA">
+      <p class="cs-subtitle">{{ $t('caseStudy.intro.subtitle') }}</p>
+      <p>{{ $t('caseStudy.intro.text') }}</p>
     </PageIntro>
 
     <section class="section section--surface" aria-labelledby="ukol-nadpis">
       <div class="container container--narrow">
-        <h2 id="ukol-nadpis" class="visually-hidden">Náš úkol</h2>
-        <p class="statement">
-          Naším úkolem je vyhledávat vhodné lokální dodavatele, nastavovat spolupráci a následně řídit svěřené procesy
-          tak, aby jejich každodenní koordinace nemusela zatěžovat švýcarskou centrálu.
-        </p>
+        <h2 id="ukol-nadpis" class="visually-hidden">{{ $t('caseStudy.task.heading') }}</h2>
+        <p class="statement">{{ $t('caseStudy.task.statement') }}</p>
       </div>
     </section>
 
     <section class="section" aria-labelledby="pribeh-nadpis">
       <div class="container story">
         <div class="prose">
-          <p class="eyebrow">Historie spolupráce</p>
-          <h2 id="pribeh-nadpis">Od prvních obchodních partnerů ke komplexnímu řízení provozu</h2>
-          <p>
-            Spolupráce začala zajištěním zákaznického servisu, lokalizací marketingových materiálů a vyhledáváním
-            partnerů pro získávání nových zákazníků. Zpočátku se jednalo především o vydavatele novin a časopisů,
-            prostřednictvím kterých Courlux realizoval své marketingové kampaně.
-          </p>
-          <p>
-            S vývojem trhu jsme postupně vyhledali a zajistili spolupráci s externími call centry. Pro jednotlivé země
-            jsme organizovali výběr dodavatelů, porovnávali nabídky, vyjednávali obchodní podmínky a následně převzali
-            koordinaci jejich činnosti a vyhodnocování výsledků.
-          </p>
-          <aside class="highlight" aria-label="Období největšího rozsahu spolupráce">
-            <p class="highlight__tag">Historické maximum</p>
-            <p>
-              V období nejintenzivnějších kampaní jsme koordinovali až čtyři call centra na jednom trhu, přičemž
-              celkový nábor přesahoval 30 000 nových zákazníků měsíčně.
-            </p>
+          <p class="eyebrow">{{ $t('caseStudy.story.eyebrow') }}</p>
+          <h2 id="pribeh-nadpis">{{ $t('caseStudy.story.title') }}</h2>
+          <p>{{ $t('caseStudy.story.p1') }}</p>
+          <p>{{ $t('caseStudy.story.p2') }}</p>
+          <aside class="highlight" :aria-label="$t('caseStudy.story.highlightLabel')">
+            <p class="highlight__tag">{{ $t('caseStudy.story.highlightTag') }}</p>
+            <p>{{ $t('caseStudy.story.highlight') }}</p>
           </aside>
-          <p>
-            Postupně jsme obdobným způsobem zajistili také další specializované partnery, například v oblasti IT
-            podpory, celní deklarace, poštovních a logistických služeb či právního poradenství.
-          </p>
+          <p>{{ $t('caseStudy.story.p3') }}</p>
         </div>
       </div>
     </section>
@@ -71,43 +46,30 @@ const partners = ['Zákaznická centra', 'Marketingoví partneři', 'Logistika a
     <section class="section section--surface" aria-labelledby="dnes-nadpis">
       <div class="container today">
         <div class="prose">
-          <p class="eyebrow">Současnost</p>
-          <h2 id="dnes-nadpis">Jak spolupráce funguje dnes</h2>
-          <p>
-            Silverdahl dnes samostatně koordinuje většinu lokálních obchodních a provozních procesů Courluxu na všech
-            čtyřech trzích.
-          </p>
-          <p>
-            Řídíme spolupráci s externími dodavateli, průběžně kontrolujeme jejich kvalitu a náklady, řešíme provozní
-            komplikace a reagujeme na změny obchodních požadavků i legislativního prostředí. Příkladem je úspěšná
-            implementace procesů souvisejících s GDPR.
-          </p>
-          <p>
-            Součástí naší odpovědnosti je také příprava obchodních rozpočtů a jejich pravidelné vyhodnocování. Švýcarské
-            centrále poskytujeme denní, týdenní a měsíční reporting, včetně porovnání skutečných výsledků s plánem.
-          </p>
-          <p>
-            V rámci schválených rozpočtů a svěřených kompetencí řešíme operativní záležitosti samostatně. Centrála si
-            ponechává strategická a finanční rozhodnutí, zajištění zásob a distribuci zboží ze Švýcarska.
-          </p>
+          <p class="eyebrow">{{ $t('caseStudy.today.eyebrow') }}</p>
+          <h2 id="dnes-nadpis">{{ $t('caseStudy.today.title') }}</h2>
+          <p>{{ $t('caseStudy.today.p1') }}</p>
+          <p>{{ $t('caseStudy.today.p2') }}</p>
+          <p>{{ $t('caseStudy.today.p3') }}</p>
+          <p>{{ $t('caseStudy.today.p4') }}</p>
         </div>
 
         <figure class="model">
           <div class="model__box">
             <p class="model__name">Courlux International SA</p>
-            <p class="model__desc">Švýcarská centrála – obchodní strategie a rozhodování</p>
+            <p class="model__desc">{{ $t('caseStudy.model.hqDesc') }}</p>
           </div>
           <span class="model__arrow" aria-hidden="true">⇅</span>
           <div class="model__box model__box--main">
             <p class="model__name">Silverdahl</p>
             <p class="model__role">Local Operations Management</p>
-            <p class="model__desc">Koordinace projektů · Řízení partnerů · Kontrola · Reporting</p>
+            <p class="model__desc">{{ $t('caseStudy.model.silverdahlDesc') }}</p>
           </div>
           <span class="model__arrow" aria-hidden="true">⇅</span>
           <ul class="model__partners">
             <li v-for="partner in partners" :key="partner">{{ partner }}</li>
           </ul>
-          <figcaption>Zjednodušené znázornění modelu řízení a koordinace externích poskytovatelů.</figcaption>
+          <figcaption>{{ $t('caseStudy.model.caption') }}</figcaption>
         </figure>
       </div>
     </section>
@@ -115,8 +77,8 @@ const partners = ['Zákaznická centra', 'Marketingoví partneři', 'Logistika a
     <section class="section" aria-labelledby="cisla-nadpis">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Fakta</p>
-          <h2 id="cisla-nadpis">Spolupráce v číslech</h2>
+          <p class="eyebrow">{{ $t('caseStudy.stats.eyebrow') }}</p>
+          <h2 id="cisla-nadpis">{{ $t('caseStudy.stats.title') }}</h2>
         </div>
         <dl class="stats">
           <StatItem v-for="stat in stats" :key="stat.label" v-bind="stat" />
@@ -126,22 +88,12 @@ const partners = ['Zákaznická centra', 'Marketingoví partneři', 'Logistika a
 
     <section class="section section--navy" aria-labelledby="prinos-nadpis">
       <div class="container container--narrow">
-        <h2 id="prinos-nadpis">Co Courlux díky spolupráci získává?</h2>
+        <h2 id="prinos-nadpis">{{ $t('caseStudy.benefit.title') }}</h2>
         <div class="prose benefit">
-          <p>
-            Courlux má pro čtyři evropské trhy jednoho odpovědného provozního partnera, který zajišťuje fungování sítě
-            specializovaných dodavatelů a každodenní koordinaci jejich služeb.
-          </p>
-          <p>
-            Díky tomuto modelu nemusí budovat vlastní rozsáhlé lokální týmy ani řídit jednotlivé poskytovatele přímo ze
-            Švýcarska. Získává přitom průběžnou kontrolu nad náklady, kvalitou a obchodními výsledky prostřednictvím
-            pravidelného reportingu.
-          </p>
+          <p>{{ $t('caseStudy.benefit.p1') }}</p>
+          <p>{{ $t('caseStudy.benefit.p2') }}</p>
         </div>
-        <p class="benefit__statement">
-          Spolupráce s Courluxem dokládá naši schopnost nejen vyhledat a zajistit vhodné obchodní partnery, ale také
-          dlouhodobě převzít řízení svěřených procesů a přizpůsobovat je měnícím se potřebám klienta.
-        </p>
+        <p class="benefit__statement">{{ $t('caseStudy.benefit.statement') }}</p>
       </div>
     </section>
 

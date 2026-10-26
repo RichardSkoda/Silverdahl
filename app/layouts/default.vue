@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+    <a class="skip-link" href="#obsah">{{ $t('a11y.skipLink') }}</a>
     <!-- Lišta je hned za skip-linkem, aby byla na začátku pořadí tabulátoru. -->
     <ClientOnly>
       <CookieBanner />

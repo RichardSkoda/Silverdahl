@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Service } from '~/data/services'
+import type { Service } from '~/composables/useServices'
 
 const props = defineProps<{ service: Service }>()
 const headingId = computed(() => `${props.service.id}-nadpis`)
@@ -21,7 +21,7 @@ const headingId = computed(() => `${props.service.id}-nadpis`)
           <p v-for="(paragraph, i) in service.intro" :key="i">{{ paragraph }}</p>
         </div>
 
-        <h3 class="service__label">Co pro vás zajistíme:</h3>
+        <h3 class="service__label">{{ $t('services.detail.weProvide') }}</h3>
         <ul class="service__items">
           <li v-for="item in service.items" :key="item.title">
             <strong>{{ item.title }}</strong>
@@ -35,8 +35,8 @@ const headingId = computed(() => `${props.service.id}-nadpis`)
           <p class="service__note">{{ service.areas.note }}</p>
         </div>
 
-        <aside class="service__benefit" :aria-label="`Co tím získáte – ${service.name}`">
-          <h3 class="service__benefit-title">Co tím získáte?</h3>
+        <aside class="service__benefit" :aria-label="$t('services.detail.benefitLabel', { name: service.name })">
+          <h3 class="service__benefit-title">{{ $t('common.benefitTitle') }}</h3>
           <p v-for="(paragraph, i) in service.benefit" :key="i">{{ paragraph }}</p>
         </aside>
       </div>

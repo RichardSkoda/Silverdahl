@@ -6,7 +6,7 @@ export const company = {
   address: {
     street: 'Oderská 333/5',
     city: 'Praha 9 – Čakovice',
-    country: 'Česká republika',
+    // Název země je v překladech (contact.details.country).
   },
   phone: { label: '+420 283 933 949', href: 'tel:+420283933949' },
   email: 'marketing@silverdahl.cz',

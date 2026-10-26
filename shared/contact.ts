@@ -1,10 +1,13 @@
 // Sdílená definice a validace kontaktního formuláře (používá ji klient i server).
+// Validace vrací kódy chyb – texty hlášek jsou v překladech (contact.form.errors.<pole>.<kód>).
+import { defaultLocale, isLocale, type Locale } from './locales'
 
+/** Hodnoty pole „předmět“. Názvy služeb se nepřekládají, 'other' má popisek v překladech. */
 export const contactSubjects = [
   'Market Entry Support',
   'Partner Sourcing & Management',
   'Local Operations Management',
-  'Jiný dotaz',
+  'other',
 ] as const
 
 export type ContactSubject = (typeof contactSubjects)[number]
@@ -15,10 +18,13 @@ export interface ContactPayload {
   email: string
   subject: string
   message: string
+  /** Jazyk webu, ze kterého zpráva přišla. */
+  locale: Locale
 }
 
-export type ContactField = keyof ContactPayload
-export type ContactErrors = Partial<Record<ContactField, string>>
+export type ContactField = Exclude<keyof ContactPayload, 'locale'>
+export type ContactErrorCode = 'required' | 'tooLong' | 'tooShort' | 'invalid'
+export type ContactErrors = Partial<Record<ContactField, ContactErrorCode>>
 
 export const contactLimits = {
   name: 120,
@@ -38,29 +44,26 @@ export function normalizeContact(input: Record<string, unknown>): ContactPayload
     email: text(input.email),
     subject: text(input.subject),
     message: text(input.message),
+    locale: isLocale(input.locale) ? input.locale : defaultLocale,
   }
 }
 
 export function validateContact(data: ContactPayload): ContactErrors {
   const errors: ContactErrors = {}
 
-  if (!data.name) errors.name = 'Vyplňte prosím své jméno.'
-  else if (data.name.length > contactLimits.name) errors.name = `Jméno může mít nejvýše ${contactLimits.name} znaků.`
+  if (!data.name) errors.name = 'required'
+  else if (data.name.length > contactLimits.name) errors.name = 'tooLong'
 
-  if (data.company.length > contactLimits.company)
-    errors.company = `Název firmy může mít nejvýše ${contactLimits.company} znaků.`
+  if (data.company.length > contactLimits.company) errors.company = 'tooLong'
 
-  if (!data.email) errors.email = 'Vyplňte prosím e-mailovou adresu.'
-  else if (data.email.length > contactLimits.email || !emailPattern.test(data.email))
-    errors.email = 'Zadejte prosím platnou e-mailovou adresu, např. jmeno@firma.cz.'
+  if (!data.email) errors.email = 'required'
+  else if (data.email.length > contactLimits.email || !emailPattern.test(data.email)) errors.email = 'invalid'
 
-  if (!(contactSubjects as readonly string[]).includes(data.subject)) errors.subject = 'Vyberte prosím, čeho se dotaz týká.'
+  if (!(contactSubjects as readonly string[]).includes(data.subject)) errors.subject = 'required'
 
-  if (!data.message) errors.message = 'Napište nám prosím zprávu.'
-  else if (data.message.length < contactLimits.messageMin)
-    errors.message = `Zpráva by měla mít alespoň ${contactLimits.messageMin} znaků.`
-  else if (data.message.length > contactLimits.message)
-    errors.message = `Zpráva může mít nejvýše ${contactLimits.message} znaků.`
+  if (!data.message) errors.message = 'required'
+  else if (data.message.length < contactLimits.messageMin) errors.message = 'tooShort'
+  else if (data.message.length > contactLimits.message) errors.message = 'tooLong'
 
   return errors
 }

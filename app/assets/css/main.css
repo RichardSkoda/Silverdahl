@@ -332,14 +332,15 @@ strong {
   color: #fff;
 }
 
-/* Bez JavaScriptu je mobilní navigace vždy rozbalená a přepínač skrytý. */
-@media (max-width: 52rem) {
+/* Bez JavaScriptu je mobilní navigace vždy rozbalená a přepínač skrytý.
+   Hranice musí odpovídat SiteHeader.vue (logo + položky menu + přepínač jazyků se vejdou až od 70rem). */
+@media (max-width: 70rem) {
   .no-js .header__toggle {
     display: none !important;
   }
 
   .no-js #hlavni-navigace {
-    display: block;
+    display: flex;
   }
 }
 

@@ -2,11 +2,12 @@
 import type { ContactStatus } from '#shared/contact'
 import { company } from '~/data/company'
 
+const { t } = useI18n()
+
 usePageSeo({
-  title: 'Kontakt',
-  description:
-    'Plánujete vstup na nový trh, hledáte spolehlivé obchodní partnery nebo potřebujete zajistit řízení lokálních provozních procesů? Kontaktujte Silverdahl.',
-  path: '/kontakt',
+  title: () => t('contact.seo.title'),
+  description: () => t('contact.seo.description'),
+  page: 'kontakt',
 })
 
 // Stav doručování se zjišťuje při SSR ze serverové konfigurace; do prohlížeče jde jen výsledná hodnota.
@@ -33,38 +34,32 @@ const isDev = import.meta.dev
 
 <template>
   <div>
-    <PageIntro eyebrow="Kontakt" title="Pojďme společně rozvíjet vaše podnikání">
-      <p>
-        Plánujete vstup na nový trh, hledáte spolehlivé obchodní partnery nebo potřebujete zajistit řízení lokálních
-        provozních procesů?
-      </p>
+    <PageIntro :eyebrow="$t('contact.intro.eyebrow')" :title="$t('contact.intro.title')">
+      <p>{{ $t('contact.intro.text') }}</p>
     </PageIntro>
 
     <section class="section">
       <div class="container contact">
         <div class="contact__text">
-          <p class="statement">Rádi s vámi probereme vaše potřeby a navrhneme možnosti spolupráce.</p>
-          <p class="contact__body">
-            Kontaktujte nás a společně najdeme řešení, které vám umožní soustředit se na vaše obchodní cíle, zatímco my
-            se postaráme o organizaci a koordinaci potřebných služeb.
-          </p>
+          <p class="statement">{{ $t('contact.statement') }}</p>
+          <p class="contact__body">{{ $t('contact.body') }}</p>
 
           <address>
             <dl class="details">
               <div class="details__item">
-                <dt class="details__label">Adresa</dt>
+                <dt class="details__label">{{ $t('contact.details.address') }}</dt>
                 <dd>
                   {{ company.address.street }}<br />
                   {{ company.address.city }}<br />
-                  {{ company.address.country }}
+                  {{ $t('contact.details.country') }}
                 </dd>
               </div>
               <div class="details__item">
-                <dt class="details__label">Telefon</dt>
+                <dt class="details__label">{{ $t('contact.details.phone') }}</dt>
                 <dd><a :href="company.phone.href">{{ company.phone.label }}</a></dd>
               </div>
               <div class="details__item">
-                <dt class="details__label">E-mail</dt>
+                <dt class="details__label">{{ $t('contact.details.email') }}</dt>
                 <dd><a :href="`mailto:${company.email}`">{{ company.email }}</a></dd>
               </div>
             </dl>
@@ -90,7 +85,7 @@ const isDev = import.meta.dev
     <section class="section section--muted" aria-labelledby="mapa-nadpis">
       <div class="container">
         <div class="section-head map-head">
-          <p class="eyebrow">Kde nás najdete</p>
+          <p class="eyebrow">{{ $t('contact.map.eyebrow') }}</p>
           <h2 id="mapa-nadpis">{{ company.address.street }}, {{ company.address.city }}</h2>
         </div>
         <GoogleMap :query="company.mapQuery" :label="`${company.name}, ${company.address.street}, ${company.address.city}`" />

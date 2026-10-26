@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { services } from '~/data/services'
+const { t } = useI18n()
+const services = useServices()
 
 // Ilustrace karet v přehledu podle grafického návrhu: glóbus s trasou, síť partnerů, řízení provozu.
 const illustrations = [
@@ -9,32 +10,24 @@ const illustrations = [
 ]
 
 usePageSeo({
-  title: 'Naše služby',
-  description:
-    'Market Entry Support, Partner Sourcing & Management a Local Operations Management – od vstupu na trh až po každodenní řízení provozu.',
-  path: '/sluzby',
+  title: () => t('services.seo.title'),
+  description: () => t('services.seo.description'),
+  page: 'sluzby',
 })
 </script>
 
 <template>
   <div>
-    <PageIntro eyebrow="Naše služby" title="Od vstupu na trh až po každodenní řízení provozu">
-      <p>
-        Pomáháme společnostem rozvíjet jejich obchodní aktivity na evropských trzích bez nutnosti budovat vlastní
-        lokální provozní strukturu.
-      </p>
-      <p>
-        Na základě individuálních potřeb klienta připravíme vhodné řešení, vyhledáme specializované obchodní partnery a
-        převezmeme koordinaci souvisejících procesů. Zajišťujeme komunikaci, kontrolu plnění i pravidelný reporting,
-        aby se naši klienti mohli soustředit na své hlavní obchodní cíle.
-      </p>
+    <PageIntro :eyebrow="$t('services.intro.eyebrow')" :title="$t('services.intro.title')">
+      <p>{{ $t('services.intro.p1') }}</p>
+      <p>{{ $t('services.intro.p2') }}</p>
     </PageIntro>
 
     <!-- Přehled tří služeb podle grafického návrhu v podkladech -->
     <section class="overview" aria-labelledby="prehled-nadpis">
       <div class="container overview__inner">
-        <h2 id="prehled-nadpis" class="overview__title">Jak Silverdahl podporuje váš růst na nových trzích</h2>
-        <p class="overview__text">Od vstupu na trh přes výběr partnerů až po dlouhodobé řízení provozu.</p>
+        <h2 id="prehled-nadpis" class="overview__title">{{ $t('services.overview.title') }}</h2>
+        <p class="overview__text">{{ $t('services.overview.text') }}</p>
         <ol class="overview__list">
           <li v-for="(service, i) in services" :key="service.id" class="ocard">
             <div class="ocard__head">
@@ -52,14 +45,14 @@ usePageSeo({
             </ul>
             <p v-if="service.areasShort" class="ocard__areas">
               <ServiceIcon name="people" class="ocard__areas-icon" />
-              <span>Možné oblasti: {{ service.areasShort }}.</span>
+              <span>{{ $t('services.overview.areas', { areas: service.areasShort }) }}</span>
             </p>
             <div class="ocard__benefit">
               <svg class="ocard__gem" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M6 3h12l4 6-10 12L2 9z M2 9h20 M12 21 8 9l4-6 4 6z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
               </svg>
               <div>
-                <p class="ocard__benefit-title">Co tím získáte?</p>
+                <p class="ocard__benefit-title">{{ $t('common.benefitTitle') }}</p>
                 <p>{{ service.benefitShort }}</p>
               </div>
             </div>
@@ -75,17 +68,12 @@ usePageSeo({
 
     <section class="section section--muted" aria-labelledby="spoluprace-nadpis">
       <div class="container container--narrow">
-        <h2 id="spoluprace-nadpis">Spolupráce podle vašich potřeb</h2>
+        <h2 id="spoluprace-nadpis">{{ $t('services.needs.title') }}</h2>
         <div class="prose needs">
-          <p>Každý obchodní projekt má svá specifika. Proto nenabízíme pouze předem definované balíčky služeb.</p>
-          <p>
-            Můžeme vám pomoci s jednorázovým výběrem dodavatele, zajistit kompletní přípravu vstupu na nový trh nebo
-            dlouhodobě převzít řízení a koordinaci lokálních obchodních procesů.
-          </p>
+          <p>{{ $t('services.needs.p1') }}</p>
+          <p>{{ $t('services.needs.p2') }}</p>
         </div>
-        <p class="statement needs__statement">
-          Vy určujete obchodní cíle. My vám pomůžeme vytvořit a řídit provozní zázemí potřebné k jejich dosažení.
-        </p>
+        <p class="statement needs__statement">{{ $t('services.needs.statement') }}</p>
       </div>
     </section>
 

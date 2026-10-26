@@ -1,7 +1,7 @@
 # Silverdahl – firemní web
 
-Firemní web společnosti **Silverdahl s.r.o.** postavený na Nuxtu 4 (Vue 3, TypeScript).
-Obsah vychází výhradně z dokumentu *Podklady pro webové stránky.docx*.
+Firemní web společnosti **Silverdahl s.r.o.** postavený na Nuxtu 4 (Vue 3, TypeScript), ve třech jazycích –
+čeština, angličtina a němčina. Obsah vychází z dokumentu *Podklady pro webové stránky.docx*.
 
 ## Technologie
 
@@ -10,6 +10,7 @@ Obsah vychází výhradně z dokumentu *Podklady pro webové stránky.docx*.
 | Framework | Nuxt 4.4.5 (Vue 3, TypeScript strict) |
 | Styly | čisté CSS s designovými proměnnými (`app/assets/css/main.css`), scoped styly v komponentách |
 | Písma | Plus Jakarta Sans (nadpisy) + Inter (text) – lokálně přes `@fontsource-variable` (žádné externí CDN) |
+| Jazyky | `@nuxtjs/i18n` (vue-i18n) – čeština (výchozí), angličtina, němčina; přeložené adresy stránek |
 | Formulář | vlastní Nitro endpoint `/api/contact`, doručení přes SMTP (`nodemailer`) |
 | Hosting | libovolný Node.js server (výstup `.output/`) – bez vazby na konkrétního poskytovatele |
 
@@ -29,7 +30,7 @@ npm run dev                      # vývojový server na http://localhost:3000
 ### Produkční build
 
 ```bash
-npm run build      # výstup do .output/ (4 obsahové stránky se předgenerují jako statické HTML)
+npm run build      # výstup do .output/ (obsahové stránky ve všech jazycích se předgenerují jako statické HTML)
 npm run start      # spustí node .output/server/index.mjs (port nastavíte proměnnou PORT)
 npm run typecheck  # kontrola typů (vue-tsc)
 ```
@@ -38,7 +39,7 @@ Konfigurace probíhá přes proměnné prostředí – viz `.env.example` (zkop�
 
 | Proměnná | Význam |
 | --- | --- |
-| `NUXT_PUBLIC_SITE_URL` | produkční doména, např. `https://www.example.cz`. Bez ní se negenerují kanonické URL ani `og:url`. |
+| `NUXT_PUBLIC_SITE_URL` | produkční doména, např. `https://www.example.cz`. Bez ní se negenerují kanonické URL, `og:url` ani odkazy na jazykové verze (`hreflang`). Stránky se předgenerují při buildu, proto ji nastavte už při `npm run build`. |
 | `NUXT_SMTP_HOST`, `NUXT_SMTP_PORT`, `NUXT_SMTP_SECURE`, `NUXT_SMTP_USER`, `NUXT_SMTP_PASS` | SMTP server pro odesílání zpráv z formuláře |
 | `NUXT_CONTACT_FROM` | odesílatel e-mailu (adresa povolená u SMTP poskytovatele) |
 | `NUXT_CONTACT_TO` | adresa, kam mají zprávy z formuláře chodit |
@@ -49,9 +50,10 @@ Konfigurace probíhá přes proměnné prostředí – viz `.env.example` (zkop�
 app/
   app.vue, error.vue           kořen aplikace, chybová / 404 stránka
   layouts/default.vue          hlavička, <main>, patička, skip-link
-  pages/                       / · /sluzby · /case-study · /o-nas · /kontakt · /cookies
+  pages/                       / · /sluzby · /case-study · /o-nas · /kontakt · /cookies (adresy v dalších jazycích viz níže)
   components/
     SiteHeader, SiteFooter     navigace (aktivní stavy, přístupné mobilní menu, funguje i bez JS)
+    LanguageSwitcher           přepínač jazyků CS · EN · DE (vede na stejnou stránku v jiném jazyce)
     SiteLogo                   logo = značka „stříbrné údolí“ + značka „A“ + oficiální logo SILVERDAHL (samostatné grafiky)
     BaseButton, PageIntro, CtaBand
     ServiceIcon                čárové ikony z grafického návrhu (Lucide, ISC)
@@ -60,15 +62,19 @@ app/
     ContactForm                formulář s validací a pravdivými stavy odeslání
     CookieBanner               lišta a nastavení souhlasu s cookies
     GoogleMap                  mapa Google na /kontakt – načte se až se souhlasem (jinak náhled + odkaz)
-  composables/usePageSeo.ts    title, description, Open Graph, kanonická URL
+  composables/usePageSeo.ts    title, description, Open Graph, kanonická URL, hreflang
+  composables/useServices.ts   služby s texty v aktuálním jazyce
+  composables/useMessageList.ts  seznamy z překladů (odstavce, odrážky)
   composables/useCookieConsent.ts  stav souhlasu s cookies (uložení, přijmout / odmítnout, otevření nastavení)
   plugins/consent.client.ts    načtení volby + místo pro měřicí a marketingové skripty (spouští se až po souhlasu)
   data/cookies.ts              kategorie cookies a přehled cookies pro stránku /cookies
   data/company.ts              adresa, telefon, e-mail (převzato ze současného webu silverdahl.cz)
-  data/services.ts             texty tří služeb
+  data/services.ts             struktura tří služeb (id, obrázek, ikona) – texty jsou v překladech
   data/navigation.ts           položky menu
   assets/css/main.css          design tokeny a globální styly
-shared/contact.ts              validace formuláře sdílená klientem i serverem
+i18n/locales/cs.json, en.json, de.json   všechny texty webu v jednotlivých jazycích
+shared/locales.ts              jazyky a přeložené adresy stránek (používá nuxt.config i server)
+shared/contact.ts              validace formuláře sdílená klientem i serverem (vrací kódy chyb, texty jsou v překladech)
 server/api/contact.post.ts     endpoint formuláře
 server/utils/contactDelivery.ts  doručení zprávy (SMTP) – místo pro napojení jiné služby
 public/                        favicon.svg, robots.txt
@@ -83,6 +89,34 @@ public/logo/                   oficiální logo SILVERDAHL převedené do SVG (c
 > Ilustrace `ilustrace-*.svg` (přehled na /sluzby) jsou vektorově překreslené podle návrhu; ikona podání ruky v
 > `ilustrace-partneri.svg` pochází z Font Awesome Free (licence CC BY 4.0 – uvedení autora je v souboru ponecháno).
 
+
+## Jazykové verze
+
+Web používá modul **@nuxtjs/i18n**. Čeština je výchozí a nemá v adrese předponu, ostatní jazyky mají `/en` a `/de`.
+Adresy stránek jsou přeložené (nastavení v `shared/locales.ts`):
+
+| Stránka | Čeština | Angličtina | Němčina |
+| --- | --- | --- | --- |
+| Úvod | `/` | `/en` | `/de` |
+| Služby | `/sluzby` | `/en/services` | `/de/leistungen` |
+| Case study | `/case-study` | `/en/case-study` | `/de/fallstudie` |
+| O nás | `/o-nas` | `/en/about-us` | `/de/ueber-uns` |
+| Kontakt | `/kontakt` | `/en/contact` | `/de/kontakt` |
+| Cookies | `/cookies` | `/en/cookies` | `/de/cookies` |
+
+- **Texty** jsou v `i18n/locales/{cs,en,de}.json` – všechny tři soubory mají stejnou strukturu klíčů.
+  Při úpravě textu změňte hodnotu ve všech jazycích. Znak `@` je ve vue-i18n vyhrazený, v textu se píše `{'@'}`;
+  `{nazev}` jsou proměnné (např. `{max}`, `{link}`) a musí v překladu zůstat.
+- **Překlady** angličtiny a němčiny jsou strojově připravené (Claude) z českých podkladů. Před spuštěním je vhodné
+  nechat je zkontrolovat rodilým mluvčím nebo překladatelem, hlavně právní texty na stránce cookies.
+- **Přepínač jazyků** je v hlavičce (na mobilu v menu). Jazyk se nevolí automaticky podle prohlížeče – modul by
+  jinak ukládal vlastní cookie a vyhledávače by nedostaly stabilní adresy.
+- **SEO:** atribut `lang`, `og:locale` a při nastaveném `NUXT_PUBLIC_SITE_URL` i kanonické URL a `hreflang` odkazy
+  na všechny jazykové verze (`x-default` = čeština).
+- **Kontaktní formulář** posílá i jazyk webu: e-mail pro firmu je česky a uvádí „Jazyk webu: EN/DE/CS“, odeslání
+  bez JavaScriptu se vrátí na kontakt ve stejném jazyce.
+- **Nový jazyk:** přidat ho do `locales` v `shared/locales.ts` (včetně přeložených cest), do `i18n.locales`
+  v `nuxt.config.ts` a vytvořit `i18n/locales/<kód>.json` se stejnými klíči jako `cs.json`.
 
 ## Logo
 

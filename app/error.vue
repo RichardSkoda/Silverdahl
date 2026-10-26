@@ -3,8 +3,14 @@ import type { NuxtError } from '#app'
 
 const props = defineProps<{ error: NuxtError }>()
 const notFound = computed(() => props.error.statusCode === 404)
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
 
-useHead({ title: notFound.value ? 'Stránka nenalezena' : 'Chyba' })
+// Chybová stránka se vykresluje místo app.vue – jazyk dokumentu je potřeba nastavit i zde.
+useHead({
+  title: () => (notFound.value ? t('error.notFoundTitle') : t('error.errorHeadTitle')),
+  htmlAttrs: { lang: locale },
+})
 </script>
 
 <template>
@@ -12,12 +18,12 @@ useHead({ title: notFound.value ? 'Stránka nenalezena' : 'Chyba' })
     <section class="section">
       <div class="container container--narrow">
         <p class="eyebrow">{{ error.statusCode }}</p>
-        <h1>{{ notFound ? 'Stránka nenalezena' : 'Něco se pokazilo' }}</h1>
+        <h1>{{ notFound ? $t('error.notFoundTitle') : $t('error.errorTitle') }}</h1>
         <p class="lead error__text">
-          {{ notFound ? 'Požadovaná stránka neexistuje nebo byla přesunuta.' : 'Omlouváme se, došlo k neočekávané chybě.' }}
+          {{ notFound ? $t('error.notFoundText') : $t('error.errorText') }}
         </p>
         <!-- Obyčejný odkaz: funguje i bez JS a zároveň vynuluje chybový stav aplikace. -->
-        <a href="/" class="error__btn">Zpět na domovskou stránku</a>
+        <a :href="localePath('index')" class="error__btn">{{ $t('error.back') }}</a>
       </div>
     </section>
   </NuxtLayout>

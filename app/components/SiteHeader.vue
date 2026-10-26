@@ -2,6 +2,7 @@
 import { mainNavigation } from '~/data/navigation'
 
 const route = useRoute()
+const localePath = useLocalePath()
 const isOpen = ref(false)
 const toggleRef = ref<HTMLButtonElement | null>(null)
 
@@ -24,7 +25,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 <template>
   <header class="header">
     <div class="container header__inner">
-      <NuxtLink to="/" class="header__brand" aria-label="Silverdahl – domovská stránka">
+      <NuxtLink :to="localePath('index')" class="header__brand" :aria-label="$t('nav.homeLink')">
         <SiteLogo />
       </NuxtLink>
 
@@ -39,23 +40,24 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
         <span class="header__toggle-icon" :class="{ 'is-open': isOpen }" aria-hidden="true">
           <span /><span /><span />
         </span>
-        <span>{{ isOpen ? 'Zavřít' : 'Menu' }}</span>
-        <span class="visually-hidden"> hlavní navigace</span>
+        <span>{{ isOpen ? $t('nav.close') : $t('nav.menu') }}</span>
+        <span class="visually-hidden"> {{ $t('nav.menuSuffix') }}</span>
       </button>
 
-      <nav id="hlavni-navigace" class="nav" :class="{ 'is-open': isOpen }" aria-label="Hlavní navigace">
+      <nav id="hlavni-navigace" class="nav" :class="{ 'is-open': isOpen }" :aria-label="$t('nav.mainLabel')">
         <ul class="nav__list">
-          <li v-for="item in mainNavigation" :key="item.to">
+          <li v-for="item in mainNavigation" :key="item.page">
             <NuxtLink
-              :to="item.to"
+              :to="localePath(item.page)"
               class="nav__link"
-              :class="{ 'nav__link--cta': item.to === '/kontakt' }"
+              :class="{ 'nav__link--cta': item.page === 'kontakt' }"
               exact-active-class="is-active"
             >
-              {{ item.label }}
+              {{ $t(item.labelKey) }}
             </NuxtLink>
           </li>
         </ul>
+        <LanguageSwitcher class="nav__lang" />
       </nav>
     </div>
   </header>
@@ -84,6 +86,12 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
   flex: none;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 .nav__list {
   list-style: none;
   display: flex;
@@ -101,6 +109,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
   color: var(--color-text);
   font-size: var(--text-sm);
   font-weight: 500;
+  white-space: nowrap;
   text-decoration: none;
   transition: color var(--transition), background-color var(--transition);
 }
@@ -175,7 +184,8 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
 .header__toggle-icon.is-open span:nth-child(2) { opacity: 0; }
 .header__toggle-icon.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-@media (max-width: 52rem) {
+/* Mobilní menu: logo, položky menu (v němčině nejdelší) a přepínač jazyků se do jedné řady vejdou až od 70rem. */
+@media (max-width: 70rem) {
   .header__inner {
     flex-wrap: wrap;
   }
@@ -187,11 +197,17 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
   .nav {
     display: none;
     flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
     padding-bottom: var(--space-4);
   }
 
   .nav.is-open {
-    display: block;
+    display: flex;
+  }
+
+  .nav__lang {
+    align-self: center;
   }
 
   .nav__list {

@@ -32,7 +32,7 @@ const logoSrc = computed(() => `/logo/logo-silverdahl${props.inverse ? '-bila' :
       <path d="M12.14 21.72H20.36V23.28H12.14Z" class="logo__accent" />
       <path d="M16 6.5L24.5 25.5H21.1L15.15 12.2L9.2 25.5H7.5Z" class="logo__fg" />
     </svg>
-    <img :src="logoSrc" alt="Silverdahl – Marketing and Customer Service" class="logo__official" width="836" height="223" />
+    <img :src="logoSrc" :alt="$t('logo.alt')" class="logo__official" width="836" height="223" />
   </span>
 </template>
 

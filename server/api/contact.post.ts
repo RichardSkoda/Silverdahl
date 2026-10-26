@@ -1,9 +1,10 @@
 import { normalizeContact, validateContact, type ContactStatus } from '#shared/contact'
+import { pagePath } from '#shared/locales'
 
 /**
  * POST /api/contact
  * - JSON požadavek (formulář s JavaScriptem) → JSON odpověď se stavovým kódem.
- * - Klasický POST formuláře (bez JavaScriptu) → přesměrování zpět na /kontakt?stav=…
+ * - Klasický POST formuláře (bez JavaScriptu) → přesměrování zpět na kontakt v jazyce formuláře (?stav=…).
  *
  * Nikdy nehlásí úspěch, pokud zpráva nebyla skutečně předána k doručení.
  */
@@ -11,8 +12,10 @@ export default defineEventHandler(async (event) => {
   const isJson = (getRequestHeader(event, 'content-type') ?? '').includes('application/json')
   const body = ((await readBody(event).catch(() => null)) ?? {}) as Record<string, unknown>
 
+  const data = normalizeContact(body)
+
   const respond = (status: ContactStatus, httpStatus: number, extra: Record<string, unknown> = {}) => {
-    if (!isJson) return sendRedirect(event, `/kontakt?stav=${status}#formular`, 303)
+    if (!isJson) return sendRedirect(event, `${pagePath('kontakt', data.locale)}?stav=${status}#formular`, 303)
     setResponseStatus(event, httpStatus)
     return { status, ...extra }
   }
@@ -22,7 +25,6 @@ export default defineEventHandler(async (event) => {
     return respond('chyba', 400)
   }
 
-  const data = normalizeContact(body)
   const errors = validateContact(data)
   if (Object.keys(errors).length > 0) {
     return respond('neplatne', 422, { errors })

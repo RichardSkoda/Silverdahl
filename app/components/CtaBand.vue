@@ -1,19 +1,17 @@
 <script setup lang="ts">
-// Závěrečná výzva ke kontaktu – texty z části „Kontakt“ v podkladech.
-withDefaults(defineProps<{ title?: string; text?: string }>(), {
-  title: 'Pojďme společně rozvíjet vaše podnikání',
-  text: 'Rádi s vámi probereme vaše potřeby a navrhneme možnosti spolupráce.',
-})
+// Závěrečná výzva ke kontaktu – výchozí texty z části „Kontakt“ v podkladech (cta.* v překladech).
+defineProps<{ title?: string; text?: string }>()
+const localePath = useLocalePath()
 </script>
 
 <template>
   <section class="cta section--navy" aria-labelledby="cta-nadpis">
     <div class="container cta__inner">
       <div>
-        <h2 id="cta-nadpis" class="cta__title">{{ title }}</h2>
-        <p class="cta__text">{{ text }}</p>
+        <h2 id="cta-nadpis" class="cta__title">{{ title ?? $t('cta.title') }}</h2>
+        <p class="cta__text">{{ text ?? $t('cta.text') }}</p>
       </div>
-      <BaseButton to="/kontakt" variant="inverse">Kontaktujte nás</BaseButton>
+      <BaseButton :to="localePath('kontakt')" variant="inverse">{{ $t('cta.button') }}</BaseButton>
     </div>
   </section>
 </template>

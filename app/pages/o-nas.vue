@@ -1,9 +1,12 @@
 <script setup lang="ts">
+const { t } = useI18n()
+const localePath = useLocalePath()
+const { strings } = useMessageList()
+
 usePageSeo({
-  title: 'O nás',
-  description:
-    'Silverdahl s.r.o. – česká společnost s dlouholetými zkušenostmi s podporou mezinárodního obchodu, řízením provozních procesů a koordinací dodavatelů.',
-  path: '/o-nas',
+  title: () => t('about.seo.title'),
+  description: () => t('about.seo.description'),
+  page: 'o-nas',
 })
 
 interface Manager {
@@ -14,83 +17,55 @@ interface Manager {
   bio: string[]
 }
 
+// Texty profilů jsou v překladech about.team.<key>.
 // TODO (Tomáš Kouřil): Podle podkladů bude finální profil doplněn o konkrétní délku praxe,
 // významné projekty, profesní zkušenosti a hlavní obchodní úspěchy. Nedoplňovat bez dodání podkladů.
 // TODO (oba profily): Doplnit skutečné profesionální fotografie, až budou dodány. Ilustrační portréty
 // v podkladech nepředstavují skutečné osoby, proto se nepoužívají – zatím se zobrazují iniciály.
-const managers: Manager[] = [
-  {
-    name: 'Tomáš Kouřil',
-    initials: 'TK',
-    role: 'Jednatel společnosti',
-    focus: 'Strategie, obchodní rozvoj, mezinárodní partnerství a vedení společnosti.',
-    bio: [
-      'Tomáš stojí v čele společnosti Silverdahl od jejího založení v roce 1994 a podílí se na jejím strategickém směřování, rozvoji obchodních vztahů a řízení dlouhodobé spolupráce se zahraničními partnery.',
-      'Jeho role zahrnuje především obchodní jednání, rozvoj partnerské sítě, nastavování podmínek spolupráce a dohled nad ekonomickým, personálním a provozním fungováním společnosti.',
-      'Díky zkušenostem s mezinárodním obchodním prostředím a outsourcingem služeb přispívá k vytváření dlouhodobých a stabilních obchodních vztahů.',
-    ],
-  },
-  {
-    name: 'Michal Tauchman',
-    initials: 'MT',
-    role: 'Projektový manažer',
-    focus: 'Řízení projektů, koordinace dodavatelů, provozní reporting a optimalizace procesů.',
-    bio: [
-      'Michal má dlouholeté zkušenosti s projektovým řízením, koordinací obchodních partnerů a provozní podporou mezinárodních obchodních aktivit.',
-      'Ve společnosti Silverdahl působí od roku 2008. Během své profesní dráhy se podílel na řízení obchodních a marketingových projektů, koordinaci externích dodavatelů a zajišťování provozních procesů pro zahraniční obchodní partnery.',
-      'Jeho specializací je organizace a řízení projektů, koordinace spolupráce mezi zahraniční centrálou a lokálními dodavateli a oblast provozního controllingu. Zaměřuje se na tvorbu a správu rozpočtů, pravidelný reporting, vyhodnocování obchodních výsledků a kontrolu ekonomické efektivity jednotlivých aktivit.',
-      'Vystudoval bakalářský program Marketingová komunikace a následně magisterský program Ekonomika a management, který absolvoval s vyznamenáním. Ve své profesní praxi propojuje ekonomické a manažerské znalosti s marketingovou odborností.',
-    ],
-  },
-]
+const people = [
+  { key: 'kouril', name: 'Tomáš Kouřil', initials: 'TK' },
+  { key: 'tauchman', name: 'Michal Tauchman', initials: 'MT' },
+] as const
+
+const managers = computed<Manager[]>(() =>
+  people.map((p) => ({
+    name: p.name,
+    initials: p.initials,
+    role: t(`about.team.${p.key}.role`),
+    focus: t(`about.team.${p.key}.focus`),
+    bio: strings(`about.team.${p.key}.bio`),
+  })),
+)
 </script>
 
 <template>
   <div>
-    <PageIntro eyebrow="O nás" title="Zkušenosti, lokální znalost a osobní odpovědnost">
-      <p>
-        Silverdahl s.r.o. je česká společnost s dlouholetými zkušenostmi s podporou mezinárodního obchodu, řízením
-        provozních procesů a koordinací specializovaných dodavatelů na evropských trzích.
-      </p>
+    <PageIntro :eyebrow="$t('about.intro.eyebrow')" :title="$t('about.intro.title')">
+      <p>{{ $t('about.intro.text') }}</p>
     </PageIntro>
 
     <section class="section section--surface" aria-labelledby="zkusenosti-nadpis">
       <div class="container split">
-        <h2 id="zkusenosti-nadpis">Zkušenosti s mezinárodním obchodem</h2>
+        <h2 id="zkusenosti-nadpis">{{ $t('about.experience.title') }}</h2>
         <div class="prose split__body">
-          <p>
-            Naše zkušenosti vycházejí především z více než třicetileté spolupráce se švýcarskou společností
-            <NuxtLink to="/case-study">Courlux International SA</NuxtLink>, pro kterou zajišťujeme komplexní provozní
-            podporu v České republice, na Slovensku, v Polsku a Maďarsku.
-          </p>
-          <p>
-            Za tu dobu jsme získali rozsáhlé zkušenosti s vyhledáváním obchodních partnerů, vyjednáváním podmínek
-            spolupráce, řízením projektů, kontrolou nákladů i reportingem výsledků zahraniční centrále.
-          </p>
-          <p class="statement">
-            Naším cílem je tyto zkušenosti nabídnout dalším společnostem, které chtějí rozvíjet své podnikání na
-            evropských trzích bez nutnosti budovat vlastní rozsáhlé lokální týmy.
-          </p>
+          <i18n-t keypath="about.experience.p1" tag="p" scope="global">
+            <template #company>
+              <NuxtLink :to="localePath('case-study')">Courlux International SA</NuxtLink>
+            </template>
+          </i18n-t>
+          <p>{{ $t('about.experience.p2') }}</p>
+          <p class="statement">{{ $t('about.experience.statement') }}</p>
         </div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="jak-nadpis">
       <div class="container split">
-        <h2 id="jak-nadpis">Jak pracujeme</h2>
+        <h2 id="jak-nadpis">{{ $t('about.approach.title') }}</h2>
         <div class="prose split__body">
-          <p>
-            Věříme, že základem úspěšné mezinárodní spolupráce jsou spolehliví obchodní partneři, kvalitní komunikace a
-            jasně definovaná odpovědnost.
-          </p>
-          <p>
-            Převzetím koordinace svěřených procesů zajišťujeme jejich každodenní fungování, kontrolujeme výsledky a
-            poskytujeme klientovi pravidelný přehled o realizovaných aktivitách.
-          </p>
-          <p class="statement">
-            Naší největší výhodou je propojení znalosti lokálního prostředí s dlouholetou zkušeností s požadavky
-            zahraničních obchodních společností.
-          </p>
+          <p>{{ $t('about.approach.p1') }}</p>
+          <p>{{ $t('about.approach.p2') }}</p>
+          <p class="statement">{{ $t('about.approach.statement') }}</p>
         </div>
       </div>
     </section>
@@ -98,8 +73,8 @@ const managers: Manager[] = [
     <section class="section section--surface" aria-labelledby="management-nadpis">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Lidé</p>
-          <h2 id="management-nadpis">Náš management</h2>
+          <p class="eyebrow">{{ $t('about.team.eyebrow') }}</p>
+          <h2 id="management-nadpis">{{ $t('about.team.title') }}</h2>
         </div>
 
         <ul class="team">
@@ -122,13 +97,10 @@ const managers: Manager[] = [
       </div>
     </section>
 
-    <section class="section section--navy" aria-label="Citát">
+    <section class="section section--navy" :aria-label="$t('about.quote.label')">
       <figure class="container container--narrow quote">
         <blockquote>
-          <p>
-            „Za Silverdahlem nestojí anonymní servisní organizace, ale zkušení lidé, kteří rozumějí mezinárodnímu
-            obchodu, dokážou samostatně řídit provoz a osobně odpovídají za svěřené projekty.“
-          </p>
+          <p>{{ $t('about.quote.text') }}</p>
         </blockquote>
       </figure>
     </section>
