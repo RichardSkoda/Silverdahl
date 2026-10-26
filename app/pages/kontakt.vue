@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ContactStatus } from '#shared/contact'
+import { company } from '~/data/company'
 
 usePageSeo({
   title: 'Kontakt',
@@ -26,8 +27,8 @@ const initialStatus = computed(() => {
 
 const isDev = import.meta.dev
 
-// TODO: Doplnit ověřené kontaktní údaje (e-mail, telefon, adresa sídla, IČO). Podklady je zatím neobsahují,
-// proto se na stránce nezobrazují.
+// Adresa, telefon a e-mail jsou převzaté ze současného webu (viz data/company.ts).
+// TODO: Doplnit IČO a další firemní údaje, až budou ověřeny.
 </script>
 
 <template>
@@ -48,6 +49,27 @@ const isDev = import.meta.dev
             se postaráme o organizaci a koordinaci potřebných služeb.
           </p>
 
+          <address>
+            <dl class="details">
+              <div class="details__item">
+                <dt class="details__label">Adresa</dt>
+                <dd>
+                  {{ company.address.street }}<br />
+                  {{ company.address.city }}<br />
+                  {{ company.address.country }}
+                </dd>
+              </div>
+              <div class="details__item">
+                <dt class="details__label">Telefon</dt>
+                <dd><a :href="company.phone.href">{{ company.phone.label }}</a></dd>
+              </div>
+              <div class="details__item">
+                <dt class="details__label">E-mail</dt>
+                <dd><a :href="`mailto:${company.email}`">{{ company.email }}</a></dd>
+              </div>
+            </dl>
+          </address>
+
           <div v-if="isDev" class="dev-note" role="note">
             <strong>Poznámka pro vývojáře (zobrazuje se jen při <code>npm run dev</code>)</strong>
             <p>
@@ -62,6 +84,16 @@ const isDev = import.meta.dev
         </div>
 
         <ContactForm :delivery-ready="deliveryReady" :initial-status="initialStatus" />
+      </div>
+    </section>
+
+    <section class="section section--muted" aria-labelledby="mapa-nadpis">
+      <div class="container">
+        <div class="section-head map-head">
+          <p class="eyebrow">Kde nás najdete</p>
+          <h2 id="mapa-nadpis">{{ company.address.street }}, {{ company.address.city }}</h2>
+        </div>
+        <GoogleMap :query="company.mapQuery" :label="`${company.name}, ${company.address.street}, ${company.address.city}`" />
       </div>
     </section>
   </div>
@@ -84,6 +116,54 @@ const isDev = import.meta.dev
 .contact__body {
   margin-top: var(--space-5);
   color: var(--color-text-muted);
+}
+
+address {
+  font-style: normal;
+}
+
+.details {
+  display: grid;
+  gap: var(--space-5);
+  margin: var(--space-6) 0 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.details__label {
+  margin-bottom: var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.details__item dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--color-navy-800);
+}
+
+.details__item a {
+  color: inherit;
+  text-decoration-color: var(--color-border-strong);
+}
+
+.details__item a:hover {
+  text-decoration-color: currentColor;
+}
+
+.map-head {
+  margin-bottom: var(--space-6);
+}
+
+.map-head h2 {
+  font-size: var(--text-2xl);
 }
 
 .dev-note {

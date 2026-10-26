@@ -3,6 +3,7 @@ import { mainNavigation } from '~/data/navigation'
 import { services } from '~/data/services'
 
 const year = new Date().getFullYear()
+const { openSettings } = useCookieConsent()
 </script>
 
 <template>
@@ -41,6 +42,15 @@ const year = new Date().getFullYear()
 
     <div class="container footer__bottom">
       <p>© {{ year }} Silverdahl s.r.o.</p>
+      <ul class="footer__legal">
+        <li><NuxtLink to="/cookies">Zásady cookies</NuxtLink></li>
+        <!-- Tlačítko funguje jen s JavaScriptem, bez něj se lišta ani nezobrazuje. -->
+        <ClientOnly>
+          <li>
+            <button type="button" class="footer__link-btn" @click="openSettings">Nastavení cookies</button>
+          </li>
+        </ClientOnly>
+      </ul>
     </div>
   </footer>
 </template>
@@ -101,8 +111,34 @@ const year = new Date().getFullYear()
 }
 
 .footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-6);
   margin-top: var(--space-7);
   padding-block: var(--space-5);
   border-top: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.footer__legal {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.footer__link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text-inverse);
+  font: inherit;
+  cursor: pointer;
+}
+
+.footer__link-btn:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 </style>

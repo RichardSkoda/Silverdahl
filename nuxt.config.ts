@@ -59,5 +59,6 @@ export default defineNuxtConfig({
     '/sluzby': { prerender: true },
     '/case-study': { prerender: true },
     '/o-nas': { prerender: true },
+    '/cookies': { prerender: true },
   },
 })

@@ -49,7 +49,7 @@ Konfigurace probíhá přes proměnné prostředí – viz `.env.example` (zkop�
 app/
   app.vue, error.vue           kořen aplikace, chybová / 404 stránka
   layouts/default.vue          hlavička, <main>, patička, skip-link
-  pages/                       / · /sluzby · /case-study · /o-nas · /kontakt
+  pages/                       / · /sluzby · /case-study · /o-nas · /kontakt · /cookies
   components/
     SiteHeader, SiteFooter     navigace (aktivní stavy, přístupné mobilní menu, funguje i bez JS)
     SiteLogo                   textový wordmark (není oficiální logo)
@@ -58,7 +58,13 @@ app/
     ServiceSection             detail služby (/sluzby)
     StatItem                   statistika s časovým zařazením (historické maximum × současnost)
     ContactForm                formulář s validací a pravdivými stavy odeslání
+    CookieBanner               lišta a nastavení souhlasu s cookies
+    GoogleMap                  mapa Google na /kontakt – načte se až se souhlasem (jinak náhled + odkaz)
   composables/usePageSeo.ts    title, description, Open Graph, kanonická URL
+  composables/useCookieConsent.ts  stav souhlasu s cookies (uložení, přijmout / odmítnout, otevření nastavení)
+  plugins/consent.client.ts    načtení volby + místo pro měřicí a marketingové skripty (spouští se až po souhlasu)
+  data/cookies.ts              kategorie cookies a přehled cookies pro stránku /cookies
+  data/company.ts              adresa, telefon, e-mail (převzato ze současného webu silverdahl.cz)
   data/services.ts             texty tří služeb
   data/navigation.ts           položky menu
   assets/css/main.css          design tokeny a globální styly
@@ -76,6 +82,27 @@ public/images/                 mapa Evropy (SVG, Natural Earth) a fotografie kar
 > Ilustrace `ilustrace-*.svg` (přehled na /sluzby) jsou vektorově překreslené podle návrhu; ikona podání ruky v
 > `ilustrace-partneri.svg` pochází z Font Awesome Free (licence CC BY 4.0 – uvedení autora je v souboru ponecháno).
 
+
+## Cookies a souhlas
+
+- Web zatím **nepoužívá žádné analytické ani marketingové nástroje** – vlastní cookie je jen nezbytná `silverdahl_consent`
+  (uložená volba návštěvníka, platnost 6 měsíců, `SameSite=Lax`, v produkci `Secure`).
+- **Mapa Google na /kontakt** patří do kategorie *Externí obsah*: bez souhlasu se nenačte (žádný požadavek na Google),
+  zobrazí se náhled s tlačítkem „Zobrazit mapu“ (uloží souhlas jen s touto kategorií) a odkazem do Google Map.
+  Po odvolání souhlasu se mapa hned skryje.
+- Lišta nabízí **Přijmout vše / Odmítnout vše / Nastavení** se stejně výraznými tlačítky, volitelné kategorie jsou ve
+  výchozím stavu vypnuté. Volbu lze kdykoli změnit odkazem „Nastavení cookies“ v patičce nebo na stránce `/cookies`.
+- Stránky jsou předgenerované, proto se lišta vykresluje až v prohlížeči (`<ClientOnly>`). Bez JavaScriptu se
+  nezobrazí – nenačítá se pak ale ani žádný skript, který by souhlas vyžadoval.
+
+**Zapojení měřicího nástroje (např. Google Analytics):**
+1. Kód vložte do pole `loaders` v `app/plugins/consent.client.ts` do správné kategorie (`analytics` / `marketing`).
+   Nikdy ne přímo do `nuxt.config.ts` ani do šablon – spustil by se bez souhlasu.
+2. Jeho cookies doplňte do `cookieList` v `app/data/cookies.ts` (zobrazí se v tabulce na `/cookies`) a upravte text
+   „Jaké cookies používáme“ v `app/pages/cookies.vue`.
+3. Zvyšte `CONSENT_VERSION` v `app/data/cookies.ts` – všichni návštěvníci budou o souhlas požádáni znovu.
+
+Po odvolání souhlasu se stránka jednou znovu načte, aby už spuštěné skripty přestaly běžet.
 
 ## Kontaktní formulář
 

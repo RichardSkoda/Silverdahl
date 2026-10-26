@@ -343,6 +343,11 @@ strong {
   }
 }
 
+/* Prvky, které bez JavaScriptu nefungují (např. tlačítko „Zobrazit mapu“). */
+.no-js .js-only {
+  display: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
