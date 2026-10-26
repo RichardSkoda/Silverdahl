@@ -1,0 +1,20 @@
+node_modules
+.nuxt
+.output
+.data
+.nitro
+.cache
+dist
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
