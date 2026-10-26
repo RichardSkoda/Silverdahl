@@ -52,7 +52,7 @@ app/
   pages/                       / · /sluzby · /case-study · /o-nas · /kontakt · /cookies
   components/
     SiteHeader, SiteFooter     navigace (aktivní stavy, přístupné mobilní menu, funguje i bez JS)
-    SiteLogo                   textový wordmark (není oficiální logo)
+    SiteLogo                   logo = značka „stříbrné údolí“ + značka „A“ + oficiální logo SILVERDAHL (samostatné grafiky)
     BaseButton, PageIntro, CtaBand
     ServiceIcon                čárové ikony z grafického návrhu (Lucide, ISC)
     ServiceSection             detail služby (/sluzby)
@@ -73,6 +73,7 @@ server/api/contact.post.ts     endpoint formuláře
 server/utils/contactDelivery.ts  doručení zprávy (SMTP) – místo pro napojení jiné služby
 public/                        favicon.svg, robots.txt
 public/images/                 mapa Evropy (SVG, Natural Earth) a fotografie karet služeb a hero
+public/logo/                   oficiální logo SILVERDAHL převedené do SVG (celé / jen nápis, tmavé / bílé)
 ```
 
 > **Fotografie jsou dočasné.** Snímky v `public/images/*.webp` jsou výřezy z grafického návrhu domovské stránky
@@ -82,6 +83,22 @@ public/images/                 mapa Evropy (SVG, Natural Earth) a fotografie kar
 > Ilustrace `ilustrace-*.svg` (přehled na /sluzby) jsou vektorově překreslené podle návrhu; ikona podání ruky v
 > `ilustrace-partneri.svg` pochází z Font Awesome Free (licence CC BY 4.0 – uvedení autora je v souboru ponecháno).
 
+
+## Logo
+
+Logo se skládá ze **tří samostatných grafik** vedle sebe (záměrně nejsou sloučené do jednoho souboru):
+
+1. **Značka „stříbrné údolí“** – *Silverdahl* je nejspíš švédské složené jméno *silver* (stříbro) + *dahl*
+   (starý pravopis *dal*, údolí). Značka ukazuje dva vrcholy (2. a 4. čára v barvě příčky „A“) a pod údolím „Ag“ – chemickou značku stříbra.
+   Samostatně je v `public/logo/znacka-stribrne-udoli.svg` (a `-bila.svg` na tmavé pozadí).
+2. **Značka „A“** – tmavě modrý čtverec s písmenem A, vykreslená přímo v `SiteLogo.vue`. Stejná je ve `favicon.svg`.
+3. **Oficiální logo SILVERDAHL s podtitulem „Marketing and Customer Service“** ze současného webu
+   (`LOGO-SILVERDAHL.png`, 836 × 223 px) převedené do SVG obkreslením (shoda s originálem cca 95 %).
+   Web používá celé logo (`logo-silverdahl.svg`, v patičce `logo-silverdahl-bila.svg`); v `public/logo/` je navíc
+   samotný nápis bez podtitulu (`logo-silverdahl-napis*.svg`) pro místa, kde by byl podtitul příliš malý.
+
+Pokud klient dodá originální vektorové logo (SVG/AI/PDF), nahraďte jím soubory v `public/logo/` – bude přesnější
+než obkreslená verze.
 
 ## Cookies a souhlas
 
