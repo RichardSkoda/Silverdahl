@@ -244,13 +244,21 @@
     "stats": {
       "eyebrow": "Fakten",
       "title": "Die Zusammenarbeit in Zahlen",
-      "items": [
-        { "value": "30+", "label": "Jahre langfristige Partnerschaft", "period": "Langfristig" },
-        { "value": "4", "label": "Märkte – Tschechien, Slowakei, Polen und Ungarn", "period": "Langfristig" },
-        { "value": "bis zu 4", "label": "Callcenter auf einem Markt zur Zeit des größten Umfangs der Zusammenarbeit", "period": "Historischer Höchststand" },
-        { "value": "30.000+", "label": "Neukunden pro Monat in den intensivsten Kampagnen", "period": "Historischer Höchststand" },
-        { "value": "Tausende", "label": "Kundenkontakte pro Monat im laufenden Betrieb", "period": "Laufender Betrieb" }
-      ]
+      "current": {
+        "title": "Langfristig und heute",
+        "items": [
+          { "value": "30+", "label": "Jahre langfristige Partnerschaft" },
+          { "value": "4", "label": "Märkte – Tschechien, Slowakei, Polen und Ungarn" },
+          { "value": "Tausende", "label": "Kundenkontakte pro Monat im laufenden Betrieb" }
+        ]
+      },
+      "peak": {
+        "title": "Zur Zeit des größten Umfangs der Zusammenarbeit",
+        "items": [
+          { "value": "bis zu 4", "label": "Callcenter auf einem einzigen Markt koordiniert" },
+          { "value": "30.000+", "label": "Neukunden pro Monat in den intensivsten Kampagnen" }
+        ]
+      }
     },
     "benefit": {
       "title": "Was gewinnt Courlux durch die Zusammenarbeit?",

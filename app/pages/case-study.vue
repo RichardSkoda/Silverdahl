@@ -8,8 +8,14 @@ usePageSeo({
   page: 'case-study',
 })
 
-// Údaje přesně podle podkladů. „period“ odlišuje historické maximum od současného provozu.
-const stats = computed(() => records('caseStudy.stats.items', ['value', 'label', 'period'] as const))
+// Údaje podle podkladů, rozdělené na dlouhodobé/současné a na historické maximum spolupráce.
+const statGroups = computed(() =>
+  (['current', 'peak'] as const).map((key) => ({
+    key,
+    title: t(`caseStudy.stats.${key}.title`),
+    items: records(`caseStudy.stats.${key}.items`, ['value', 'label'] as const),
+  })),
+)
 const partners = computed(() => strings('caseStudy.model.partners'))
 </script>
 
@@ -80,9 +86,14 @@ const partners = computed(() => strings('caseStudy.model.partners'))
           <p class="eyebrow">{{ $t('caseStudy.stats.eyebrow') }}</p>
           <h2 id="cisla-nadpis">{{ $t('caseStudy.stats.title') }}</h2>
         </div>
-        <dl class="stats">
-          <StatItem v-for="stat in stats" :key="stat.label" v-bind="stat" />
-        </dl>
+        <div class="stats">
+          <div v-for="group in statGroups" :key="group.key" class="stats__group" :class="`stats__group--${group.key}`">
+            <h3 class="stats__title">{{ group.title }}</h3>
+            <dl class="stats__list">
+              <StatItem v-for="stat in group.items" :key="stat.label" v-bind="stat" />
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -242,23 +253,57 @@ const partners = computed(() => strings('caseStudy.model.partners'))
   color: var(--color-text-muted);
 }
 
-/* Statistiky */
+/* Statistiky – dvě skupiny: dlouhodobě a dnes / v období největšího rozsahu */
 .stats {
+  display: grid;
+  gap: var(--space-7) var(--space-6);
+}
+
+/* Stejné svislé odsazení jako box s historickými údaji – nadpisy obou skupin jsou v jedné řadě. */
+.stats__group--current {
+  padding-block: var(--space-5);
+}
+
+.stats__title {
+  margin-bottom: var(--space-5);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.stats__list {
   display: grid;
   gap: var(--space-6) var(--space-5);
   margin: 0;
 }
 
 @media (min-width: 36rem) {
-  .stats {
+  .stats__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 64rem) {
   .stats {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   }
+
+  .stats__group--current .stats__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* V pěti úzkých sloupcích menší čísla, aby se „Thousands“ / „30,000+“ nelámaly uprostřed. */
+  .stats :deep(.stat__value) {
+    font-size: clamp(1.6rem, 0.9rem + 1.4vw, 2.35rem);
+    white-space: nowrap;
+  }
+}
+
+/* Historické údaje jsou odlišené jemným podkladem, aby se nepletly se současným stavem. */
+.stats__group--peak {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-muted);
 }
 
 .benefit {

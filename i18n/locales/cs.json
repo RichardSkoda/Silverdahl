@@ -244,13 +244,21 @@
     "stats": {
       "eyebrow": "Fakta",
       "title": "Spolupráce v číslech",
-      "items": [
-        { "value": "30+", "label": "let dlouhodobého partnerství", "period": "Dlouhodobě" },
-        { "value": "4", "label": "trhy – Česká republika, Slovensko, Polsko a Maďarsko", "period": "Dlouhodobě" },
-        { "value": "až 4", "label": "call centra na jednom trhu v období největšího rozsahu spolupráce", "period": "Historické maximum" },
-        { "value": "30 000+", "label": "nových zákazníků měsíčně v historicky nejintenzivnějších kampaních", "period": "Historické maximum" },
-        { "value": "Tisíce", "label": "zákaznických kontaktů měsíčně v rámci současného provozu", "period": "Současný provoz" }
-      ]
+      "current": {
+        "title": "Dlouhodobě a dnes",
+        "items": [
+          { "value": "30+", "label": "let dlouhodobého partnerství" },
+          { "value": "4", "label": "trhy – Česká republika, Slovensko, Polsko a Maďarsko" },
+          { "value": "Tisíce", "label": "zákaznických kontaktů měsíčně v současném provozu" }
+        ]
+      },
+      "peak": {
+        "title": "V období největšího rozsahu spolupráce",
+        "items": [
+          { "value": "až 4", "label": "call centra koordinovaná na jednom trhu" },
+          { "value": "30 000+", "label": "nových zákazníků měsíčně v nejintenzivnějších kampaních" }
+        ]
+      }
     },
     "benefit": {
       "title": "Co Courlux díky spolupráci získává?",

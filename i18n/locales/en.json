@@ -244,13 +244,21 @@
     "stats": {
       "eyebrow": "Facts",
       "title": "The cooperation in numbers",
-      "items": [
-        { "value": "30+", "label": "years of long-term partnership", "period": "Long-term" },
-        { "value": "4", "label": "markets – Czech Republic, Slovakia, Poland and Hungary", "period": "Long-term" },
-        { "value": "up to 4", "label": "call centres in a single market at the peak of the cooperation", "period": "Historical peak" },
-        { "value": "30,000+", "label": "new customers per month in the most intensive campaigns", "period": "Historical peak" },
-        { "value": "Thousands", "label": "of customer contacts per month in current operations", "period": "Current operations" }
-      ]
+      "current": {
+        "title": "Long-term and today",
+        "items": [
+          { "value": "30+", "label": "years of long-term partnership" },
+          { "value": "4", "label": "markets – Czech Republic, Slovakia, Poland and Hungary" },
+          { "value": "Thousands", "label": "of customer contacts per month in current operations" }
+        ]
+      },
+      "peak": {
+        "title": "At the peak of the cooperation",
+        "items": [
+          { "value": "up to 4", "label": "call centres coordinated in a single market" },
+          { "value": "30,000+", "label": "new customers per month in the most intensive campaigns" }
+        ]
+      }
     },
     "benefit": {
       "title": "What does Courlux gain from the cooperation?",

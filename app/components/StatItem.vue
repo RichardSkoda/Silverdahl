@@ -3,20 +3,15 @@ withDefaults(
   defineProps<{
     value: string
     label: string
-    /** Časové zařazení údaje – odlišuje historické maximum od současného provozu. */
-    period?: string
     inverse?: boolean
   }>(),
-  { period: undefined, inverse: false },
+  { inverse: false },
 )
 </script>
 
 <template>
   <div class="stat" :class="{ 'stat--inverse': inverse }">
-    <dt class="stat__label">
-      <span v-if="period" class="stat__period">{{ period }}</span>
-      {{ label }}
-    </dt>
+    <dt class="stat__label">{{ label }}</dt>
     <dd class="stat__value">{{ value }}</dd>
   </div>
 </template>
@@ -46,25 +41,11 @@ withDefaults(
   font-size: var(--text-sm);
 }
 
-.stat__period {
-  display: block;
-  margin-bottom: var(--space-2);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent-strong);
-}
-
 .stat--inverse .stat__value {
   color: #fff;
 }
 
 .stat--inverse .stat__label {
   color: var(--color-text-inverse-muted);
-}
-
-.stat--inverse .stat__period {
-  color: var(--color-accent-on-dark);
 }
 </style>
