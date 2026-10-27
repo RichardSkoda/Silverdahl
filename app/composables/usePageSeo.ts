@@ -1,4 +1,5 @@
 import { defaultLocale, languageTags, locales, ogLocales, pagePath, type PageName } from '#shared/locales'
+import { pageLabelKeys } from '~/data/navigation'
 
 type SchemaNode = Record<string, unknown>
 
@@ -9,19 +10,11 @@ interface PageSeoOptions {
   /** Stránka – z ní se skládá kanonická URL a odkazy na jazykové verze (hreflang). */
   page: PageName
   /** Typ stránky pro strukturovaná data schema.org. */
-  schemaType?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage'
+  schemaType?: 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage' | 'FAQPage'
+  /** Další vlastnosti uzlu stránky (např. mainEntity s otázkami u FAQPage). */
+  pageProps?: MaybeRefOrGetter<SchemaNode>
   /** Další uzly strukturovaných dat (např. služby, osoby). */
   schema?: MaybeRefOrGetter<SchemaNode[]>
-}
-
-// Popisek stránky v drobečkové navigaci (strukturovaná data).
-const breadcrumbKeys: Record<PageName, string> = {
-  index: 'nav.home',
-  sluzby: 'nav.services',
-  'case-study': 'nav.caseStudy',
-  'o-nas': 'nav.about',
-  kontakt: 'nav.contact',
-  cookies: 'footer.cookiePolicy',
 }
 
 /** Doména webu a pomocné funkce pro absolutní adresy a @id ve strukturovaných datech. */
@@ -41,7 +34,7 @@ export function useSiteOrigin() {
  * kanonická URL, hreflang odkazy na jazykové verze, pokyny pro roboty a strukturovaná data (JSON-LD).
  * Absolutní adresy se skládají z NUXT_PUBLIC_SITE_URL (výchozí https://silverdahl.cz).
  */
-export function usePageSeo({ title, description, page, schemaType = 'WebPage', schema }: PageSeoOptions) {
+export function usePageSeo({ title, description, page, schemaType = 'WebPage', pageProps, schema }: PageSeoOptions) {
   const { indexable } = useRuntimeConfig().public
   const { origin, absolute, organizationId, websiteId } = useSiteOrigin()
   const { locale, t } = useI18n()
@@ -94,6 +87,7 @@ export function usePageSeo({ title, description, page, schemaType = 'WebPage', s
         about: { '@id': organizationId },
         primaryImageOfPage: ogImage ? { '@type': 'ImageObject', url: ogImage } : undefined,
         breadcrumb: page === 'index' ? undefined : { '@id': breadcrumbId },
+        ...toValue(pageProps),
       },
     ]
     if (page !== 'index') {
@@ -102,7 +96,7 @@ export function usePageSeo({ title, description, page, schemaType = 'WebPage', s
         '@id': breadcrumbId,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('nav.home'), item: absolute(pagePath('index', locale.value)) },
-          { '@type': 'ListItem', position: 2, name: t(breadcrumbKeys[page]), item: url.value },
+          { '@type': 'ListItem', position: 2, name: t(pageLabelKeys[page]), item: url.value },
         ],
       })
     }

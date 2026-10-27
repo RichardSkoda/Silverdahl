@@ -6,6 +6,7 @@ defineProps<{ eyebrow: string; title: string }>()
 <template>
   <section class="intro">
     <div class="container">
+      <SiteBreadcrumbs />
       <p class="eyebrow">{{ eyebrow }}</p>
       <h1 class="intro__title">{{ title }}</h1>
       <div class="intro__body">

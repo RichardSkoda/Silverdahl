@@ -14,3 +14,16 @@ export const mainNavigation: NavItem[] = [
   { labelKey: 'nav.about', page: 'o-nas' },
   { labelKey: 'nav.contact', page: 'kontakt' },
 ]
+
+/** Krátký název stránky (klíč v překladech) – drobečková navigace na webu i ve strukturovaných datech. */
+export const pageLabelKeys: Record<PageName, string> = {
+  index: 'nav.home',
+  sluzby: 'nav.services',
+  'vstup-na-trh': 'nav.marketEntry',
+  'caste-dotazy': 'nav.faq',
+  'case-study': 'nav.caseStudy',
+  'o-nas': 'nav.about',
+  kontakt: 'nav.contact',
+  cookies: 'footer.cookiePolicy',
+  'ochrana-osobnich-udaju': 'footer.privacy',
+}

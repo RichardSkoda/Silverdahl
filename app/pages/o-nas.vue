@@ -3,11 +3,12 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const { strings } = useMessageList()
 
-const { organizationId } = useSiteOrigin()
+const { organizationId, absolute } = useSiteOrigin()
 
 interface Manager {
   name: string
   initials: string
+  photo: string
   role: string
   focus: string
   bio: string[]
@@ -16,17 +17,19 @@ interface Manager {
 // Texty profilů jsou v překladech about.team.<key>.
 // TODO (Tomáš Kouřil): Podle podkladů bude finální profil doplněn o konkrétní délku praxe,
 // významné projekty, profesní zkušenosti a hlavní obchodní úspěchy. Nedoplňovat bez dodání podkladů.
-// TODO (oba profily): Doplnit skutečné profesionální fotografie, až budou dodány. Ilustrační portréty
-// v podkladech nepředstavují skutečné osoby, proto se nepoužívají – zatím se zobrazují iniciály.
+// TODO (oba profily): Fotografie jsou zatím ilustrační portréty z podkladů (nepředstavují skutečné osoby).
+// Před spuštěním webu je nahradit skutečnými profesionálními fotkami ve stejném poměru stran 4 : 3
+// (ideálně alespoň 960 × 720 px) – stačí přepsat soubory public/images/management-*.webp.
 const people = [
-  { key: 'kouril', name: 'Tomáš Kouřil', initials: 'TK' },
-  { key: 'tauchman', name: 'Michal Tauchman', initials: 'MT' },
+  { key: 'kouril', name: 'Tomáš Kouřil', initials: 'TK', photo: '/images/management-kouril.webp' },
+  { key: 'tauchman', name: 'Michal Tauchman', initials: 'MT', photo: '/images/management-tauchman.webp' },
 ] as const
 
 const managers = computed<Manager[]>(() =>
   people.map((p) => ({
     name: p.name,
     initials: p.initials,
+    photo: p.photo,
     role: t(`about.team.${p.key}.role`),
     focus: t(`about.team.${p.key}.focus`),
     bio: strings(`about.team.${p.key}.bio`),
@@ -40,7 +43,13 @@ usePageSeo({
   schemaType: 'AboutPage',
   // Strukturovaná data: vedení společnosti.
   schema: () =>
-    managers.value.map((m) => ({ '@type': 'Person', name: m.name, jobTitle: m.role, worksFor: { '@id': organizationId } })),
+    managers.value.map((m) => ({
+      '@type': 'Person',
+      name: m.name,
+      jobTitle: m.role,
+      image: absolute(m.photo),
+      worksFor: { '@id': organizationId },
+    })),
 })
 </script>
 
@@ -86,12 +95,18 @@ usePageSeo({
         <ul class="team">
           <li v-for="person in managers" :key="person.name">
             <article class="person" :aria-labelledby="`${person.initials}-jmeno`">
+              <img
+                :src="person.photo"
+                :alt="person.name"
+                class="person__photo"
+                width="456"
+                height="342"
+                loading="lazy"
+                decoding="async"
+              />
               <header class="person__head">
-                <span class="person__monogram" aria-hidden="true">{{ person.initials }}</span>
-                <div>
-                  <h3 :id="`${person.initials}-jmeno`" class="person__name">{{ person.name }}</h3>
-                  <p class="person__role">{{ person.role }}</p>
-                </div>
+                <h3 :id="`${person.initials}-jmeno`" class="person__name">{{ person.name }}</h3>
+                <p class="person__role">{{ person.role }}</p>
               </header>
               <p class="person__focus">{{ person.focus }}</p>
               <div class="person__bio">
@@ -154,31 +169,30 @@ usePageSeo({
 
 .person {
   height: 100%;
-  padding: var(--space-6) var(--space-5);
+  padding: var(--space-3) var(--space-3) var(--space-6);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-bg);
 }
 
-.person__head {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
+.person__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 4px);
+  background: var(--color-surface-muted);
 }
 
-.person__monogram {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background: var(--color-navy-800);
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 1.375rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+.person__head {
+  margin-top: var(--space-5);
+}
+
+.person__head,
+.person__focus,
+.person__bio {
+  padding-inline: var(--space-3);
 }
 
 .person__name {

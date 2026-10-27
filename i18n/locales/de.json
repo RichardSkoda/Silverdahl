@@ -9,6 +9,7 @@
     "home": "Startseite",
     "services": "Leistungen",
     "caseStudy": "Fallstudie",
+    "marketEntry": "Markteintritt Tschechien",
     "about": "Über uns",
     "contact": "Kontakt",
     "mainLabel": "Hauptnavigation",
@@ -17,14 +18,27 @@
     "menu": "Menü",
     "close": "Schließen",
     "menuSuffix": "Hauptnavigation",
-    "languageLabel": "Sprache"
+    "languageLabel": "Sprache",
+    "faq": "Häufige Fragen",
+    "breadcrumbLabel": "Brotkrümelnavigation"
   },
   "footer": {
     "about": "Wir unterstützen internationale Unternehmen beim Eintritt in neue Märkte, bei der Suche nach zuverlässigen Partnern und bei der Steuerung lokaler Betriebsabläufe.",
     "pages": "Seiten",
     "services": "Leistungen",
     "cookiePolicy": "Cookie-Richtlinie",
-    "cookieSettings": "Cookie-Einstellungen"
+    "cookieSettings": "Cookie-Einstellungen",
+    "privacy": "Datenschutzerklärung",
+    "ico": "ID-Nr.",
+    "dic": "USt-IdNr.",
+    "register": "Eingetragen im Handelsregister beim Stadtgericht Prag, Aktenzeichen {file}",
+    "followOn": "Silverdahl auf {network}"
+  },
+  "share": {
+    "label": "Seite teilen",
+    "on": "Auf {network} teilen",
+    "email": "per E-Mail",
+    "mailSubject": "Silverdahl – Ihr lokaler Betriebspartner in Mitteleuropa"
   },
   "logo": {
     "alt": "Silverdahl – Marketing and Customer Service"
@@ -45,7 +59,7 @@
       "description": "Silverdahl unterstützt internationale Unternehmen beim Markteintritt in Tschechien und Mitteleuropa, findet Dienstleister und steuert den Betrieb vor Ort."
     },
     "hero": {
-      "eyebrow": "Ihr Partner für europäische Märkte",
+      "eyebrow": "Markteintritt Tschechien · Lieferanten · Betriebsführung",
       "title1": "Von der Strategie",
       "title2": "zum erfolgreichen Betrieb",
       "lead": "Wir unterstützen internationale Unternehmen beim Eintritt in neue Märkte, bei der Suche nach zuverlässigen Partnern und bei der Steuerung lokaler Betriebsabläufe.",
@@ -65,10 +79,11 @@
     },
     "message": {
       "eyebrow": "Silverdahl",
-      "title": "Your Local Operations Partner in Central Europe",
+      "title": "Ihr lokaler Betriebspartner in Mitteleuropa",
       "question": "Möchten Sie in Tschechien geschäftlich tätig werden oder Ihre Aktivitäten auf weitere europäische Märkte ausweiten?",
       "strong": "Sie müssen hier weder ein eigenes Team aufbauen noch selbst zahlreiche lokale Dienstleister suchen und steuern.",
-      "text": "Wir helfen Ihnen, geeignete Partner zu finden und die notwendigen Prozesse aufzusetzen – und übernehmen deren Koordination, Kontrolle und regelmäßiges Reporting."
+      "text": "Wir helfen Ihnen, geeignete Partner zu finden und die notwendigen Prozesse aufzusetzen – und übernehmen deren Koordination, Kontrolle und regelmäßiges Reporting.",
+      "link": "So gelingt der Markteintritt in Tschechien →"
     },
     "responsibility": {
       "eyebrow": "So arbeiten wir",
@@ -331,6 +346,8 @@
       "message": "Nachricht",
       "submit": "Nachricht senden",
       "sending": "Wird gesendet…",
+      "privacy": "Ihre Angaben verwenden wir nur zur Bearbeitung Ihrer Anfrage. Mehr in unserer {link}.",
+      "privacyLink": "Datenschutzerklärung",
       "status": {
         "odeslano": { "title": "Vielen Dank, Ihre Nachricht wurde gesendet.", "text": "Wir haben Ihre Nachricht erhalten und melden uns bei Ihnen." },
         "nenapojeno": { "title": "Ihre Nachricht wurde nicht gesendet.", "text": "Das Online-Formular ist noch nicht an die Nachrichtenzustellung angebunden. Wir bitten um Entschuldigung." },
@@ -428,8 +445,166 @@
       "openSettings": "Cookie-Einstellungen öffnen",
       "browserText": "Sie können Cookies auch in den Einstellungen Ihres Browsers löschen oder blockieren. Das Blockieren notwendiger Cookies kann die Funktion der Website einschränken – der Einwilligungshinweis erscheint dann bei jedem Besuch.",
       "questions": "Bei Fragen wenden Sie sich bitte über unser {link} an uns.",
-      "questionsLink": "Kontaktformular"
+      "questionsLink": "Kontaktformular",
+      "privacy": "Wie wir personenbezogene Daten verarbeiten, beschreibt unsere {link}.",
+      "privacyLink": "Datenschutzerklärung"
     }
+  },
+  "marketEntry": {
+    "seo": {
+      "title": "Markteintritt Tschechien ohne eigenes Team",
+      "description": "Markteintritt in Tschechien: Lieferantenauswahl, Buchhaltung, Logistik, Kundenservice und Betriebsführung – Silverdahl bereitet alles vor und koordiniert."
+    },
+    "intro": {
+      "eyebrow": "Markteintritt Tschechien",
+      "title": "Markteintritt in Tschechien ohne eigenes lokales Team",
+      "text": "Sie möchten in Tschechien verkaufen oder von hier aus weitere Märkte Mitteleuropas bedienen? Wir entwickeln mit Ihnen das passende Betriebsmodell, finden zuverlässige lokale Dienstleister und übernehmen die Koordination des Tagesgeschäfts."
+    },
+    "why": {
+      "eyebrow": "Warum Tschechien",
+      "title": "Ein idealer Standort für den Start in Mitteleuropa",
+      "items": [
+        { "title": "Lage im Herzen Europas", "text": "Gute Verkehrsanbindung nach Deutschland, Österreich, Polen, in die Slowakei und nach Ungarn." },
+        { "title": "EU-Binnenmarkt", "text": "Die EU-Mitgliedschaft erleichtert Handel, Warenverkehr und den Aufbau von Dienstleistungen." },
+        { "title": "Erfahrene Dienstleister", "text": "Kontaktzentren, Logistik, IT, Buchhaltung und Marketing in der benötigten Qualität." },
+        { "title": "Drehscheibe für die Region", "text": "Von einem Standort aus lässt sich auch der Betrieb in der Slowakei, in Polen und Ungarn koordinieren." }
+      ]
+    },
+    "needs": {
+      "eyebrow": "Was geregelt sein muss",
+      "title": "Woran Sie beim Markteintritt denken sollten",
+      "text": "Ein erfolgreicher Start erfordert die Abstimmung vieler Bereiche und Dienstleister. Wir finden, prüfen und koordinieren spezialisierte Partner – Sie haben einen zentralen Ansprechpartner.",
+      "items": [
+        { "title": "Rechtlicher und steuerlicher Rahmen", "text": "gemeinsam mit bewährten Anwälten und Steuerberatern." },
+        { "title": "Buchhaltung und Lohnabrechnung", "text": "ein zuverlässiges Buchhaltungsbüro und regelmäßige Berichte an die Zentrale." },
+        { "title": "Kundenservice", "text": "ein Kontaktzentrum auf Tschechisch und in weiteren Sprachen der Region." },
+        { "title": "Logistik und Lager", "text": "Lagerung, Fulfillment, Transport und Postdienste." },
+        { "title": "Marketing und Lokalisierung", "text": "Übersetzungen, lokalisierte Unterlagen und lokale Marketingpartner." },
+        { "title": "Zoll und IT", "text": "Zollanmeldungen, IT-Support und weitere spezialisierte Leistungen." }
+      ]
+    },
+    "process": {
+      "eyebrow": "Unser Vorgehen",
+      "title": "Vom ersten Gespräch bis zum laufenden Betrieb",
+      "items": [
+        { "title": "Bedarfsanalyse", "text": "Wir lernen Ihr Geschäftsmodell, Ihre Ziele und Ihre Anforderungen an den lokalen Betrieb kennen." },
+        { "title": "Lösungskonzept", "text": "Wir definieren die nötigen Prozesse, Dienstleister, Zuständigkeiten und den Zeitplan." },
+        { "title": "Partnerauswahl", "text": "Wir finden und prüfen Dienstleister, vergleichen Angebote und unterstützen bei den Verhandlungen." },
+        { "title": "Start und Steuerung", "text": "Wir koordinieren den Leistungsbeginn und steuern den Betrieb langfristig mit regelmäßigem Reporting." }
+      ],
+      "servicesLink": "Alle Leistungen im Detail →"
+    },
+    "proof": {
+      "eyebrow": "Erfahrung",
+      "title": "Über 30 Jahre auf den Märkten Mitteleuropas",
+      "text": "Für das Schweizer Unternehmen Courlux International SA finden wir Dienstleister und steuern den Betrieb in Tschechien, der Slowakei, Polen und Ungarn – von Kundenkontaktzentren bis zu Logistik und Reporting an die Zentrale."
+    },
+    "faqTeaser": {
+      "title": "Weitere Fragen?",
+      "text": "Antworten auf die häufigsten Fragen zu Markteintritt, Lieferantenauswahl und Betriebsführung finden Sie auf einer eigenen Seite.",
+      "link": "Häufige Fragen"
+    }
+  },
+  "faq": {
+    "seo": {
+      "title": "Häufige Fragen – Markteintritt und Betrieb",
+      "description": "Antworten auf häufige Fragen: Markteintritt in Tschechien ohne Niederlassung, Lieferantenauswahl, Sprachen, Reporting und Vorlaufzeit."
+    },
+    "intro": "Antworten auf die häufigsten Fragen zum Markteintritt in Tschechien und Mitteleuropa, zur Lieferantenauswahl und zur lokalen Betriebsführung.",
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zum Markteintritt in Tschechien",
+    "items": [
+      { "q": "Brauche ich für den Markteintritt in Tschechien eine eigene Niederlassung und Mitarbeiter?", "a": "Nicht unbedingt. Viele Aufgaben – Kundenservice, Logistik, Buchhaltung oder Marketing – lassen sich über spezialisierte Dienstleister abdecken. Silverdahl findet sie, richtet die Zusammenarbeit ein und koordiniert sie langfristig, sodass Sie kein eigenes lokales Team aufbauen müssen." },
+      { "q": "In welchen Märkten können Sie unterstützen?", "a": "Langjährige Erfahrung haben wir in Tschechien, der Slowakei, Polen und Ungarn. Je nach Projekt unterstützen wir auch in weiteren europäischen Märkten." },
+      { "q": "Welche Dienstleister können Sie vermitteln?", "a": "Zum Beispiel Kontaktzentren, Marketing- und Werbedienstleistungen, Druck und Distribution, Logistik, Lagerung und Fulfillment, IT, Buchhaltung und Steuern, Rechtsberatung, Zolldienstleistungen, Übersetzung und Lokalisierung oder Personaldienstleistungen. Die Liste ist nicht abschließend." },
+      { "q": "Wie lange dauert die Vorbereitung des Markteintritts?", "a": "Das hängt vom Umfang des Projekts und der Zahl der benötigten Dienstleister ab. Nach der Bedarfsanalyse erstellen wir einen konkreten Zeitplan, damit Sie genau wissen, wann der Betrieb starten kann." },
+      { "q": "Muss ich alle Ihre Leistungen in Anspruch nehmen?", "a": "Nein. Wir übernehmen eine einmalige Lieferantenauswahl, die komplette Vorbereitung des Markteintritts oder die langfristige Betriebsführung – ganz nach Ihrem aktuellen Bedarf." },
+      { "q": "In welcher Sprache arbeiten Sie?", "a": "Wir kommunizieren auf Tschechisch, Englisch und Deutsch. Das Reporting erstellen wir in der Sprache und im Format, das Ihrer Zentrale entspricht." },
+      { "q": "Wie behalte ich den Überblick über Betrieb und Kosten?", "a": "Wir liefern regelmäßiges Reporting – je nach Vereinbarung täglich, wöchentlich oder monatlich – einschließlich Lieferantenleistung, Kosten und Soll-Ist-Vergleich." }
+    ]
+  },
+  "privacy": {
+    "seo": {
+      "title": "Datenschutzerklärung",
+      "description": "Wie Silverdahl Daten aus dem Kontaktformular und der Website verarbeitet, wie lange wir sie speichern und welche Rechte Sie nach der DSGVO haben."
+    },
+    "title": "Datenschutzerklärung",
+    "intro": "Der Schutz Ihrer Daten ist uns wichtig. Hier erfahren Sie, welche personenbezogenen Daten wir bei der Nutzung der Website verarbeiten, warum und wie lange und welche Rechte Sie haben.",
+    "controller": {
+      "title": "Verantwortlicher",
+      "text": "Verantwortlich für die Verarbeitung Ihrer personenbezogenen Daten ist:"
+    },
+    "sections": {
+      "data": {
+        "title": "Welche Daten wir verarbeiten",
+        "items": [
+          "Daten aus dem Kontaktformular: Vor- und Nachname, Firma (optional), E-Mail, Betreff und Nachricht.",
+          "Daten aus der Kommunikation per E-Mail und Telefon, wenn Sie uns direkt kontaktieren.",
+          "Technische Daten: IP-Adresse und Browserinformationen in den Server-Logs.",
+          "Cookie-Daten entsprechend Ihrer Auswahl – Einzelheiten in der Cookie-Richtlinie."
+        ]
+      },
+      "purposes": {
+        "title": "Zwecke und Rechtsgrundlagen",
+        "items": [
+          "Bearbeitung Ihrer Anfrage und Gespräche über eine Zusammenarbeit – vorvertragliche Maßnahmen und unser berechtigtes Interesse an der Beantwortung Ihrer Nachricht (Art. 6 Abs. 1 lit. b und f DSGVO).",
+          "Sicherer und zuverlässiger Betrieb der Website – unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).",
+          "Anzeige der Google-Karte sowie etwaige Analyse- oder Marketingtools – nur mit Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)."
+        ]
+      },
+      "retention": {
+        "title": "Speicherdauer",
+        "paragraphs": [
+          "Nachrichten aus dem Kontaktformular und die zugehörige Kommunikation speichern wir so lange, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist, höchstens 3 Jahre ab der letzten Kommunikation, sofern kein Vertragsverhältnis entsteht. Server-Logs werden spätestens nach 90 Tagen gelöscht."
+        ]
+      },
+      "recipients": {
+        "title": "Empfänger",
+        "paragraphs": [
+          "Wir verkaufen Ihre Daten nicht und geben sie nicht zu Marketingzwecken an Dritte weiter. Zugriff können nur unsere Auftragsverarbeiter haben, die für uns technische Leistungen erbringen:"
+        ],
+        "items": [
+          "unser Webhosting-Anbieter,",
+          "unser E-Mail-Dienstleister, über den Nachrichten aus dem Kontaktformular zugestellt werden,",
+          "Google Ireland Ltd. – nur wenn Sie die Karte in den Cookie-Einstellungen zulassen."
+        ]
+      },
+      "transfers": {
+        "title": "Übermittlung in Drittländer",
+        "paragraphs": [
+          "Wir verarbeiten Daten innerhalb der Europäischen Union. Eine Ausnahme kann Google bei der Anzeige der Karte sein – eine Übermittlung in die USA erfolgt auf Grundlage des Angemessenheitsbeschlusses der Europäischen Kommission zum EU-US Data Privacy Framework."
+        ]
+      },
+      "rights": {
+        "title": "Ihre Rechte",
+        "paragraphs": ["Im Zusammenhang mit der Verarbeitung Ihrer personenbezogenen Daten haben Sie das Recht:"],
+        "items": [
+          "auf Auskunft über Ihre Daten und eine Kopie,",
+          "auf Berichtigung unrichtiger Daten,",
+          "auf Löschung, wenn die Daten nicht mehr benötigt werden oder Sie Ihre Einwilligung widerrufen haben,",
+          "auf Einschränkung der Verarbeitung,",
+          "auf Datenübertragbarkeit,",
+          "der Verarbeitung aufgrund berechtigten Interesses zu widersprechen,",
+          "eine erteilte Einwilligung jederzeit so einfach zu widerrufen, wie Sie sie erteilt haben,",
+          "sich bei der tschechischen Datenschutzbehörde (Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Prag 7, www.uoou.cz) oder bei der Aufsichtsbehörde Ihres Landes zu beschweren."
+        ]
+      },
+      "security": {
+        "title": "Sicherheit",
+        "paragraphs": [
+          "Die Website ist ausschließlich über eine verschlüsselte Verbindung (HTTPS) erreichbar. Zugriff auf die Daten haben nur befugte Personen, die zur Verschwiegenheit verpflichtet sind."
+        ]
+      }
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "Welche Cookies die Website verwendet und wie Sie Ihre Einwilligung ändern können, beschreibt unsere {link}."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte erreichen Sie uns per E-Mail unter {email} oder schriftlich an unserem Firmensitz."
+    },
+    "updated": "Diese Datenschutzerklärung gilt ab dem 1. November 2026."
   },
   "error": {
     "notFoundTitle": "Seite nicht gefunden",

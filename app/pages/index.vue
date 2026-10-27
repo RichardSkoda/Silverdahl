@@ -29,8 +29,9 @@ const strengths = computed(() =>
         <img src="/images/hero-budova.webp" alt="" class="hero__building" width="260" height="744" loading="lazy" decoding="async" />
       </div>
       <div class="container hero__content">
-        <p class="eyebrow hero__eyebrow">{{ $t('home.hero.eyebrow') }}</p>
+        <!-- Nadtitulek je součástí H1, aby nadpis obsahoval i hledaná slova (vstup na trh, řízení provozu). -->
         <h1 id="hero-nadpis" class="hero__title">
+          <span class="eyebrow hero__eyebrow">{{ $t('home.hero.eyebrow') }}</span>
           {{ $t('home.hero.title1') }} <span class="hero__line">{{ $t('home.hero.title2') }}</span>
         </h1>
         <p class="hero__lead">{{ $t('home.hero.lead') }}</p>
@@ -93,6 +94,7 @@ const strengths = computed(() =>
         <p class="message__question">{{ $t('home.message.question') }}</p>
         <p class="message__strong">{{ $t('home.message.strong') }}</p>
         <p class="message__text">{{ $t('home.message.text') }}</p>
+        <NuxtLink :to="localePath('vstup-na-trh')" class="message__link">{{ $t('home.message.link') }}</NuxtLink>
       </div>
     </section>
 
@@ -148,7 +150,9 @@ const strengths = computed(() =>
 }
 
 .hero__eyebrow {
+  display: flex;
   margin-bottom: var(--space-5);
+  line-height: var(--leading-snug);
 }
 
 .hero__title {
@@ -194,8 +198,6 @@ const strengths = computed(() =>
 .hero__art {
   position: relative;
   height: 17rem;
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 25%, #000 55%, transparent 100%);
-  mask-image: linear-gradient(180deg, transparent 0%, #000 25%, #000 55%, transparent 100%);
 }
 
 .hero__map {
@@ -230,6 +232,15 @@ const strengths = computed(() =>
   .hero__building {
     display: none;
   }
+
+  /* Na mobilu se mapa rozplývá překryvem v barvě pozadí místo mask-image – vypadá stejně a vykresluje se levněji. */
+  .hero__art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #f5f8fc 0%, rgb(245 248 252 / 0) 25%, rgb(251 252 254 / 0) 55%, #fbfcfe 100%);
+    pointer-events: none;
+  }
 }
 
 @media (min-width: 60rem) {
@@ -263,6 +274,13 @@ const strengths = computed(() =>
     justify-content: center;
     align-items: flex-start;
   }
+}
+
+.message__link {
+  display: inline-block;
+  margin-top: var(--space-5);
+  font-weight: 600;
+  color: var(--color-accent-strong);
 }
 
 /* ---------- Tři kroky ---------- */

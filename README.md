@@ -51,7 +51,7 @@ Konfigurace probíhá přes proměnné prostředí – viz `.env.example` (zkop�
 app/
   app.vue, error.vue           kořen aplikace, chybová / 404 stránka
   layouts/default.vue          hlavička, <main>, patička, skip-link
-  pages/                       / · /sluzby · /case-study · /o-nas · /kontakt · /cookies (adresy v dalších jazycích viz níže)
+  pages/                       / · /sluzby · /vstup-na-cesky-trh · /case-study · /o-nas · /kontakt · /cookies · /ochrana-osobnich-udaju (adresy v dalších jazycích viz níže)
   components/
     SiteHeader, SiteFooter     navigace (aktivní stavy, přístupné mobilní menu, funguje i bez JS)
     LanguageSwitcher           přepínač jazyků CS · EN · DE (vede na stejnou stránku v jiném jazyce)
@@ -203,15 +203,19 @@ Po odvolání souhlasu se stránka jednou znovu načte, aby už spuštěné skri
 
 ## Čeká na doplnění před zveřejněním
 
-- [ ] **Kontaktní údaje** – e-mail, telefon, adresa sídla, IČO/DIČ, zápis v OR (patička + `/kontakt`, viz TODO v kódu).
+- [ ] **Firemní údaje – ZÁSTUPNÉ HODNOTY** – IČO, DIČ a spisová značka v `app/data/company.ts` jsou smyšlené
+      (zobrazují se v patičce, v zásadách ochrany osobních údajů a ve strukturovaných datech). Ověřit i e-mail, telefon a adresu.
+- [ ] **Sociální sítě – ZÁSTUPNÉ ODKAZY** – `company.social` (LinkedIn, Facebook) v `app/data/company.ts`; po založení
+      profilů přepsat skutečnými adresami (patička + `sameAs` ve strukturovaných datech). Sdílecí tlačítka fungují už teď.
 - [ ] **Doména** – výchozí je `https://silverdahl.cz`; při jiné doméně nastavit `NUXT_PUBLIC_SITE_URL` už pro build.
       Na testovacím nasazení nastavit `NUXT_PUBLIC_INDEXABLE=false`.
 - [ ] **Search Console** – po spuštění ověřit doménu a odeslat sitemap.
 - [ ] **Doručování formuláře** – nastavit SMTP proměnné a otestovat odeslání skutečné zprávy.
-- [ ] **Zásady ochrany osobních údajů** – text a odkaz u formuláře (TODO v `ContactForm.vue`).
+- [ ] **Zásady ochrany osobních údajů** – vzorový text (`/ochrana-osobnich-udaju`, překlady `privacy.*`) nechat zkontrolovat
+      právníkem; doplnit poskytovatele hostingu a e-mailu, ověřit lhůty uchování a datum účinnosti.
 - [ ] **Profil Tomáše Kouřila** – podle podkladů bude doplněna konkrétní délka praxe, významné projekty,
       profesní zkušenosti a hlavní obchodní úspěchy (TODO v `app/pages/o-nas.vue`).
-- [ ] **Fotografie managementu** – portréty v podkladech jsou ilustrační návrh, proto nejsou použity;
-      zatím se zobrazují iniciály. Po dodání skutečných fotografií doplnit do `o-nas.vue`.
+- [ ] **Fotografie managementu** – zatím ilustrační portréty z podkladů (nejsou to skutečné osoby, malé rozlišení).
+      Nahradit skutečnými fotkami 4 : 3, ideálně ≥ 960 × 720 px: `public/images/management-kouril.webp` a `-tauchman.webp`.
 - [ ] **Logo** – oficiální logo je obkreslené z PNG ze současného webu; při dodání originálního vektorového loga nahradit soubory v `public/logo/` a znovu vygenerovat `public/logo/logo-silverdahl.png` a `public/og/silverdahl.jpg`.
 - [ ] Aktualizace na Node 24 LTS a nejnovější Nuxt (viz výše).

@@ -18,10 +18,13 @@ export function isLocale(value: unknown): value is Locale {
 export const localizedPaths = {
   index: { cs: '/', en: '/', de: '/' },
   sluzby: { cs: '/sluzby', en: '/services', de: '/leistungen' },
+  'vstup-na-trh': { cs: '/vstup-na-cesky-trh', en: '/czech-market-entry', de: '/markteintritt-tschechien' },
+  'caste-dotazy': { cs: '/caste-dotazy', en: '/faq', de: '/haeufige-fragen' },
   'case-study': { cs: '/case-study', en: '/case-study', de: '/fallstudie' },
   'o-nas': { cs: '/o-nas', en: '/about-us', de: '/ueber-uns' },
   kontakt: { cs: '/kontakt', en: '/contact', de: '/kontakt' },
   cookies: { cs: '/cookies', en: '/cookies', de: '/cookies' },
+  'ochrana-osobnich-udaju': { cs: '/ochrana-osobnich-udaju', en: '/privacy-policy', de: '/datenschutz' },
 } as const satisfies Record<string, Record<Locale, string>>
 
 export type PageName = keyof typeof localizedPaths

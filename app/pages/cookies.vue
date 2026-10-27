@@ -11,9 +11,6 @@ usePageSeo({
 })
 
 const { openSettings } = useCookieConsent()
-
-// TODO: Doplnit odkaz na zásady ochrany osobních údajů a kontakt na správce (název, sídlo, IČO, e-mail),
-// až budou k dispozici. Podklady je zatím neobsahují.
 </script>
 
 <template>
@@ -77,6 +74,11 @@ const { openSettings } = useCookieConsent()
         <i18n-t keypath="cookies.page.questions" tag="p" scope="global">
           <template #link>
             <NuxtLink :to="localePath('kontakt')">{{ $t('cookies.page.questionsLink') }}</NuxtLink>
+          </template>
+        </i18n-t>
+        <i18n-t keypath="cookies.page.privacy" tag="p" scope="global">
+          <template #link>
+            <NuxtLink :to="localePath('ochrana-osobnich-udaju')">{{ $t('cookies.page.privacyLink') }}</NuxtLink>
           </template>
         </i18n-t>
       </div>

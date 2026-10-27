@@ -10,6 +10,7 @@ import {
 } from '#shared/contact'
 
 const { t, locale } = useI18n()
+const localePath = useLocalePath()
 
 const props = withDefaults(
   defineProps<{
@@ -238,7 +239,11 @@ const describedBy = (field: ContactField, hint?: string) =>
       <input id="kontakt-web" v-model="honeypot" name="website" type="text" tabindex="-1" autocomplete="off">
     </div>
 
-    <!-- TODO: Doplnit informaci o zpracování osobních údajů (odkaz na zásady ochrany osobních údajů), až bude k dispozici. -->
+    <i18n-t keypath="contact.form.privacy" tag="p" class="form__privacy" scope="global">
+      <template #link>
+        <NuxtLink :to="localePath('ochrana-osobnich-udaju')">{{ $t('contact.form.privacyLink') }}</NuxtLink>
+      </template>
+    </i18n-t>
 
     <div class="form__actions">
       <BaseButton type="submit" :disabled="submitDisabled">
@@ -347,6 +352,11 @@ const describedBy = (field: ContactField, hint?: string) =>
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.form__privacy {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
 }
 
 .form__actions {

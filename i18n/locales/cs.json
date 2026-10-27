@@ -9,6 +9,7 @@
     "home": "Domů",
     "services": "Služby",
     "caseStudy": "Case study",
+    "marketEntry": "Vstup na český trh",
     "about": "O nás",
     "contact": "Kontakt",
     "mainLabel": "Hlavní navigace",
@@ -17,14 +18,27 @@
     "menu": "Menu",
     "close": "Zavřít",
     "menuSuffix": "hlavní navigace",
-    "languageLabel": "Jazyk"
+    "languageLabel": "Jazyk",
+    "faq": "Časté dotazy",
+    "breadcrumbLabel": "Drobečková navigace"
   },
   "footer": {
     "about": "Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy.",
     "pages": "Stránky",
     "services": "Služby",
     "cookiePolicy": "Zásady cookies",
-    "cookieSettings": "Nastavení cookies"
+    "cookieSettings": "Nastavení cookies",
+    "privacy": "Ochrana osobních údajů",
+    "ico": "IČO",
+    "dic": "DIČ",
+    "register": "Spisová značka {file} vedená u Městského soudu v Praze",
+    "followOn": "Silverdahl na síti {network}"
+  },
+  "share": {
+    "label": "Sdílet stránku",
+    "on": "Sdílet na {network}",
+    "email": "e-mailem",
+    "mailSubject": "Silverdahl – lokální provozní partner ve střední Evropě"
   },
   "logo": {
     "alt": "Silverdahl – Marketing and Customer Service"
@@ -45,7 +59,7 @@
       "description": "Silverdahl pomáhá zahraničním firmám se vstupem na český a středoevropský trh – najde spolehlivé dodavatele a převezme řízení lokálního provozu."
     },
     "hero": {
-      "eyebrow": "Váš partner pro evropské trhy",
+      "eyebrow": "Vstup na český trh · dodavatelé · řízení provozu",
       "title1": "Od strategie",
       "title2": "k úspěšnému provozu",
       "lead": "Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy.",
@@ -65,10 +79,11 @@
     },
     "message": {
       "eyebrow": "Silverdahl",
-      "title": "Your Local Operations Partner in Central Europe",
+      "title": "Váš lokální provozní partner ve střední Evropě",
       "question": "Chcete začít podnikat v České republice nebo rozšířit své aktivity na další evropské trhy?",
       "strong": "Nemusíte zde budovat vlastní tým ani sami vyhledávat a řídit řadu lokálních dodavatelů.",
-      "text": "Pomůžeme vám najít vhodné partnery, nastavit potřebné procesy a zajistíme jejich koordinaci, kontrolu a pravidelný reporting."
+      "text": "Pomůžeme vám najít vhodné partnery, nastavit potřebné procesy a zajistíme jejich koordinaci, kontrolu a pravidelný reporting.",
+      "link": "Jak probíhá vstup na český trh →"
     },
     "responsibility": {
       "eyebrow": "Jak spolupracujeme",
@@ -331,6 +346,8 @@
       "message": "Zpráva",
       "submit": "Odeslat zprávu",
       "sending": "Odesílám…",
+      "privacy": "Údaje z formuláře použijeme jen k vyřízení vašeho dotazu. Více v {link}.",
+      "privacyLink": "zásadách ochrany osobních údajů",
       "status": {
         "odeslano": { "title": "Děkujeme, zpráva byla odeslána.", "text": "Vaši zprávu jsme přijali a ozveme se vám." },
         "nenapojeno": { "title": "Zpráva nebyla odeslána.", "text": "Online formulář zatím není napojen na doručování zpráv. Omlouváme se za komplikaci." },
@@ -428,8 +445,166 @@
       "openSettings": "Otevřít nastavení cookies",
       "browserText": "Cookies můžete také smazat nebo zablokovat v nastavení svého prohlížeče. Zablokování nezbytných cookies může omezit fungování webu – lišta se souhlasem se pak bude zobrazovat při každé návštěvě.",
       "questions": "S dotazy se na nás obraťte prostřednictvím {link}.",
-      "questionsLink": "kontaktního formuláře"
+      "questionsLink": "kontaktního formuláře",
+      "privacy": "Jak zpracováváme osobní údaje, popisují {link}.",
+      "privacyLink": "zásady ochrany osobních údajů"
     }
+  },
+  "marketEntry": {
+    "seo": {
+      "title": "Vstup na český trh bez vlastní pobočky a týmu",
+      "description": "Jak vstoupit na český trh: výběr dodavatelů, účetnictví, logistika, zákaznický servis a řízení provozu. Silverdahl vše připraví a koordinuje za vás."
+    },
+    "intro": {
+      "eyebrow": "Vstup na český trh",
+      "title": "Vstup na český trh bez budování vlastního týmu",
+      "text": "Chcete prodávat v České republice nebo odsud obsluhovat další trhy střední Evropy? Pomůžeme vám připravit provozní řešení, najít spolehlivé lokální dodavatele a převezmeme koordinaci každodenního provozu."
+    },
+    "why": {
+      "eyebrow": "Proč Česká republika",
+      "title": "Výhodné místo pro start ve střední Evropě",
+      "items": [
+        { "title": "Poloha v srdci Evropy", "text": "Dobrá dopravní dostupnost Německa, Rakouska, Polska, Slovenska i Maďarska." },
+        { "title": "Jednotný trh EU", "text": "Členství v Evropské unii usnadňuje obchod, pohyb zboží i nastavení služeb." },
+        { "title": "Zkušení dodavatelé služeb", "text": "Kontaktní centra, logistika, IT, účetnictví i marketing v potřebné kvalitě." },
+        { "title": "Výchozí bod pro region", "text": "Z jednoho místa lze koordinovat i provoz na Slovensku, v Polsku a Maďarsku." }
+      ]
+    },
+    "needs": {
+      "eyebrow": "Co je potřeba zajistit",
+      "title": "Na co při vstupu na trh nezapomenout",
+      "text": "Úspěšný start na novém trhu vyžaduje sladit řadu oblastí a dodavatelů. Specializované partnery vyhledáme, prověříme a jejich spolupráci koordinujeme – vy máte jedno kontaktní místo.",
+      "items": [
+        { "title": "Právní a daňový rámec", "text": "ve spolupráci s ověřenými právníky a daňovými poradci." },
+        { "title": "Účetnictví a mzdy", "text": "spolehlivá účetní kancelář a pravidelné výkazy pro centrálu." },
+        { "title": "Zákaznický servis", "text": "kontaktní centrum v češtině i dalších jazycích regionu." },
+        { "title": "Logistika a sklad", "text": "skladování, fulfillment, doprava a poštovní služby." },
+        { "title": "Marketing a lokalizace", "text": "překlady, lokalizace materiálů a místní marketingoví partneři." },
+        { "title": "Clo a IT", "text": "celní deklarace, IT podpora a další specializované služby." }
+      ]
+    },
+    "process": {
+      "eyebrow": "Jak postupujeme",
+      "title": "Od první schůzky ke spuštění provozu",
+      "items": [
+        { "title": "Analýza potřeb", "text": "Seznámíme se s vaším obchodním modelem, cíli a požadavky na lokální provoz." },
+        { "title": "Návrh řešení", "text": "Navrhneme potřebné procesy, dodavatele, odpovědnosti a harmonogram." },
+        { "title": "Výběr partnerů", "text": "Vyhledáme a prověříme dodavatele, porovnáme nabídky a pomůžeme vyjednat podmínky." },
+        { "title": "Spuštění a řízení", "text": "Koordinujeme zahájení služeb a dlouhodobě řídíme provoz s pravidelným reportingem." }
+      ],
+      "servicesLink": "Podrobný přehled našich služeb →"
+    },
+    "proof": {
+      "eyebrow": "Zkušenost",
+      "title": "Více než 30 let na trzích střední Evropy",
+      "text": "Pro švýcarskou společnost Courlux International SA zajišťujeme dodavatele a řídíme provoz v České republice, na Slovensku, v Polsku a Maďarsku – od zákaznických center po logistiku a reporting centrále."
+    },
+    "faqTeaser": {
+      "title": "Máte další otázky?",
+      "text": "Odpovědi na nejčastější dotazy ke vstupu na trh, výběru dodavatelů a řízení provozu najdete na samostatné stránce.",
+      "link": "Časté dotazy"
+    }
+  },
+  "faq": {
+    "seo": {
+      "title": "Časté dotazy – vstup na trh a řízení provozu",
+      "description": "Odpovědi na časté otázky: vstup na český trh bez pobočky, výběr dodavatelů, jazyky, reporting a délka přípravy. Silverdahl, Praha."
+    },
+    "intro": "Odpovědi na nejčastější otázky ke vstupu na český a středoevropský trh, výběru dodavatelů a řízení lokálního provozu.",
+    "eyebrow": "Časté dotazy",
+    "title": "Otázky ke vstupu na český trh",
+    "items": [
+      { "q": "Potřebuji pro vstup na český trh vlastní pobočku a zaměstnance?", "a": "Ne nutně. Řadu činností – zákaznický servis, logistiku, účetnictví nebo marketing – lze zajistit prostřednictvím specializovaných dodavatelů. Silverdahl je vyhledá, nastaví spolupráci a dlouhodobě ji koordinuje, takže nemusíte budovat vlastní lokální tým." },
+      { "q": "Na kterých trzích můžete pomoci?", "a": "Dlouhodobé zkušenosti máme z České republiky, Slovenska, Polska a Maďarska. Podle povahy projektu umíme pomoci i na dalších evropských trzích." },
+      { "q": "Jaké dodavatele dokážete zajistit?", "a": "Například kontaktní centra, marketingové a reklamní služby, tisk a distribuci, logistiku, skladování a fulfillment, IT, účetní a daňové služby, právní poradenství, celní služby, překlady a lokalizaci či personální služby. Výběr oblastí není uzavřený." },
+      { "q": "Jak dlouho trvá příprava vstupu na trh?", "a": "Záleží na rozsahu projektu a počtu potřebných dodavatelů. Po úvodní analýze připravíme konkrétní harmonogram, abyste přesně věděli, kdy může provoz začít." },
+      { "q": "Musím využít všechny vaše služby?", "a": "Ne. Můžeme zajistit jednorázový výběr dodavatele, kompletní přípravu vstupu na trh nebo dlouhodobé řízení provozu – podle toho, co právě potřebujete." },
+      { "q": "V jakém jazyce spolu budeme komunikovat?", "a": "Komunikujeme česky, anglicky a německy. Reporting připravujeme v jazyce a formátu, který vyhovuje vaší centrále." },
+      { "q": "Jak budu mít přehled o provozu a nákladech?", "a": "Poskytujeme pravidelný reporting – podle dohody denní, týdenní nebo měsíční – včetně vyhodnocení výkonnosti dodavatelů, nákladů a porovnání výsledků s plánem." }
+    ]
+  },
+  "privacy": {
+    "seo": {
+      "title": "Zásady ochrany osobních údajů",
+      "description": "Jak Silverdahl s.r.o. zpracovává osobní údaje z kontaktního formuláře a webu, jak dlouho je uchovává a jaká máte práva podle GDPR."
+    },
+    "title": "Zásady ochrany osobních údajů",
+    "intro": "Vážíme si vašeho soukromí. Zde najdete, jaké osobní údaje při používání webu zpracováváme, proč a jak dlouho a jaká máte práva.",
+    "controller": {
+      "title": "Kdo je správce údajů",
+      "text": "Správcem osobních údajů je:"
+    },
+    "sections": {
+      "data": {
+        "title": "Jaké údaje zpracováváme",
+        "items": [
+          "Údaje z kontaktního formuláře: jméno a příjmení, název firmy (nepovinné), e-mail, téma dotazu a text zprávy.",
+          "Údaje z e-mailové a telefonické komunikace, pokud nás kontaktujete přímo.",
+          "Technické údaje: IP adresa a údaje o prohlížeči v provozních záznamech serveru.",
+          "Údaje z cookies podle vaší volby – podrobnosti v zásadách cookies."
+        ]
+      },
+      "purposes": {
+        "title": "Proč údaje zpracováváme a na jakém základě",
+        "items": [
+          "Vyřízení vašeho dotazu a jednání o spolupráci – opatření před uzavřením smlouvy a náš oprávněný zájem odpovědět na vaši zprávu (čl. 6 odst. 1 písm. b) a f) GDPR).",
+          "Zajištění bezpečného a spolehlivého provozu webu – náš oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR).",
+          "Zobrazení mapy Google a případné analytické či marketingové nástroje – jen s vaším souhlasem (čl. 6 odst. 1 písm. a) GDPR)."
+        ]
+      },
+      "retention": {
+        "title": "Jak dlouho údaje uchováváme",
+        "paragraphs": [
+          "Zprávy z kontaktního formuláře a související komunikaci uchováváme po dobu nezbytnou k vyřízení dotazu, nejdéle 3 roky od poslední komunikace, pokud z ní nevznikne smluvní vztah. Provozní záznamy serveru se mažou nejpozději po 90 dnech."
+        ]
+      },
+      "recipients": {
+        "title": "Komu údaje předáváme",
+        "paragraphs": [
+          "Údaje neprodáváme ani nepředáváme pro marketingové účely třetím stranám. Přístup k nim mohou mít pouze naši zpracovatelé, kteří pro nás zajišťují technický provoz:"
+        ],
+        "items": [
+          "poskytovatel webhostingu,",
+          "poskytovatel e-mailových služeb, přes který se doručují zprávy z formuláře,",
+          "Google Ireland Ltd. – jen pokud v nastavení cookies povolíte zobrazení mapy."
+        ]
+      },
+      "transfers": {
+        "title": "Předávání mimo EU",
+        "paragraphs": [
+          "Údaje zpracováváme v Evropské unii. Výjimkou může být společnost Google při zobrazení mapy – k předání do USA pak dochází na základě rozhodnutí Evropské komise o rámci ochrany osobních údajů EU–USA (Data Privacy Framework)."
+        ]
+      },
+      "rights": {
+        "title": "Vaše práva",
+        "paragraphs": ["V souvislosti se zpracováním osobních údajů máte právo:"],
+        "items": [
+          "na přístup ke svým údajům a jejich kopii,",
+          "na opravu nepřesných údajů,",
+          "na výmaz, pokud údaje již nejsou potřebné nebo jste odvolali souhlas,",
+          "na omezení zpracování,",
+          "na přenositelnost údajů,",
+          "vznést námitku proti zpracování na základě oprávněného zájmu,",
+          "kdykoli odvolat udělený souhlas, a to stejně snadno, jako jste ho udělili,",
+          "podat stížnost u Úřadu pro ochranu osobních údajů (Pplk. Sochora 27, 170 00 Praha 7, www.uoou.cz)."
+        ]
+      },
+      "security": {
+        "title": "Zabezpečení",
+        "paragraphs": [
+          "Web je dostupný výhradně přes šifrované spojení (HTTPS). Přístup k údajům mají jen pověřené osoby, které jsou vázány mlčenlivostí."
+        ]
+      }
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "Které cookies web používá a jak můžete svůj souhlas změnit, popisují {link}."
+    },
+    "contact": {
+      "title": "Jak nás kontaktovat",
+      "text": "S dotazy k ochraně osobních údajů nebo k uplatnění svých práv se na nás obraťte e-mailem na {email} nebo písemně na adrese sídla."
+    },
+    "updated": "Tyto zásady jsou účinné od 1. 11. 2026."
   },
   "error": {
     "notFoundTitle": "Stránka nenalezena",

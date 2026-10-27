@@ -68,8 +68,8 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown))
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgb(255 255 255 / 0.92);
-  backdrop-filter: blur(8px);
+  /* Bez backdrop-filter: rozmazání pod lepivou hlavičkou se při posunu přepočítává a zpomaluje slabé telefony. */
+  background: rgb(255 255 255 / 0.97);
   border-bottom: 1px solid var(--color-border);
 }
 

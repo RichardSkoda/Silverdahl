@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { mainNavigation } from '~/data/navigation'
 import { serviceDefs } from '~/data/services'
+import { company } from '~/data/company'
 
 const year = new Date().getFullYear()
 const localePath = useLocalePath()
@@ -13,10 +14,27 @@ const { openSettings } = useCookieConsent()
       <div class="footer__about">
         <SiteLogo inverse />
         <p>{{ $t('footer.about') }}</p>
-        <!--
-          TODO: Doplnit ověřené kontaktní a firemní údaje (sídlo, IČO, DIČ, zápis v obchodním rejstříku,
-          telefon, e-mail, případně profily na sociálních sítích). Podklady je zatím neobsahují.
-        -->
+        <!-- Firemní údaje: IČO, DIČ a zápis v rejstříku jsou zatím zástupné – viz data/company.ts. -->
+        <address class="footer__company">
+          <strong>{{ company.name }}</strong><br />
+          {{ company.address.street }}, {{ company.address.postalCode }} {{ company.address.city }}<br />
+          {{ $t('footer.ico') }} {{ company.legal.ico }} · {{ $t('footer.dic') }} {{ company.legal.dic }}<br />
+          {{ $t('footer.register', { file: company.legal.registerFile }) }}
+        </address>
+        <ul class="footer__social">
+          <li>
+            <a :href="company.social.linkedin" target="_blank" rel="noopener noreferrer" :title="$t('footer.followOn', { network: 'LinkedIn' })">
+              <SocialIcon name="linkedin" />
+              <span class="visually-hidden">{{ $t('footer.followOn', { network: 'LinkedIn' }) }} {{ $t('common.newWindow') }}</span>
+            </a>
+          </li>
+          <li>
+            <a :href="company.social.facebook" target="_blank" rel="noopener noreferrer" :title="$t('footer.followOn', { network: 'Facebook' })">
+              <SocialIcon name="facebook" />
+              <span class="visually-hidden">{{ $t('footer.followOn', { network: 'Facebook' }) }} {{ $t('common.newWindow') }}</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <nav :aria-label="$t('nav.footerLabel')">
@@ -25,6 +43,8 @@ const { openSettings } = useCookieConsent()
           <li v-for="item in mainNavigation" :key="item.page">
             <NuxtLink :to="localePath(item.page)">{{ $t(item.labelKey) }}</NuxtLink>
           </li>
+          <li><NuxtLink :to="localePath('vstup-na-trh')">{{ $t('nav.marketEntry') }}</NuxtLink></li>
+          <li><NuxtLink :to="localePath('caste-dotazy')">{{ $t('nav.faq') }}</NuxtLink></li>
         </ul>
       </nav>
 
@@ -40,7 +60,9 @@ const { openSettings } = useCookieConsent()
 
     <div class="container footer__bottom">
       <p>© {{ year }} Silverdahl s.r.o.</p>
+      <ShareLinks inverse />
       <ul class="footer__legal">
+        <li><NuxtLink :to="localePath('ochrana-osobnich-udaju')">{{ $t('footer.privacy') }}</NuxtLink></li>
         <li><NuxtLink :to="localePath('cookies')">{{ $t('footer.cookiePolicy') }}</NuxtLink></li>
         <!-- Tlačítko funguje jen s JavaScriptem, bez něj se lišta ani nezobrazuje. -->
         <ClientOnly>
@@ -76,6 +98,43 @@ const { openSettings } = useCookieConsent()
 .footer__about p {
   margin-top: var(--space-5);
   max-width: 26rem;
+}
+
+.footer__company {
+  margin-top: var(--space-5);
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.footer__company strong {
+  color: var(--color-text-inverse);
+  font-weight: 600;
+}
+
+.footer__social {
+  list-style: none;
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.footer__social a {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.08);
+  transition: background-color var(--transition);
+}
+
+.footer__social a:hover {
+  background: rgb(255 255 255 / 0.16);
+}
+
+.footer__social svg {
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .footer__title {

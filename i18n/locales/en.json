@@ -9,6 +9,7 @@
     "home": "Home",
     "services": "Services",
     "caseStudy": "Case study",
+    "marketEntry": "Czech market entry",
     "about": "About us",
     "contact": "Contact",
     "mainLabel": "Main navigation",
@@ -17,14 +18,27 @@
     "menu": "Menu",
     "close": "Close",
     "menuSuffix": "main navigation",
-    "languageLabel": "Language"
+    "languageLabel": "Language",
+    "faq": "FAQ",
+    "breadcrumbLabel": "Breadcrumb"
   },
   "footer": {
     "about": "We help international companies enter new markets, find reliable partners and manage local operations.",
     "pages": "Pages",
     "services": "Services",
     "cookiePolicy": "Cookie policy",
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "privacy": "Privacy policy",
+    "ico": "Company ID",
+    "dic": "VAT ID",
+    "register": "Registered in the Commercial Register of the Municipal Court in Prague, file no. {file}",
+    "followOn": "Silverdahl on {network}"
+  },
+  "share": {
+    "label": "Share this page",
+    "on": "Share on {network}",
+    "email": "by e-mail",
+    "mailSubject": "Silverdahl – your local operations partner in Central Europe"
   },
   "logo": {
     "alt": "Silverdahl – Marketing and Customer Service"
@@ -45,7 +59,7 @@
       "description": "Silverdahl helps international companies enter the Czech and Central European markets, find reliable suppliers and manage local operations."
     },
     "hero": {
-      "eyebrow": "Your partner for European markets",
+      "eyebrow": "Czech market entry · suppliers · local operations",
       "title1": "From strategy",
       "title2": "to successful operations",
       "lead": "We help international companies enter new markets, find reliable partners and manage local operational processes.",
@@ -68,7 +82,8 @@
       "title": "Your Local Operations Partner in Central Europe",
       "question": "Are you planning to do business in the Czech Republic or expand into other European markets?",
       "strong": "You don’t need to build your own team here or find and manage a whole range of local suppliers yourself.",
-      "text": "We help you find the right partners and set up the necessary processes – and we take care of their coordination, control and regular reporting."
+      "text": "We help you find the right partners and set up the necessary processes – and we take care of their coordination, control and regular reporting.",
+      "link": "How Czech market entry works →"
     },
     "responsibility": {
       "eyebrow": "How we work",
@@ -331,6 +346,8 @@
       "message": "Message",
       "submit": "Send message",
       "sending": "Sending…",
+      "privacy": "We use the details from this form only to handle your enquiry. See our {link}.",
+      "privacyLink": "privacy policy",
       "status": {
         "odeslano": { "title": "Thank you, your message has been sent.", "text": "We have received your message and will get back to you." },
         "nenapojeno": { "title": "Your message was not sent.", "text": "The online form is not yet connected to message delivery. We apologise for the inconvenience." },
@@ -428,8 +445,166 @@
       "openSettings": "Open cookie settings",
       "browserText": "You can also delete or block cookies in your browser settings. Blocking necessary cookies may limit how the website works – the consent banner will then appear on every visit.",
       "questions": "If you have any questions, please get in touch via our {link}.",
-      "questionsLink": "contact form"
+      "questionsLink": "contact form",
+      "privacy": "How we process personal data is described in our {link}.",
+      "privacyLink": "privacy policy"
     }
+  },
+  "marketEntry": {
+    "seo": {
+      "title": "Czech market entry without a local team",
+      "description": "How to enter the Czech market: supplier selection, accounting, logistics, customer service and local operations. Silverdahl prepares and coordinates it all."
+    },
+    "intro": {
+      "eyebrow": "Czech market entry",
+      "title": "Enter the Czech market without building your own team",
+      "text": "Want to sell in the Czech Republic or serve other Central European markets from here? We help you design the operating model, find reliable local suppliers and take over the coordination of day-to-day operations."
+    },
+    "why": {
+      "eyebrow": "Why the Czech Republic",
+      "title": "A practical base for Central Europe",
+      "items": [
+        { "title": "Location at the heart of Europe", "text": "Easy access to Germany, Austria, Poland, Slovakia and Hungary." },
+        { "title": "EU single market", "text": "EU membership makes trade, the movement of goods and service set-up easier." },
+        { "title": "Experienced service providers", "text": "Contact centres, logistics, IT, accounting and marketing at the quality you need." },
+        { "title": "A hub for the region", "text": "Operations in Slovakia, Poland and Hungary can be coordinated from one place." }
+      ]
+    },
+    "needs": {
+      "eyebrow": "What needs to be in place",
+      "title": "What to plan for when entering the market",
+      "text": "A successful launch means aligning many areas and suppliers. We find, vet and coordinate the specialist partners – you have a single point of contact.",
+      "items": [
+        { "title": "Legal and tax framework", "text": "together with trusted lawyers and tax advisers." },
+        { "title": "Accounting and payroll", "text": "a reliable accounting firm and regular reports for your headquarters." },
+        { "title": "Customer service", "text": "a contact centre in Czech and other regional languages." },
+        { "title": "Logistics and warehousing", "text": "storage, fulfilment, transport and postal services." },
+        { "title": "Marketing and localisation", "text": "translations, localised materials and local marketing partners." },
+        { "title": "Customs and IT", "text": "customs declarations, IT support and other specialist services." }
+      ]
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "From the first meeting to live operations",
+      "items": [
+        { "title": "Needs analysis", "text": "We get to know your business model, goals and requirements for local operations." },
+        { "title": "Solution design", "text": "We define the processes, suppliers, responsibilities and timeline you need." },
+        { "title": "Partner selection", "text": "We find and vet suppliers, compare offers and help negotiate terms." },
+        { "title": "Launch and management", "text": "We coordinate the start of services and manage operations long term with regular reporting." }
+      ],
+      "servicesLink": "See all our services in detail →"
+    },
+    "proof": {
+      "eyebrow": "Experience",
+      "title": "More than 30 years in Central European markets",
+      "text": "For the Swiss company Courlux International SA we source suppliers and manage operations in the Czech Republic, Slovakia, Poland and Hungary – from customer contact centres to logistics and reporting to headquarters."
+    },
+    "faqTeaser": {
+      "title": "Any other questions?",
+      "text": "Answers to the most common questions about market entry, supplier selection and local operations are on a separate page.",
+      "link": "FAQ"
+    }
+  },
+  "faq": {
+    "seo": {
+      "title": "FAQ – market entry and local operations",
+      "description": "Answers to common questions: entering the Czech market without a branch, supplier selection, languages, reporting and lead times."
+    },
+    "intro": "Answers to the most common questions about entering the Czech and Central European market, selecting suppliers and managing local operations.",
+    "eyebrow": "FAQ",
+    "title": "Questions about entering the Czech market",
+    "items": [
+      { "q": "Do I need my own branch and employees to enter the Czech market?", "a": "Not necessarily. Many activities – customer service, logistics, accounting or marketing – can be provided by specialist suppliers. Silverdahl finds them, sets up the cooperation and coordinates it long term, so you do not need to build your own local team." },
+      { "q": "Which markets can you help with?", "a": "We have long-standing experience in the Czech Republic, Slovakia, Poland and Hungary. Depending on the project, we can also help in other European markets." },
+      { "q": "What kind of suppliers can you arrange?", "a": "For example contact centres, marketing and advertising services, printing and distribution, logistics, warehousing and fulfilment, IT, accounting and tax services, legal advice, customs services, translation and localisation, or HR services. The list is not closed." },
+      { "q": "How long does it take to prepare a market entry?", "a": "It depends on the scope of the project and the number of suppliers needed. After the initial analysis we prepare a concrete timeline so you know exactly when operations can start." },
+      { "q": "Do I have to use all of your services?", "a": "No. We can handle a one-off supplier selection, the complete preparation of a market entry or the long-term management of operations – whatever you need right now." },
+      { "q": "Which languages do you work in?", "a": "We communicate in Czech, English and German. Reporting is prepared in the language and format that suits your headquarters." },
+      { "q": "How will I keep track of operations and costs?", "a": "We provide regular reporting – daily, weekly or monthly as agreed – including supplier performance, costs and a comparison of actual results with the plan." }
+    ]
+  },
+  "privacy": {
+    "seo": {
+      "title": "Privacy policy",
+      "description": "How Silverdahl s.r.o. processes personal data from the contact form and the website, how long we keep it and what your rights are under the GDPR."
+    },
+    "title": "Privacy policy",
+    "intro": "We value your privacy. This page explains what personal data we process when you use the website, why and for how long, and what your rights are.",
+    "controller": {
+      "title": "Data controller",
+      "text": "The controller of your personal data is:"
+    },
+    "sections": {
+      "data": {
+        "title": "What data we process",
+        "items": [
+          "Contact form data: first and last name, company name (optional), e-mail, subject and message.",
+          "Data from e-mail and phone communication if you contact us directly.",
+          "Technical data: IP address and browser information in server logs.",
+          "Cookie data according to your choice – see the cookie policy for details."
+        ]
+      },
+      "purposes": {
+        "title": "Why we process data and on what legal basis",
+        "items": [
+          "Handling your enquiry and discussing cooperation – steps prior to entering into a contract and our legitimate interest in answering your message (Art. 6(1)(b) and (f) GDPR).",
+          "Ensuring the secure and reliable operation of the website – our legitimate interest (Art. 6(1)(f) GDPR).",
+          "Displaying the Google map and any analytics or marketing tools – only with your consent (Art. 6(1)(a) GDPR)."
+        ]
+      },
+      "retention": {
+        "title": "How long we keep data",
+        "paragraphs": [
+          "We keep contact form messages and related communication for as long as necessary to handle your enquiry, at most 3 years from the last communication unless a contractual relationship arises. Server logs are deleted after 90 days at the latest."
+        ]
+      },
+      "recipients": {
+        "title": "Who we share data with",
+        "paragraphs": [
+          "We do not sell your data or share it with third parties for marketing purposes. Only our processors who provide technical services for us may have access to it:"
+        ],
+        "items": [
+          "our web hosting provider,",
+          "our e-mail service provider, which delivers messages from the contact form,",
+          "Google Ireland Ltd. – only if you allow the map in the cookie settings."
+        ]
+      },
+      "transfers": {
+        "title": "Transfers outside the EU",
+        "paragraphs": [
+          "We process data within the European Union. An exception may be Google when the map is displayed – any transfer to the USA is based on the European Commission's adequacy decision on the EU–US Data Privacy Framework."
+        ]
+      },
+      "rights": {
+        "title": "Your rights",
+        "paragraphs": ["In connection with the processing of your personal data, you have the right:"],
+        "items": [
+          "to access your data and obtain a copy,",
+          "to have inaccurate data corrected,",
+          "to erasure if the data is no longer needed or you have withdrawn your consent,",
+          "to restriction of processing,",
+          "to data portability,",
+          "to object to processing based on legitimate interest,",
+          "to withdraw your consent at any time, as easily as you gave it,",
+          "to lodge a complaint with the Czech Office for Personal Data Protection (Pplk. Sochora 27, 170 00 Prague 7, www.uoou.cz) or with the supervisory authority in your country."
+        ]
+      },
+      "security": {
+        "title": "Security",
+        "paragraphs": [
+          "The website is available exclusively over an encrypted connection (HTTPS). Only authorised persons bound by confidentiality have access to the data."
+        ]
+      }
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "Which cookies the website uses and how you can change your consent is described in our {link}."
+    },
+    "contact": {
+      "title": "How to contact us",
+      "text": "For questions about data protection or to exercise your rights, contact us by e-mail at {email} or in writing at our registered office."
+    },
+    "updated": "This policy is effective from 1 November 2026."
   },
   "error": {
     "notFoundTitle": "Page not found",

@@ -51,7 +51,7 @@ const isDev = import.meta.dev
                 <dt class="details__label">{{ $t('contact.details.address') }}</dt>
                 <dd>
                   {{ company.address.street }}<br />
-                  {{ company.address.city }}<br />
+                  {{ company.address.postalCode }} {{ company.address.city }}<br />
                   {{ $t('contact.details.country') }}
                 </dd>
               </div>
