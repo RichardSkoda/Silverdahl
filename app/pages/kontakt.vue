@@ -8,6 +8,7 @@ usePageSeo({
   title: () => t('contact.seo.title'),
   description: () => t('contact.seo.description'),
   page: 'kontakt',
+  schemaType: 'ContactPage',
 })
 
 // Stav doručování se zjišťuje při SSR ze serverové konfigurace; do prohlížeče jde jen výsledná hodnota.

@@ -24,8 +24,9 @@ const strengths = computed(() =>
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-nadpis">
       <div class="hero__art" aria-hidden="true">
-        <img src="/images/mapa-evropy.svg" alt="" class="hero__map" width="800" height="560" />
-        <img src="/images/hero-budova.webp" alt="" class="hero__building" width="260" height="744" />
+        <img src="/images/mapa-evropy.svg" alt="" class="hero__map" width="800" height="560" fetchpriority="high" />
+        <!-- Na mobilu je fotka skrytá – lazy zajistí, že se tam vůbec nestáhne. -->
+        <img src="/images/hero-budova.webp" alt="" class="hero__building" width="260" height="744" loading="lazy" decoding="async" />
       </div>
       <div class="container hero__content">
         <p class="eyebrow hero__eyebrow">{{ $t('home.hero.eyebrow') }}</p>
@@ -49,7 +50,7 @@ const strengths = computed(() =>
         <ol class="steps__list">
           <li v-for="(service, i) in services" :key="service.id" class="step" :class="`step--${i + 1}`">
             <div class="step__media">
-              <img :src="service.image" alt="" class="step__photo" width="456" height="336" loading="lazy" />
+              <img :src="service.image" alt="" class="step__photo" width="456" height="336" loading="lazy" decoding="async" />
               <span class="step__icon" aria-hidden="true">
                 <ServiceIcon :name="service.icon" />
               </span>

@@ -1,6 +1,6 @@
 {
-  "meta": {
-    "ogLocale": "en_GB"
+  "seo": {
+    "ogImageAlt": "Silverdahl – Your Local Operations Partner in Central Europe"
   },
   "a11y": {
     "skipLink": "Skip to content"
@@ -41,8 +41,8 @@
   },
   "home": {
     "seo": {
-      "title": "Your partner for European markets",
-      "description": "Silverdahl helps international companies enter new markets, find reliable partners and manage local operations."
+      "title": "Czech market entry & local operations partner",
+      "description": "Silverdahl helps international companies enter the Czech and Central European markets, find reliable suppliers and manage local operations."
     },
     "hero": {
       "eyebrow": "Your partner for European markets",
@@ -87,8 +87,8 @@
   },
   "services": {
     "seo": {
-      "title": "Our services",
-      "description": "Market Entry Support, Partner Sourcing & Management and Local Operations Management – from market entry to day-to-day operations."
+      "title": "Services: market entry, sourcing & operations",
+      "description": "Market Entry Support, Partner Sourcing & Management and Local Operations Management – entering the Czech market, finding suppliers, running operations."
     },
     "intro": {
       "eyebrow": "Our services",
@@ -190,8 +190,8 @@
   },
   "caseStudy": {
     "seo": {
-      "title": "Case study: Courlux International SA",
-      "description": "More than 30 years of comprehensive operational support in four European markets – the Czech Republic, Slovakia, Poland and Hungary."
+      "title": "Case study Courlux: 30+ years in four CEE markets",
+      "description": "How Silverdahl has sourced suppliers, coordinated call centres and run operations for the Swiss company Courlux in four Central European markets for 30+ years."
     },
     "intro": {
       "eyebrow": "Case study / Reference",
@@ -246,8 +246,8 @@
   },
   "about": {
     "seo": {
-      "title": "About us",
-      "description": "Silverdahl s.r.o. – a Czech company with many years of experience in supporting international trade, managing operational processes and coordinating suppliers."
+      "title": "About us – Czech operations partner since 1994",
+      "description": "Silverdahl s.r.o. is a Czech company that has supported international trade, managed operational processes and coordinated suppliers in Europe since 1994."
     },
     "intro": {
       "eyebrow": "About us",
@@ -296,8 +296,8 @@
   },
   "contact": {
     "seo": {
-      "title": "Contact",
-      "description": "Planning to enter a new market, looking for reliable business partners or need someone to manage your local operations? Contact Silverdahl."
+      "title": "Contact – Prague 9, Czech Republic",
+      "description": "Planning to enter a new market or looking for reliable suppliers? Call or write to us – Silverdahl, Oderská 333/5, Prague 9, Czech Republic."
     },
     "intro": {
       "eyebrow": "Contact",
@@ -405,7 +405,7 @@
     "page": {
       "seo": {
         "title": "Cookie policy",
-        "description": "Which cookies the Silverdahl website uses, what they are for and how you can change your consent at any time."
+        "description": "Which cookies the Silverdahl website uses, what they are for, when the Google map is loaded and how you can change or withdraw your consent at any time."
       },
       "eyebrow": "Legal information",
       "title": "Cookie policy",

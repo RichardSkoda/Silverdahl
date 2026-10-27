@@ -5,6 +5,11 @@ export const locales = ['cs', 'en', 'de'] as const
 export type Locale = (typeof locales)[number]
 export const defaultLocale: Locale = 'cs'
 
+/** Jazykový tag pro vyhledávače a strukturovaná data (BCP 47). */
+export const languageTags: Record<Locale, string> = { cs: 'cs-CZ', en: 'en-GB', de: 'de-DE' }
+/** Formát pro Open Graph (og:locale). */
+export const ogLocales: Record<Locale, string> = { cs: 'cs_CZ', en: 'en_GB', de: 'de_DE' }
+
 export function isLocale(value: unknown): value is Locale {
   return typeof value === 'string' && (locales as readonly string[]).includes(value)
 }

@@ -1,6 +1,6 @@
 {
-  "meta": {
-    "ogLocale": "cs_CZ"
+  "seo": {
+    "ogImageAlt": "Silverdahl – Your Local Operations Partner in Central Europe"
   },
   "a11y": {
     "skipLink": "Přeskočit na obsah"
@@ -41,8 +41,8 @@
   },
   "home": {
     "seo": {
-      "title": "Váš partner pro evropské trhy",
-      "description": "Silverdahl pomáhá zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy."
+      "title": "Vstup na český a evropský trh a řízení provozu",
+      "description": "Silverdahl pomáhá zahraničním firmám se vstupem na český a středoevropský trh – najde spolehlivé dodavatele a převezme řízení lokálního provozu."
     },
     "hero": {
       "eyebrow": "Váš partner pro evropské trhy",
@@ -87,8 +87,8 @@
   },
   "services": {
     "seo": {
-      "title": "Naše služby",
-      "description": "Market Entry Support, Partner Sourcing & Management a Local Operations Management – od vstupu na trh až po každodenní řízení provozu."
+      "title": "Služby: vstup na trh, dodavatelé, řízení provozu",
+      "description": "Market Entry Support, Partner Sourcing & Management a Local Operations Management: vstup na český trh, výběr dodavatelů i externí řízení provozu."
     },
     "intro": {
       "eyebrow": "Naše služby",
@@ -190,8 +190,8 @@
   },
   "caseStudy": {
     "seo": {
-      "title": "Case study: Courlux International SA",
-      "description": "Více než 30 let komplexní provozní podpory na čtyřech evropských trzích – Česká republika, Slovensko, Polsko a Maďarsko."
+      "title": "Case study Courlux: 30+ let podpory ve 4 zemích",
+      "description": "Jak Silverdahl přes 30 let hledá dodavatele, koordinuje call centra a řídí provoz švýcarské firmy Courlux v Česku, na Slovensku, v Polsku a Maďarsku."
     },
     "intro": {
       "eyebrow": "Case study / Reference",
@@ -246,8 +246,8 @@
   },
   "about": {
     "seo": {
-      "title": "O nás",
-      "description": "Silverdahl s.r.o. – česká společnost s dlouholetými zkušenostmi s podporou mezinárodního obchodu, řízením provozních procesů a koordinací dodavatelů."
+      "title": "O nás – český provozní partner od roku 1994",
+      "description": "Silverdahl s.r.o. je česká společnost, která od roku 1994 podporuje mezinárodní obchod, řídí provozní procesy a koordinuje dodavatele na evropských trzích."
     },
     "intro": {
       "eyebrow": "O nás",
@@ -296,8 +296,8 @@
   },
   "contact": {
     "seo": {
-      "title": "Kontakt",
-      "description": "Plánujete vstup na nový trh, hledáte spolehlivé obchodní partnery nebo potřebujete zajistit řízení lokálních provozních procesů? Kontaktujte Silverdahl."
+      "title": "Kontakt – Praha 9, Čakovice",
+      "description": "Plánujete vstup na nový trh nebo hledáte spolehlivé dodavatele? Napište nám nebo zavolejte – Silverdahl, Oderská 333/5, Praha 9 – Čakovice."
     },
     "intro": {
       "eyebrow": "Kontakt",
@@ -405,7 +405,7 @@
     "page": {
       "seo": {
         "title": "Zásady cookies",
-        "description": "Jaké cookies web Silverdahl používá, k čemu slouží a jak můžete svůj souhlas kdykoli změnit."
+        "description": "Jaké cookies web Silverdahl používá, k čemu slouží, kdy se načítá mapa Google a jak můžete svůj souhlas kdykoli změnit nebo odvolat."
       },
       "eyebrow": "Právní informace",
       "title": "Zásady používání cookies",

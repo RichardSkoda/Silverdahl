@@ -11,6 +11,19 @@ const prerendered = (Object.keys(localizedPaths) as PageName[])
   .filter((page) => page !== 'kontakt')
   .flatMap((page) => locales.map((locale) => pagePath(page, locale)))
 
+// Trvalé přesměrování adres ze současného webu (WordPress), které nový web nemá – zachová jejich pozice ve
+// vyhledávání i odkazy z jiných webů. Adresy /o-nas/, /kontakt/ a /en/ existují i na novém webu (fungují i s lomítkem).
+const legacyRedirects: Record<string, string> = {
+  '/reference': '/case-study',
+  '/en/o-nas': '/en/about-us',
+  '/en/reference': '/en/case-study',
+  '/en/kontakt': '/en/contact',
+  '/wp-sitemap.xml': '/sitemap.xml',
+}
+
+// Statické soubory bez otisku v názvu (obrázky, loga, ikony) – cache na 30 dní.
+const staticCache = { headers: { 'cache-control': 'public, max-age=2592000' } }
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -34,6 +47,8 @@ export default defineNuxtConfig({
     // Bez automatického přesměrování podle jazyka prohlížeče – modul by jinak ukládal vlastní cookie
     // a návštěvník vždy dostane přesně tu verzi, na kterou odkaz vede (důležité i pro vyhledávače).
     detectBrowserLanguage: false,
+    // Pozor: bundle.dropMessageCompiler nezapínat – překlady se načítají za běhu (/_i18n/…) a texty s proměnnými
+    // ({company}, {link}…) by se v prohlížeči nezkompilovaly (chyba vue-i18n 24 → chybová stránka).
   },
 
   css: [
@@ -53,7 +68,12 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'Silverdahl s.r.o.' },
         { property: 'og:type', content: 'website' },
       ],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', sizes: '48x48' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+      ],
       // Odstraní třídu .no-js ještě před vykreslením – mobilní menu se bez JS zobrazí rozbalené.
       script: [{ innerHTML: "document.documentElement.classList.remove('no-js')", tagPosition: 'head' }],
     },
@@ -71,9 +91,13 @@ export default defineNuxtConfig({
     contactFrom: '', // NUXT_CONTACT_FROM – odesílatel, např. "Web Silverdahl <web@domena>"
     contactTo: '', // NUXT_CONTACT_TO – kam mají zprávy z formuláře chodit
     public: {
-      // NUXT_PUBLIC_SITE_URL – produkční doména bez lomítka na konci, např. https://www.example.cz
-      // TODO: doplnit ověřenou doménu; dokud je prázdná, kanonické URL ani og:url se negenerují.
-      siteUrl: '',
+      // NUXT_PUBLIC_SITE_URL – produkční doména bez lomítka na konci. Výchozí je současná doména klienta
+      // (silverdahl.cz běží bez www, verze s www i http se na ni přesměrovávají). Z ní se skládají kanonické URL,
+      // hreflang, og:url, og:image, strukturovaná data a sitemap. Stránky se předgenerují při buildu,
+      // změnu domény je proto potřeba nastavit už při `npm run build`.
+      siteUrl: 'https://silverdahl.cz',
+      // NUXT_PUBLIC_INDEXABLE=false na testovacím nasazení – robots.txt zakáže procházení a stránky dostanou noindex.
+      indexable: true,
     },
   },
 
@@ -85,5 +109,25 @@ export default defineNuxtConfig({
     payloadExtraction: false,
   },
 
-  routeRules: Object.fromEntries(prerendered.map((path) => [path, { prerender: true }])),
+  // Statické soubory (včetně předgenerovaných stránek) se při buildu předkomprimují (gzip + brotli).
+  nitro: {
+    compressPublicAssets: { gzip: true, brotli: true },
+  },
+
+  routeRules: {
+    ...Object.fromEntries(prerendered.map((path) => [path, { prerender: true }])),
+    ...Object.fromEntries(
+      Object.entries(legacyRedirects).flatMap(([from, to]) => [
+        [from, { redirect: { to, statusCode: 301 } }],
+        [`${from}/`, { redirect: { to, statusCode: 301 } }],
+      ]),
+    ),
+    '/images/**': staticCache,
+    '/logo/**': staticCache,
+    '/og/**': staticCache,
+    '/icons/**': staticCache,
+    '/favicon.svg': staticCache,
+    '/favicon.ico': staticCache,
+    '/apple-touch-icon.png': staticCache,
+  },
 })

@@ -39,7 +39,8 @@ Konfigurace probíhá přes proměnné prostředí – viz `.env.example` (zkop�
 
 | Proměnná | Význam |
 | --- | --- |
-| `NUXT_PUBLIC_SITE_URL` | produkční doména, např. `https://www.example.cz`. Bez ní se negenerují kanonické URL, `og:url` ani odkazy na jazykové verze (`hreflang`). Stránky se předgenerují při buildu, proto ji nastavte už při `npm run build`. |
+| `NUXT_PUBLIC_SITE_URL` | doména webu, výchozí `https://silverdahl.cz` (současný web běží bez `www`). Skládají se z ní kanonické URL, `hreflang`, `og:url`, `og:image`, strukturovaná data, sitemap a robots.txt. Stránky se předgenerují při buildu, proto ji nastavte už při `npm run build`. |
+| `NUXT_PUBLIC_INDEXABLE` | `false` na testovacím nasazení – robots.txt zakáže procházení a stránky dostanou `noindex`. Výchozí `true`. |
 | `NUXT_SMTP_HOST`, `NUXT_SMTP_PORT`, `NUXT_SMTP_SECURE`, `NUXT_SMTP_USER`, `NUXT_SMTP_PASS` | SMTP server pro odesílání zpráv z formuláře |
 | `NUXT_CONTACT_FROM` | odesílatel e-mailu (adresa povolená u SMTP poskytovatele) |
 | `NUXT_CONTACT_TO` | adresa, kam mají zprávy z formuláře chodit |
@@ -77,7 +78,10 @@ shared/locales.ts              jazyky a přeložené adresy stránek (používá
 shared/contact.ts              validace formuláře sdílená klientem i serverem (vrací kódy chyb, texty jsou v překladech)
 server/api/contact.post.ts     endpoint formuláře
 server/utils/contactDelivery.ts  doručení zprávy (SMTP) – místo pro napojení jiné služby
-public/                        favicon.svg, robots.txt
+public/                        favicon (svg, ico), apple-touch-icon, site.webmanifest, icons/ (ikony pro manifest)
+public/og/silverdahl.jpg       obrázek pro sdílení na sociálních sítích (1200 × 630)
+server/routes/robots.txt.ts    robots.txt (odkaz na sitemap; na testovacím nasazení zákaz procházení)
+server/routes/sitemap.xml.ts   sitemap všech stránek ve všech jazycích včetně hreflang
 public/images/                 mapa Evropy (SVG, Natural Earth) a fotografie karet služeb a hero
 public/logo/                   oficiální logo SILVERDAHL převedené do SVG (celé / jen nápis, tmavé / bílé)
 ```
@@ -111,12 +115,33 @@ Adresy stránek jsou přeložené (nastavení v `shared/locales.ts`):
   nechat je zkontrolovat rodilým mluvčím nebo překladatelem, hlavně právní texty na stránce cookies.
 - **Přepínač jazyků** je v hlavičce (na mobilu v menu). Jazyk se nevolí automaticky podle prohlížeče – modul by
   jinak ukládal vlastní cookie a vyhledávače by nedostaly stabilní adresy.
-- **SEO:** atribut `lang`, `og:locale` a při nastaveném `NUXT_PUBLIC_SITE_URL` i kanonické URL a `hreflang` odkazy
-  na všechny jazykové verze (`x-default` = čeština).
+- **SEO:** atribut `lang`, `og:locale` (+ `og:locale:alternate`), kanonické URL a `hreflang` odkazy na všechny
+  jazykové verze (`x-default` = čeština) – v hlavičce stránek i v `sitemap.xml`. Podrobnosti v sekci SEO.
 - **Kontaktní formulář** posílá i jazyk webu: e-mail pro firmu je česky a uvádí „Jazyk webu: EN/DE/CS“, odeslání
   bez JavaScriptu se vrátí na kontakt ve stejném jazyce.
 - **Nový jazyk:** přidat ho do `locales` v `shared/locales.ts` (včetně přeložených cest), do `i18n.locales`
   v `nuxt.config.ts` a vytvořit `i18n/locales/<kód>.json` se stejnými klíči jako `cs.json`.
+
+## SEO
+
+| Oblast | Řešení |
+| --- | --- |
+| Titulky a popisy | vlastní pro každou stránku a jazyk (`*.seo` v `i18n/locales/*.json`), délka do ~60 / ~160 znaků, s hledanými výrazy (vstup na trh, Česko / Tschechien, dodavatelé, řízení provozu) |
+| Kanonické URL, hreflang | `usePageSeo()` – absolutní adresy z `NUXT_PUBLIC_SITE_URL`, všechny jazykové verze + `x-default` |
+| Sdílení | Open Graph + Twitter karta s obrázkem `public/og/silverdahl.jpg` (1200 × 630) |
+| Strukturovaná data (JSON-LD) | `Organization` (adresa, kontakt, rok založení, obsluhované země) a `WebSite` na všech stránkách (`app.vue`); `WebPage`/`AboutPage`/`ContactPage`/`CollectionPage` + `BreadcrumbList`; na Službách `Service`, na O nás `Person` |
+| Indexace | `robots.txt` a `sitemap.xml` generuje server (`server/routes/`), meta `robots` s `max-image-preview:large` |
+| Přesměrování | trvalá (301) ze starých adres WordPressu: `/reference/` → `/case-study`, `/en/o-nas/` → `/en/about-us`, `/en/reference/` → `/en/case-study`, `/en/kontakt/` → `/en/contact`, `/wp-sitemap.xml` → `/sitemap.xml` (`nuxt.config.ts`) |
+| Rychlost | předkomprimované statické soubory (brotli + gzip), cache 30 dní pro obrázky a loga, optimalizovaná SVG (SVGO), líné načítání obrázků mimo obrazovku |
+| Ikony | `favicon.svg`, `favicon.ico` (16/32/48), `apple-touch-icon.png`, `site.webmanifest` |
+
+Po spuštění webu doporučujeme: ověřit web v **Google Search Console** (+ odeslat `https://silverdahl.cz/sitemap.xml`),
+otestovat strukturovaná data v **Rich Results Test** a sdílení v **LinkedIn Post Inspector**.
+
+> Stránka `/kontakt` se vykresluje na serveru za běhu – její kompresi (gzip/brotli) zajistí hosting nebo proxy
+> (nginx, Cloudflare). Statické stránky jsou předkomprimované už při buildu.
+>
+> `bundle.dropMessageCompiler` v i18n nezapínat – rozbije stránky s proměnnými v překladech (viz komentář v `nuxt.config.ts`).
 
 ## Logo
 
@@ -179,13 +204,14 @@ Po odvolání souhlasu se stránka jednou znovu načte, aby už spuštěné skri
 ## Čeká na doplnění před zveřejněním
 
 - [ ] **Kontaktní údaje** – e-mail, telefon, adresa sídla, IČO/DIČ, zápis v OR (patička + `/kontakt`, viz TODO v kódu).
-- [ ] **Doména** – nastavit `NUXT_PUBLIC_SITE_URL` (kanonické URL, `og:url`); případně doplnit `sitemap.xml`.
+- [ ] **Doména** – výchozí je `https://silverdahl.cz`; při jiné doméně nastavit `NUXT_PUBLIC_SITE_URL` už pro build.
+      Na testovacím nasazení nastavit `NUXT_PUBLIC_INDEXABLE=false`.
+- [ ] **Search Console** – po spuštění ověřit doménu a odeslat sitemap.
 - [ ] **Doručování formuláře** – nastavit SMTP proměnné a otestovat odeslání skutečné zprávy.
 - [ ] **Zásady ochrany osobních údajů** – text a odkaz u formuláře (TODO v `ContactForm.vue`).
 - [ ] **Profil Tomáše Kouřila** – podle podkladů bude doplněna konkrétní délka praxe, významné projekty,
       profesní zkušenosti a hlavní obchodní úspěchy (TODO v `app/pages/o-nas.vue`).
 - [ ] **Fotografie managementu** – portréty v podkladech jsou ilustrační návrh, proto nejsou použity;
       zatím se zobrazují iniciály. Po dodání skutečných fotografií doplnit do `o-nas.vue`.
-- [ ] **Logo** – na webu je jednoduchý textový wordmark; nahradit oficiálním logem, pokud existuje.
-- [ ] Volitelně Open Graph obrázek (`og:image`) a anglická jazyková verze.
+- [ ] **Logo** – oficiální logo je obkreslené z PNG ze současného webu; při dodání originálního vektorového loga nahradit soubory v `public/logo/` a znovu vygenerovat `public/logo/logo-silverdahl.png` a `public/og/silverdahl.jpg`.
 - [ ] Aktualizace na Node 24 LTS a nejnovější Nuxt (viz výše).

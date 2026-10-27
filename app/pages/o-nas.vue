@@ -3,11 +3,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 const { strings } = useMessageList()
 
-usePageSeo({
-  title: () => t('about.seo.title'),
-  description: () => t('about.seo.description'),
-  page: 'o-nas',
-})
+const { organizationId } = useSiteOrigin()
 
 interface Manager {
   name: string
@@ -36,6 +32,16 @@ const managers = computed<Manager[]>(() =>
     bio: strings(`about.team.${p.key}.bio`),
   })),
 )
+
+usePageSeo({
+  title: () => t('about.seo.title'),
+  description: () => t('about.seo.description'),
+  page: 'o-nas',
+  schemaType: 'AboutPage',
+  // Strukturovaná data: vedení společnosti.
+  schema: () =>
+    managers.value.map((m) => ({ '@type': 'Person', name: m.name, jobTitle: m.role, worksFor: { '@id': organizationId } })),
+})
 </script>
 
 <template>

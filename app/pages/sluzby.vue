@@ -9,10 +9,33 @@ const illustrations = [
   '/images/ilustrace-provoz.svg',
 ]
 
+const localePath = useLocalePath()
+const { absolute, organizationId } = useSiteOrigin()
+
 usePageSeo({
   title: () => t('services.seo.title'),
   description: () => t('services.seo.description'),
   page: 'sluzby',
+  schemaType: 'CollectionPage',
+  // Strukturovaná data: tři služby poskytované organizací Silverdahl.
+  schema: () => [
+    {
+      '@type': 'ItemList',
+      itemListElement: services.value.map((service, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'Service',
+          name: service.name,
+          serviceType: service.subtitle,
+          description: service.summary,
+          url: absolute(`${localePath('sluzby')}#${service.id}`),
+          provider: { '@id': organizationId },
+          areaServed: ['Czech Republic', 'Slovakia', 'Poland', 'Hungary'].map((name) => ({ '@type': 'Country', name })),
+        },
+      })),
+    },
+  ],
 })
 </script>
 
@@ -39,7 +62,7 @@ usePageSeo({
                 <p class="ocard__sub">{{ service.subtitle }}</p>
               </div>
             </div>
-            <img :src="illustrations[i]" alt="" class="ocard__art" width="240" height="180" loading="lazy" />
+            <img :src="illustrations[i]" alt="" class="ocard__art" width="240" height="180" loading="lazy" decoding="async" />
             <ul class="check-list ocard__items">
               <li v-for="item in service.items" :key="item.title">{{ item.title }}</li>
             </ul>
