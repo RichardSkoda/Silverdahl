@@ -131,7 +131,7 @@ Adresy stránek jsou přeložené (nastavení v `shared/locales.ts`):
 | Sdílení | Open Graph + Twitter karta s obrázkem `public/og/silverdahl.jpg` (1200 × 630) |
 | Strukturovaná data (JSON-LD) | `Organization` (adresa, kontakt, rok založení, obsluhované země) a `WebSite` na všech stránkách (`app.vue`); `WebPage`/`AboutPage`/`ContactPage`/`CollectionPage` + `BreadcrumbList`; na Službách `Service`, na O nás `Person` |
 | Indexace | `robots.txt` a `sitemap.xml` generuje server (`server/routes/`), meta `robots` s `max-image-preview:large` |
-| Přesměrování | trvalá (301) ze starých adres WordPressu: `/reference/` → `/case-study`, `/en/o-nas/` → `/en/about-us`, `/en/reference/` → `/en/case-study`, `/en/kontakt/` → `/en/contact`, `/wp-sitemap.xml` → `/sitemap.xml` (`nuxt.config.ts`) |
+| Přesměrování | trvalá (301) ze starých adres WordPressu: `/reference/` → `/case-study`, `/en/o-nas/` → `/en/about-us`, `/en/reference/` → `/en/case-study`, `/en/kontakt/` → `/en/contact`, `/wp-sitemap.xml` → `/sitemap.xml` (`server/middleware/legacy-redirects.ts`) |
 | Rychlost | předkomprimované statické soubory (brotli + gzip), cache 30 dní pro obrázky a loga, optimalizovaná SVG (SVGO), líné načítání obrázků mimo obrazovku |
 | Ikony | `favicon.svg`, `favicon.ico` (16/32/48), `apple-touch-icon.png`, `site.webmanifest` |
 

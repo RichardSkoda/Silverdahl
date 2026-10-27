@@ -11,16 +11,6 @@ const prerendered = (Object.keys(localizedPaths) as PageName[])
   .filter((page) => page !== 'kontakt')
   .flatMap((page) => locales.map((locale) => pagePath(page, locale)))
 
-// Trvalé přesměrování adres ze současného webu (WordPress), které nový web nemá – zachová jejich pozice ve
-// vyhledávání i odkazy z jiných webů. Adresy /o-nas/, /kontakt/ a /en/ existují i na novém webu (fungují i s lomítkem).
-const legacyRedirects: Record<string, string> = {
-  '/reference': '/case-study',
-  '/en/o-nas': '/en/about-us',
-  '/en/reference': '/en/case-study',
-  '/en/kontakt': '/en/contact',
-  '/wp-sitemap.xml': '/sitemap.xml',
-}
-
 // Statické soubory bez otisku v názvu (obrázky, loga, ikony) – cache na 30 dní.
 const staticCache = { headers: { 'cache-control': 'public, max-age=2592000' } }
 
@@ -116,12 +106,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     ...Object.fromEntries(prerendered.map((path) => [path, { prerender: true }])),
-    ...Object.fromEntries(
-      Object.entries(legacyRedirects).flatMap(([from, to]) => [
-        [from, { redirect: { to, statusCode: 301 } }],
-        [`${from}/`, { redirect: { to, statusCode: 301 } }],
-      ]),
-    ),
+    // Přesměrování starých adres z WordPressu: server/middleware/legacy-redirects.ts
     '/images/**': staticCache,
     '/logo/**': staticCache,
     '/og/**': staticCache,
