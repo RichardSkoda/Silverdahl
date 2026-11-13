@@ -59,7 +59,7 @@ usePageSeo({
       <p>{{ $t('about.intro.text') }}</p>
     </PageIntro>
 
-    <section class="section section--surface" aria-labelledby="zkusenosti-nadpis">
+    <section class="section section--tight section--surface" aria-labelledby="zkusenosti-nadpis">
       <div class="container split">
         <h2 id="zkusenosti-nadpis">{{ $t('about.experience.title') }}</h2>
         <div class="prose split__body">
@@ -74,7 +74,7 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="section" aria-labelledby="jak-nadpis">
+    <section class="section section--tight" aria-labelledby="jak-nadpis">
       <div class="container split">
         <h2 id="jak-nadpis">{{ $t('about.approach.title') }}</h2>
         <div class="prose split__body">
@@ -85,7 +85,7 @@ usePageSeo({
       </div>
     </section>
 
-    <section class="section section--surface" aria-labelledby="management-nadpis">
+    <section class="section section--tight section--surface" aria-labelledby="management-nadpis">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">{{ $t('about.team.eyebrow') }}</p>
@@ -123,6 +123,24 @@ usePageSeo({
         <blockquote>
           <p>{{ $t('about.quote.text') }}</p>
         </blockquote>
+      </figure>
+    </section>
+
+    <!-- Most přes Øresund (Kodaň – Malmö): obrázek a heslo ze současného webu, zároveň odkaz na vazby na Skandinávii. -->
+    <section class="section section--tight" aria-labelledby="most-nadpis">
+      <figure class="container bridge">
+        <h2 id="most-nadpis" class="bridge__title">{{ $t('about.bridge.title') }}</h2>
+        <img
+          src="/images/most-oresund.webp"
+          srcset="/images/most-oresund-640.webp 640w, /images/most-oresund.webp 1000w"
+          sizes="(min-width: 66rem) 1000px, 100vw"
+          :alt="$t('about.bridge.alt')"
+          class="bridge__img"
+          width="1000"
+          height="530"
+          loading="lazy"
+          decoding="async"
+        />
       </figure>
     </section>
 
@@ -223,6 +241,25 @@ usePageSeo({
 
 .quote {
   margin-block: 0;
+}
+
+.bridge {
+  margin-block: 0;
+  max-width: calc(62.5rem + 2 * var(--gutter));
+  text-align: center;
+}
+
+.bridge__title {
+  font-size: var(--text-2xl);
+  text-wrap: balance;
+}
+
+.bridge__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-6);
+  border-radius: var(--radius-lg);
 }
 
 .quote blockquote {

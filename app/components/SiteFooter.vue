@@ -6,6 +6,11 @@ import { company } from '~/data/company'
 const year = new Date().getFullYear()
 const localePath = useLocalePath()
 const { openSettings } = useCookieConsent()
+
+const networkNames = { linkedin: 'LinkedIn', facebook: 'Facebook' } as const
+const socialLinks = (Object.keys(networkNames) as (keyof typeof networkNames)[])
+  .filter((key) => company.social[key])
+  .map((key) => ({ key, name: networkNames[key], href: company.social[key]! }))
 </script>
 
 <template>
@@ -14,24 +19,18 @@ const { openSettings } = useCookieConsent()
       <div class="footer__about">
         <SiteLogo inverse />
         <p>{{ $t('footer.about') }}</p>
-        <!-- Firemní údaje: IČO, DIČ a zápis v rejstříku jsou zatím zástupné – viz data/company.ts. -->
         <address class="footer__company">
           <strong>{{ company.name }}</strong><br />
           {{ company.address.street }}, {{ company.address.postalCode }} {{ company.address.city }}<br />
           {{ $t('footer.ico') }} {{ company.legal.ico }} · {{ $t('footer.dic') }} {{ company.legal.dic }}<br />
           {{ $t('footer.register', { file: company.legal.registerFile }) }}
         </address>
-        <ul class="footer__social">
-          <li>
-            <a :href="company.social.linkedin" target="_blank" rel="noopener noreferrer" :title="$t('footer.followOn', { network: 'LinkedIn' })">
-              <SocialIcon name="linkedin" />
-              <span class="visually-hidden">{{ $t('footer.followOn', { network: 'LinkedIn' }) }} {{ $t('common.newWindow') }}</span>
-            </a>
-          </li>
-          <li>
-            <a :href="company.social.facebook" target="_blank" rel="noopener noreferrer" :title="$t('footer.followOn', { network: 'Facebook' })">
-              <SocialIcon name="facebook" />
-              <span class="visually-hidden">{{ $t('footer.followOn', { network: 'Facebook' }) }} {{ $t('common.newWindow') }}</span>
+        <!-- Profily na sociálních sítích – jen ty, které jsou vyplněné v data/company.ts. -->
+        <ul v-if="socialLinks.length" class="footer__social">
+          <li v-for="link in socialLinks" :key="link.key">
+            <a :href="link.href" target="_blank" rel="noopener noreferrer" :title="$t('footer.followOn', { network: link.name })">
+              <SocialIcon :name="link.key" />
+              <span class="visually-hidden">{{ $t('footer.followOn', { network: link.name }) }} {{ $t('common.newWindow') }}</span>
             </a>
           </li>
         </ul>

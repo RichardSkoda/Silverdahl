@@ -39,11 +39,15 @@ const structuredData = computed(() =>
               contactType: 'sales',
               email: company.email,
               telephone: company.phone.href.replace('tel:', ''),
-              availableLanguage: ['Czech', 'English', 'German'],
+              availableLanguage: ['Czech', 'English'],
             },
-            areaServed: ['Czech Republic', 'Slovakia', 'Poland', 'Hungary'].map((name) => ({ '@type': 'Country', name })),
-            knowsLanguage: locales.map((l) => languageTags[l]),
-            sameAs: Object.values(company.social),
+            areaServed: [
+              ...['Czech Republic', 'Slovakia', 'Poland', 'Hungary'].map((name) => ({ '@type': 'Country', name })),
+              { '@type': 'Place', name: 'Europe' },
+            ],
+            // Jazyky, ve kterých firma komunikuje (web má i němčinu, firma ale německy nekomunikuje).
+            knowsLanguage: ['cs', 'en'],
+            ...(Object.keys(company.social).length && { sameAs: Object.values(company.social) }),
           },
           {
             '@type': 'WebSite',

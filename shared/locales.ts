@@ -18,7 +18,7 @@ export function isLocale(value: unknown): value is Locale {
 export const localizedPaths = {
   index: { cs: '/', en: '/', de: '/' },
   sluzby: { cs: '/sluzby', en: '/services', de: '/leistungen' },
-  'vstup-na-trh': { cs: '/vstup-na-cesky-trh', en: '/czech-market-entry', de: '/markteintritt-tschechien' },
+  'vstup-na-trh': { cs: '/vstup-na-novy-trh', en: '/european-market-entry', de: '/markteintritt-europa' },
   'caste-dotazy': { cs: '/caste-dotazy', en: '/faq', de: '/haeufige-fragen' },
   'case-study': { cs: '/case-study', en: '/case-study', de: '/fallstudie' },
   'o-nas': { cs: '/o-nas', en: '/about-us', de: '/ueber-uns' },

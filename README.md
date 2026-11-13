@@ -51,11 +51,11 @@ Konfigurace probíhá přes proměnné prostředí – viz `.env.example` (zkop�
 app/
   app.vue, error.vue           kořen aplikace, chybová / 404 stránka
   layouts/default.vue          hlavička, <main>, patička, skip-link
-  pages/                       / · /sluzby · /vstup-na-cesky-trh · /case-study · /o-nas · /kontakt · /cookies · /ochrana-osobnich-udaju (adresy v dalších jazycích viz níže)
+  pages/                       / · /sluzby · /vstup-na-novy-trh · /case-study · /o-nas · /kontakt · /cookies · /ochrana-osobnich-udaju (adresy v dalších jazycích viz níže)
   components/
     SiteHeader, SiteFooter     navigace (aktivní stavy, přístupné mobilní menu, funguje i bez JS)
     LanguageSwitcher           přepínač jazyků CS · EN · DE (vede na stejnou stránku v jiném jazyce)
-    SiteLogo                   logo = značka „stříbrné údolí“ + značka „A“ + oficiální logo SILVERDAHL (samostatné grafiky)
+    SiteLogo                   logo = značka „stříbrné údolí“ (Ag) + oficiální logo SILVERDAHL (samostatné grafiky; značka „A“ je jen v public/logo/znacka-a*.svg a favicon)
     BaseButton, PageIntro, CtaBand
     ServiceIcon                čárové ikony z grafického návrhu (Lucide, ISC)
     ServiceSection             detail služby (/sluzby)
@@ -131,7 +131,7 @@ Adresy stránek jsou přeložené (nastavení v `shared/locales.ts`):
 | Sdílení | Open Graph + Twitter karta s obrázkem `public/og/silverdahl.jpg` (1200 × 630) |
 | Strukturovaná data (JSON-LD) | `Organization` (adresa, kontakt, rok založení, obsluhované země) a `WebSite` na všech stránkách (`app.vue`); `WebPage`/`AboutPage`/`ContactPage`/`CollectionPage` + `BreadcrumbList`; na Službách `Service`, na O nás `Person` |
 | Indexace | `robots.txt` a `sitemap.xml` generuje server (`server/routes/`), meta `robots` s `max-image-preview:large` |
-| Přesměrování | trvalá (301) ze starých adres WordPressu: `/reference/` → `/case-study`, `/en/o-nas/` → `/en/about-us`, `/en/reference/` → `/en/case-study`, `/en/kontakt/` → `/en/contact`, `/wp-sitemap.xml` → `/sitemap.xml` (`server/middleware/legacy-redirects.ts`) |
+| Přesměrování | trvalá (301) ze starých adres WordPressu: `/reference/` → `/case-study`, `/en/o-nas/` → `/en/about-us`, `/en/reference/` → `/en/case-study`, `/en/kontakt/` → `/en/contact`, `/wp-sitemap.xml` → `/sitemap.xml`; původní adresy stránky Vstup na trh `/vstup-na-cesky-trh` → `/vstup-na-novy-trh` (en, de obdobně) (`server/middleware/legacy-redirects.ts`) |
 | Rychlost | předkomprimované statické soubory (brotli + gzip), cache 30 dní pro obrázky a loga, optimalizovaná SVG (SVGO), líné načítání obrázků mimo obrazovku |
 | Ikony | `favicon.svg`, `favicon.ico` (16/32/48), `apple-touch-icon.png`, `site.webmanifest` |
 
@@ -203,10 +203,9 @@ Po odvolání souhlasu se stránka jednou znovu načte, aby už spuštěné skri
 
 ## Čeká na doplnění před zveřejněním
 
-- [ ] **Firemní údaje – ZÁSTUPNÉ HODNOTY** – IČO, DIČ a spisová značka v `app/data/company.ts` jsou smyšlené
-      (zobrazují se v patičce, v zásadách ochrany osobních údajů a ve strukturovaných datech). Ověřit i e-mail, telefon a adresu.
-- [ ] **Sociální sítě – ZÁSTUPNÉ ODKAZY** – `company.social` (LinkedIn, Facebook) v `app/data/company.ts`; po založení
-      profilů přepsat skutečnými adresami (patička + `sameAs` ve strukturovaných datech). Sdílecí tlačítka fungují už teď.
+- [ ] **Sociální sítě** – firma zatím profily nemá, odkazy v patičce jsou proto skryté. Po založení (např. LinkedIn)
+      doplnit adresu do `company.social` v `app/data/company.ts` – zobrazí se v patičce i jako `sameAs` ve strukturovaných
+      datech. Sdílecí tlačítka fungují už teď.
 - [ ] **Doména** – výchozí je `https://silverdahl.cz`; při jiné doméně nastavit `NUXT_PUBLIC_SITE_URL` už pro build.
       Na testovacím nasazení nastavit `NUXT_PUBLIC_INDEXABLE=false`.
 - [ ] **Search Console** – po spuštění ověřit doménu a odeslat sitemap.
@@ -216,6 +215,7 @@ Po odvolání souhlasu se stránka jednou znovu načte, aby už spuštěné skri
 - [ ] **Profil Tomáše Kouřila** – podle podkladů bude doplněna konkrétní délka praxe, významné projekty,
       profesní zkušenosti a hlavní obchodní úspěchy (TODO v `app/pages/o-nas.vue`).
 - [ ] **Fotografie managementu** – zatím ilustrační portréty z podkladů (nejsou to skutečné osoby, malé rozlišení).
+      Klient fotky dodá, případně se celá sekce s fotkami a medailonky odstraní.
       Nahradit skutečnými fotkami 4 : 3, ideálně ≥ 960 × 720 px: `public/images/management-kouril.webp` a `-tauchman.webp`.
 - [ ] **Logo** – oficiální logo je obkreslené z PNG ze současného webu; při dodání originálního vektorového loga nahradit soubory v `public/logo/` a znovu vygenerovat `public/logo/logo-silverdahl.png` a `public/og/silverdahl.jpg`.
 - [ ] Aktualizace na Node 24 LTS a nejnovější Nuxt (viz výše).

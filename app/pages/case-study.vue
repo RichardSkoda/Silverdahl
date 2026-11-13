@@ -26,14 +26,14 @@ const partners = computed(() => strings('caseStudy.model.partners'))
       <p>{{ $t('caseStudy.intro.text') }}</p>
     </PageIntro>
 
-    <section class="section section--surface" aria-labelledby="ukol-nadpis">
+    <section class="section section--tight section--surface" aria-labelledby="ukol-nadpis">
       <div class="container container--narrow">
         <h2 id="ukol-nadpis" class="visually-hidden">{{ $t('caseStudy.task.heading') }}</h2>
         <p class="statement">{{ $t('caseStudy.task.statement') }}</p>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="pribeh-nadpis">
+    <section class="section section--tight" aria-labelledby="pribeh-nadpis">
       <div class="container story">
         <div class="prose">
           <p class="eyebrow">{{ $t('caseStudy.story.eyebrow') }}</p>
@@ -49,7 +49,7 @@ const partners = computed(() => strings('caseStudy.model.partners'))
       </div>
     </section>
 
-    <section class="section section--surface" aria-labelledby="dnes-nadpis">
+    <section class="section section--tight section--surface" aria-labelledby="dnes-nadpis">
       <div class="container today">
         <div class="prose">
           <p class="eyebrow">{{ $t('caseStudy.today.eyebrow') }}</p>
@@ -80,7 +80,7 @@ const partners = computed(() => strings('caseStudy.model.partners'))
       </div>
     </section>
 
-    <section class="section" aria-labelledby="cisla-nadpis">
+    <section class="section section--tight" aria-labelledby="cisla-nadpis">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">{{ $t('caseStudy.stats.eyebrow') }}</p>

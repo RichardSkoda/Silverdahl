@@ -124,7 +124,7 @@ const strengths = computed(() =>
           </div>
           <dl class="case__stats">
             <StatItem value="30+" :label="$t('home.case.statYears')" />
-            <StatItem value="4" :label="$t('home.case.statMarkets')" />
+            <StatItem :value="$t('home.case.statMarketsValue')" :label="$t('home.case.statMarkets')" />
             <StatItem value="CH → CEE" :label="$t('home.case.statHq')" />
           </dl>
         </div>

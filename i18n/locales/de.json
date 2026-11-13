@@ -9,7 +9,7 @@
     "home": "Startseite",
     "services": "Leistungen",
     "caseStudy": "Fallstudie",
-    "marketEntry": "Markteintritt Tschechien",
+    "marketEntry": "Markteintritt",
     "about": "Über uns",
     "contact": "Kontakt",
     "mainLabel": "Hauptnavigation",
@@ -55,11 +55,11 @@
   },
   "home": {
     "seo": {
-      "title": "Markteintritt in Tschechien und Mitteleuropa",
-      "description": "Silverdahl unterstützt internationale Unternehmen beim Markteintritt in Tschechien und Mitteleuropa, findet Dienstleister und steuert den Betrieb vor Ort."
+      "title": "Markteintritt in Europa und Betriebsführung",
+      "description": "Silverdahl unterstützt internationale Unternehmen beim Eintritt in neue europäische Märkte, findet Dienstleister und steuert den Betrieb vor Ort."
     },
     "hero": {
-      "eyebrow": "Markteintritt Tschechien · Lieferanten · Betriebsführung",
+      "eyebrow": "Markteintritt · Lieferanten · Betriebsführung",
       "title1": "Von der Strategie",
       "title2": "zum erfolgreichen Betrieb",
       "lead": "Wir unterstützen internationale Unternehmen beim Eintritt in neue Märkte, bei der Suche nach zuverlässigen Partnern und bei der Steuerung lokaler Betriebsabläufe.",
@@ -83,7 +83,7 @@
       "question": "Möchten Sie in Tschechien geschäftlich tätig werden oder Ihre Aktivitäten auf weitere europäische Märkte ausweiten?",
       "strong": "Sie müssen hier weder ein eigenes Team aufbauen noch selbst zahlreiche lokale Dienstleister suchen und steuern.",
       "text": "Wir helfen Ihnen, geeignete Partner zu finden und die notwendigen Prozesse aufzusetzen – und übernehmen deren Koordination, Kontrolle und regelmäßiges Reporting.",
-      "link": "So gelingt der Markteintritt in Tschechien →"
+      "link": "So gelingt der Eintritt in einen neuen Markt →"
     },
     "responsibility": {
       "eyebrow": "So arbeiten wir",
@@ -96,14 +96,15 @@
       "text": "Das Schweizer Handelsunternehmen Courlux International SA setzt Silverdahl als langjährigen Partner für seine geschäftlichen und operativen Aktivitäten in Tschechien, der Slowakei, Polen und Ungarn ein.",
       "button": "Zur Fallstudie",
       "statYears": "Jahre langfristige Partnerschaft",
-      "statMarkets": "Märkte – Tschechien, Slowakei, Polen und Ungarn",
+      "statMarketsValue": "4 Märkte",
+      "statMarkets": "Tschechien, Slowakei, Polen und Ungarn",
       "statHq": "Schweizer Zentrale und Mitteleuropa"
     }
   },
   "services": {
     "seo": {
       "title": "Leistungen: Markteintritt, Partnersuche, Betrieb",
-      "description": "Market Entry Support, Partner Sourcing & Management und Local Operations Management – Markteintritt in Tschechien, Lieferantensuche, Betriebssteuerung."
+      "description": "Market Entry Support, Partner Sourcing & Management und Local Operations Management – Eintritt in neue Märkte, Lieferantensuche, Betriebssteuerung."
     },
     "intro": {
       "eyebrow": "Unsere Leistungen",
@@ -224,14 +225,14 @@
       "p2": "Mit der Entwicklung des Marktes haben wir schrittweise externe Callcenter gefunden und unter Vertrag genommen. Für die einzelnen Länder organisierten wir die Lieferantenauswahl, verglichen Angebote, verhandelten die Konditionen und übernahmen anschließend die Koordination ihrer Tätigkeit sowie die Auswertung der Ergebnisse.",
       "highlightLabel": "Zeitraum des größten Umfangs der Zusammenarbeit",
       "highlightTag": "Historischer Höchststand",
-      "highlight": "In den intensivsten Kampagnenphasen koordinierten wir bis zu vier Callcenter auf einem einzigen Markt; die Neukundengewinnung lag insgesamt bei über 30.000 Kunden pro Monat.",
+      "highlight": "In den intensivsten Akquisitionskampagnen koordinierten wir erfolgreich die Aktivitäten auf vier Märkten; die Neukundengewinnung lag insgesamt bei über 50.000 Kunden pro Monat.",
       "p3": "Nach und nach gewannen wir auf ähnliche Weise weitere spezialisierte Partner, zum Beispiel für IT-Support, Zollanmeldungen, Post- und Logistikdienstleistungen sowie Rechtsberatung."
     },
     "today": {
       "eyebrow": "Heute",
       "title": "Wie die Zusammenarbeit heute funktioniert",
       "p1": "Heute koordiniert Silverdahl eigenständig den Großteil der lokalen Geschäfts- und Betriebsprozesse von Courlux auf allen vier Märkten.",
-      "p2": "Wir steuern die Zusammenarbeit mit externen Dienstleistern, überwachen laufend deren Qualität und Kosten, lösen operative Probleme und reagieren auf Änderungen der geschäftlichen Anforderungen und der Gesetzgebung. Ein Beispiel ist die erfolgreiche Umsetzung der DSGVO-bezogenen Prozesse.",
+      "p2": "Wir steuern die Zusammenarbeit mit externen Dienstleistern, überwachen laufend deren Qualität und Kosten, lösen operative Probleme und reagieren auf Änderungen der geschäftlichen Anforderungen und der Gesetzgebung. Zu den erfolgreich umgesetzten Projekten gehören die Einführung DSGVO-bezogener Prozesse sowie die Anpassung von Logistik- und Zollprozessen an das EU-Recht, einschließlich der Einführung des IOSS-Verfahrens (Import One Stop Shop), der Anpassung der Zollabfertigung von Sendungen mit geringem Wert (Low Value Consignments) bis 150 EUR und der Umsetzung von Änderungen bei den Einfuhrzöllen.",
       "p3": "Zu unseren Aufgaben gehören auch die Erstellung der Geschäftsbudgets und deren regelmäßige Auswertung. Die Schweizer Zentrale erhält von uns tägliche, wöchentliche und monatliche Berichte einschließlich eines Soll-Ist-Vergleichs.",
       "p4": "Im Rahmen genehmigter Budgets und übertragener Befugnisse erledigen wir operative Angelegenheiten selbstständig. Die Zentrale behält strategische und finanzielle Entscheidungen, die Bestandsverwaltung und den Warenversand aus der Schweiz."
     },
@@ -248,15 +249,15 @@
         "title": "Langfristig und heute",
         "items": [
           { "value": "30+", "label": "Jahre langfristige Partnerschaft" },
-          { "value": "4", "label": "Märkte – Tschechien, Slowakei, Polen und Ungarn" },
+          { "value": "4 Märkte", "label": "Tschechien, Slowakei, Polen und Ungarn" },
           { "value": "Tausende", "label": "Kundenkontakte pro Monat im laufenden Betrieb" }
         ]
       },
       "peak": {
         "title": "Zur Zeit des größten Umfangs der Zusammenarbeit",
         "items": [
-          { "value": "bis zu 4", "label": "Callcenter auf einem einzigen Markt koordiniert" },
-          { "value": "30.000+", "label": "Neukunden pro Monat in den intensivsten Kampagnen" }
+          { "value": "bis zu 4", "label": "externe Partner pro Markt in der Kundenakquise koordiniert" },
+          { "value": "50.000+", "label": "Neukunden pro Monat in den intensivsten Kampagnen" }
         ]
       }
     },
@@ -280,7 +281,7 @@
     "experience": {
       "title": "Erfahrung im internationalen Geschäft",
       "p1": "Unsere Erfahrung beruht vor allem auf der mehr als dreißigjährigen Zusammenarbeit mit dem Schweizer Unternehmen {company}, für das wir umfassende operative Unterstützung in Tschechien, der Slowakei, Polen und Ungarn leisten.",
-      "p2": "In dieser Zeit haben wir umfangreiche Erfahrung in der Suche nach Geschäftspartnern, der Verhandlung von Konditionen, im Projektmanagement, in der Kostenkontrolle und im Reporting an ausländische Zentralen gesammelt.",
+      "p2": "Silverdahl hat zudem enge Geschäftsbeziehungen nach Skandinavien. Das Unternehmen wurde von einem schwedischen Unternehmer gegründet und arbeitet seit Langem eng mit dem schwedischen Unternehmen Silverhuset zusammen, das die Geschäftsaktivitäten von Courlux auf den skandinavischen Märkten koordiniert. Diese Verbindung ermöglicht es uns, Erfahrungen aus verschiedenen europäischen Märkten zu teilen, und trägt zu einem tieferen Verständnis der Bedürfnisse internationaler Handelsunternehmen bei.",
       "statement": "Unser Ziel ist es, diese Erfahrung weiteren Unternehmen anzubieten, die ihr Geschäft auf europäischen Märkten ausbauen möchten, ohne große eigene lokale Teams aufbauen zu müssen."
     },
     "approach": {
@@ -307,10 +308,13 @@
         "bio": [
           "Michal verfügt über langjährige Erfahrung im Projektmanagement, in der Koordination von Geschäftspartnern und in der operativen Unterstützung internationaler Geschäftsaktivitäten.",
           "Er ist seit 2008 bei Silverdahl tätig. Im Laufe seiner beruflichen Laufbahn hat er an der Steuerung von Geschäfts- und Marketingprojekten, der Koordination externer Dienstleister und der Abwicklung von Betriebsprozessen für ausländische Geschäftspartner mitgewirkt.",
-          "Sein Schwerpunkt liegt in der Organisation und Steuerung von Projekten, der Koordination der Zusammenarbeit zwischen ausländischer Zentrale und lokalen Dienstleistern sowie im operativen Controlling. Er konzentriert sich auf die Erstellung und Verwaltung von Budgets, regelmäßiges Reporting, die Auswertung der Geschäftsergebnisse und die Kontrolle der Wirtschaftlichkeit einzelner Aktivitäten.",
-          "Er hat einen Bachelorabschluss in Marketingkommunikation und einen Masterabschluss in Wirtschaft und Management, den er mit Auszeichnung abschloss. In seiner beruflichen Praxis verbindet er wirtschaftliches und betriebswirtschaftliches Wissen mit Marketingkompetenz."
+          "Sein Schwerpunkt liegt in der Organisation und Steuerung von Projekten, der Koordination der Zusammenarbeit zwischen ausländischer Zentrale und lokalen Dienstleistern sowie im operativen Controlling. Er konzentriert sich auf die Erstellung und Verwaltung von Budgets, regelmäßiges Reporting, die Auswertung der Geschäftsergebnisse und die Kontrolle der Wirtschaftlichkeit einzelner Aktivitäten."
         ]
       }
+    },
+    "bridge": {
+      "title": "„Wir sind die Brücke zwischen Ihren Zielen und zufriedenen Kunden“",
+      "alt": "Die Öresundbrücke zwischen Kopenhagen und Malmö bei Sonnenuntergang"
     },
     "quote": {
       "label": "Zitat",
@@ -460,22 +464,22 @@
   },
   "marketEntry": {
     "seo": {
-      "title": "Markteintritt Tschechien ohne eigenes Team",
-      "description": "Markteintritt in Tschechien: Lieferantenauswahl, Buchhaltung, Logistik, Kundenservice und Betriebsführung – Silverdahl bereitet alles vor und koordiniert."
+      "title": "Markteintritt in Europa ohne eigenes Team",
+      "description": "Sie planen den Eintritt in einen neuen europäischen Markt? Von Tschechien aus wählen wir Dienstleister aus und steuern Logistik, Kundenservice und Betrieb."
     },
     "intro": {
-      "eyebrow": "Markteintritt Tschechien",
-      "title": "Markteintritt in Tschechien ohne eigenes lokales Team",
-      "text": "Sie möchten in Tschechien verkaufen oder von hier aus weitere Märkte Mitteleuropas bedienen? Wir entwickeln mit Ihnen das passende Betriebsmodell, finden zuverlässige lokale Dienstleister und übernehmen die Koordination des Tagesgeschäfts."
+      "eyebrow": "Markteintritt",
+      "title": "Eintritt in neue Märkte ohne eigenes lokales Team",
+      "text": "Sie planen den Eintritt in einen neuen europäischen Markt oder möchten Ihre Geschäftsaktivitäten auf mehrere Länder ausweiten? Nutzen Sie die Vorteile Tschechiens als strategischen Standort im Herzen Europas. Wir entwickeln mit Ihnen effiziente Betriebslösungen, finden zuverlässige lokale Partner und koordinieren das Tagesgeschäft auf europäischen Märkten direkt aus Tschechien."
     },
     "why": {
       "eyebrow": "Warum Tschechien",
-      "title": "Ein idealer Standort für den Start in Mitteleuropa",
+      "title": "Ein strategischer Standort für Geschäfte in Europa",
       "items": [
         { "title": "Lage im Herzen Europas", "text": "Gute Verkehrsanbindung nach Deutschland, Österreich, Polen, in die Slowakei und nach Ungarn." },
         { "title": "EU-Binnenmarkt", "text": "Die EU-Mitgliedschaft erleichtert Handel, Warenverkehr und den Aufbau von Dienstleistungen." },
         { "title": "Erfahrene Dienstleister", "text": "Kontaktzentren, Logistik, IT, Buchhaltung und Marketing in der benötigten Qualität." },
-        { "title": "Drehscheibe für die Region", "text": "Von einem Standort aus lässt sich auch der Betrieb in der Slowakei, in Polen und Ungarn koordinieren." }
+        { "title": "Drehscheibe für mehrere Märkte", "text": "Von einem Standort aus lässt sich der Betrieb in mehreren europäischen Ländern koordinieren." }
       ]
     },
     "needs": {
@@ -485,7 +489,7 @@
       "items": [
         { "title": "Rechtlicher und steuerlicher Rahmen", "text": "gemeinsam mit bewährten Anwälten und Steuerberatern." },
         { "title": "Buchhaltung und Lohnabrechnung", "text": "ein zuverlässiges Buchhaltungsbüro und regelmäßige Berichte an die Zentrale." },
-        { "title": "Kundenservice", "text": "ein Kontaktzentrum auf Tschechisch und in weiteren Sprachen der Region." },
+        { "title": "Kundenservice", "text": "ein Kontaktzentrum in den Sprachen Ihrer Zielmärkte." },
         { "title": "Logistik und Lager", "text": "Lagerung, Fulfillment, Transport und Postdienste." },
         { "title": "Marketing und Lokalisierung", "text": "Übersetzungen, lokalisierte Unterlagen und lokale Marketingpartner." },
         { "title": "Zoll und IT", "text": "Zollanmeldungen, IT-Support und weitere spezialisierte Leistungen." }
@@ -516,18 +520,18 @@
   "faq": {
     "seo": {
       "title": "Häufige Fragen – Markteintritt und Betrieb",
-      "description": "Antworten auf häufige Fragen: Markteintritt in Tschechien ohne Niederlassung, Lieferantenauswahl, Sprachen, Reporting und Vorlaufzeit."
+      "description": "Antworten auf häufige Fragen: Markteintritt ohne Niederlassung, Lieferantenauswahl, Sprachen, Reporting und Vorlaufzeit."
     },
-    "intro": "Antworten auf die häufigsten Fragen zum Markteintritt in Tschechien und Mitteleuropa, zur Lieferantenauswahl und zur lokalen Betriebsführung.",
+    "intro": "Antworten auf die häufigsten Fragen zum Eintritt in neue Märkte, zur Lieferantenauswahl und zur lokalen Betriebsführung.",
     "eyebrow": "Häufige Fragen",
-    "title": "Fragen zum Markteintritt in Tschechien",
+    "title": "Fragen zum Eintritt in neue Märkte",
     "items": [
-      { "q": "Brauche ich für den Markteintritt in Tschechien eine eigene Niederlassung und Mitarbeiter?", "a": "Nicht unbedingt. Viele Aufgaben – Kundenservice, Logistik, Buchhaltung oder Marketing – lassen sich über spezialisierte Dienstleister abdecken. Silverdahl findet sie, richtet die Zusammenarbeit ein und koordiniert sie langfristig, sodass Sie kein eigenes lokales Team aufbauen müssen." },
-      { "q": "In welchen Märkten können Sie unterstützen?", "a": "Langjährige Erfahrung haben wir in Tschechien, der Slowakei, Polen und Ungarn. Je nach Projekt unterstützen wir auch in weiteren europäischen Märkten." },
+      { "q": "Brauche ich für den Eintritt in einen neuen Markt eine eigene Niederlassung und Mitarbeiter?", "a": "Nicht unbedingt. Viele Aufgaben – Kundenservice, Logistik, Buchhaltung oder Marketing – lassen sich über spezialisierte Dienstleister abdecken. Silverdahl findet sie, richtet die Zusammenarbeit ein und koordiniert sie langfristig, sodass Sie kein eigenes lokales Team aufbauen müssen." },
+      { "q": "In welchen Märkten können Sie unterstützen?", "a": "Unsere Erfahrung erstreckt sich über zahlreiche europäische Märkte. Langfristig koordinieren wir Projekte in Tschechien, der Slowakei, Polen und Ungarn; Erfahrung mit der Koordination von Projekten haben wir außerdem in Portugal, den Niederlanden und Belgien. Dank dieser breiten geografischen Reichweite und unserer Kenntnis der Besonderheiten einzelner Märkte können wir Geschäftsaktivitäten auch in weiteren europäischen Ländern wirksam unterstützen." },
       { "q": "Welche Dienstleister können Sie vermitteln?", "a": "Zum Beispiel Kontaktzentren, Marketing- und Werbedienstleistungen, Druck und Distribution, Logistik, Lagerung und Fulfillment, IT, Buchhaltung und Steuern, Rechtsberatung, Zolldienstleistungen, Übersetzung und Lokalisierung oder Personaldienstleistungen. Die Liste ist nicht abschließend." },
       { "q": "Wie lange dauert die Vorbereitung des Markteintritts?", "a": "Das hängt vom Umfang des Projekts und der Zahl der benötigten Dienstleister ab. Nach der Bedarfsanalyse erstellen wir einen konkreten Zeitplan, damit Sie genau wissen, wann der Betrieb starten kann." },
       { "q": "Muss ich alle Ihre Leistungen in Anspruch nehmen?", "a": "Nein. Wir übernehmen eine einmalige Lieferantenauswahl, die komplette Vorbereitung des Markteintritts oder die langfristige Betriebsführung – ganz nach Ihrem aktuellen Bedarf." },
-      { "q": "In welcher Sprache arbeiten Sie?", "a": "Wir kommunizieren auf Tschechisch, Englisch und Deutsch. Das Reporting erstellen wir in der Sprache und im Format, das Ihrer Zentrale entspricht." },
+      { "q": "In welcher Sprache arbeiten Sie?", "a": "Wir kommunizieren auf Tschechisch und Englisch. Dank moderner KI-Werkzeuge können wir auch mit weiteren europäischen Sprachen effizient arbeiten und die Kommunikation an die Anforderungen der einzelnen Märkte anpassen. Das Reporting erstellen wir in der Sprache und im Format, das Ihrer Zentrale entspricht." },
       { "q": "Wie behalte ich den Überblick über Betrieb und Kosten?", "a": "Wir liefern regelmäßiges Reporting – je nach Vereinbarung täglich, wöchentlich oder monatlich – einschließlich Lieferantenleistung, Kosten und Soll-Ist-Vergleich." }
     ]
   },

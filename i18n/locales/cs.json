@@ -9,7 +9,7 @@
     "home": "Domů",
     "services": "Služby",
     "caseStudy": "Case study",
-    "marketEntry": "Vstup na český trh",
+    "marketEntry": "Vstup na nový trh",
     "about": "O nás",
     "contact": "Kontakt",
     "mainLabel": "Hlavní navigace",
@@ -55,11 +55,11 @@
   },
   "home": {
     "seo": {
-      "title": "Vstup na český a evropský trh a řízení provozu",
-      "description": "Silverdahl pomáhá zahraničním firmám se vstupem na český a středoevropský trh – najde spolehlivé dodavatele a převezme řízení lokálního provozu."
+      "title": "Vstup na evropské trhy a řízení provozu",
+      "description": "Silverdahl pomáhá zahraničním firmám se vstupem na nové evropské trhy – z Česka najde spolehlivé dodavatele a převezme řízení lokálního provozu."
     },
     "hero": {
-      "eyebrow": "Vstup na český trh · dodavatelé · řízení provozu",
+      "eyebrow": "Vstup na nové trhy · dodavatelé · řízení provozu",
       "title1": "Od strategie",
       "title2": "k úspěšnému provozu",
       "lead": "Pomáháme zahraničním společnostem vstupovat na nové trhy, vyhledávat spolehlivé partnery a řídit lokální provozní procesy.",
@@ -83,7 +83,7 @@
       "question": "Chcete začít podnikat v České republice nebo rozšířit své aktivity na další evropské trhy?",
       "strong": "Nemusíte zde budovat vlastní tým ani sami vyhledávat a řídit řadu lokálních dodavatelů.",
       "text": "Pomůžeme vám najít vhodné partnery, nastavit potřebné procesy a zajistíme jejich koordinaci, kontrolu a pravidelný reporting.",
-      "link": "Jak probíhá vstup na český trh →"
+      "link": "Jak probíhá vstup na nový trh →"
     },
     "responsibility": {
       "eyebrow": "Jak spolupracujeme",
@@ -96,14 +96,15 @@
       "text": "Švýcarská obchodní společnost Courlux International SA využívá Silverdahl jako svého dlouhodobého partnera pro zajištění obchodních a provozních aktivit v České republice, na Slovensku, v Polsku a Maďarsku.",
       "button": "Přečíst case study",
       "statYears": "let dlouhodobého partnerství",
-      "statMarkets": "trhy – Česká republika, Slovensko, Polsko a Maďarsko",
+      "statMarketsValue": "4 trhy",
+      "statMarkets": "Česká republika, Slovensko, Polsko a Maďarsko",
       "statHq": "švýcarská centrála a střední Evropa"
     }
   },
   "services": {
     "seo": {
       "title": "Služby: vstup na trh, dodavatelé, řízení provozu",
-      "description": "Market Entry Support, Partner Sourcing & Management a Local Operations Management: vstup na český trh, výběr dodavatelů i externí řízení provozu."
+      "description": "Market Entry Support, Partner Sourcing & Management a Local Operations Management: vstup na nový trh, výběr dodavatelů i externí řízení provozu."
     },
     "intro": {
       "eyebrow": "Naše služby",
@@ -224,14 +225,14 @@
       "p2": "S vývojem trhu jsme postupně vyhledali a zajistili spolupráci s externími call centry. Pro jednotlivé země jsme organizovali výběr dodavatelů, porovnávali nabídky, vyjednávali obchodní podmínky a následně převzali koordinaci jejich činnosti a vyhodnocování výsledků.",
       "highlightLabel": "Období největšího rozsahu spolupráce",
       "highlightTag": "Historické maximum",
-      "highlight": "V období nejintenzivnějších kampaní jsme koordinovali až čtyři call centra na jednom trhu, přičemž celkový nábor přesahoval 30 000 nových zákazníků měsíčně.",
+      "highlight": "V období nejintenzivnějších akvizičních kampaní jsme úspěšně koordinovali aktivity na čtyřech trzích a dosahovali celkového náboru přesahujícího 50 000 nových zákazníků měsíčně.",
       "p3": "Postupně jsme obdobným způsobem zajistili také další specializované partnery, například v oblasti IT podpory, celní deklarace, poštovních a logistických služeb či právního poradenství."
     },
     "today": {
       "eyebrow": "Současnost",
       "title": "Jak spolupráce funguje dnes",
       "p1": "Silverdahl dnes samostatně koordinuje většinu lokálních obchodních a provozních procesů Courluxu na všech čtyřech trzích.",
-      "p2": "Řídíme spolupráci s externími dodavateli, průběžně kontrolujeme jejich kvalitu a náklady, řešíme provozní komplikace a reagujeme na změny obchodních požadavků i legislativního prostředí. Příkladem je úspěšná implementace procesů souvisejících s GDPR.",
+      "p2": "Řídíme spolupráci s externími dodavateli, průběžně kontrolujeme jejich kvalitu a náklady, řešíme provozní komplikace a reagujeme na změny obchodních požadavků i legislativního prostředí. Mezi příklady úspěšně realizovaných projektů patří implementace procesů souvisejících s GDPR a přizpůsobení logistických a celních procesů evropské legislativě, včetně zavedení systému IOSS (Import One Stop Shop), úprav celního odbavení zásilek nízké hodnoty (Low Value Consignments) do 150 EUR a implementace změn v oblasti dovozních cel.",
       "p3": "Součástí naší odpovědnosti je také příprava obchodních rozpočtů a jejich pravidelné vyhodnocování. Švýcarské centrále poskytujeme denní, týdenní a měsíční reporting, včetně porovnání skutečných výsledků s plánem.",
       "p4": "V rámci schválených rozpočtů a svěřených kompetencí řešíme operativní záležitosti samostatně. Centrála si ponechává strategická a finanční rozhodnutí, zajištění zásob a distribuci zboží ze Švýcarska."
     },
@@ -248,15 +249,15 @@
         "title": "Dlouhodobě a dnes",
         "items": [
           { "value": "30+", "label": "let dlouhodobého partnerství" },
-          { "value": "4", "label": "trhy – Česká republika, Slovensko, Polsko a Maďarsko" },
+          { "value": "4 trhy", "label": "Česká republika, Slovensko, Polsko a Maďarsko" },
           { "value": "Tisíce", "label": "zákaznických kontaktů měsíčně v současném provozu" }
         ]
       },
       "peak": {
         "title": "V období největšího rozsahu spolupráce",
         "items": [
-          { "value": "až 4", "label": "call centra koordinovaná na jednom trhu" },
-          { "value": "30 000+", "label": "nových zákazníků měsíčně v nejintenzivnějších kampaních" }
+          { "value": "až 4", "label": "externí partneři koordinovaní na každém trhu v rámci zákaznické akvizice" },
+          { "value": "50 000+", "label": "nových zákazníků měsíčně v nejintenzivnějších kampaních" }
         ]
       }
     },
@@ -280,7 +281,7 @@
     "experience": {
       "title": "Zkušenosti s mezinárodním obchodem",
       "p1": "Naše zkušenosti vycházejí především z více než třicetileté spolupráce se švýcarskou společností {company}, pro kterou zajišťujeme komplexní provozní podporu v České republice, na Slovensku, v Polsku a Maďarsku.",
-      "p2": "Za tu dobu jsme získali rozsáhlé zkušenosti s vyhledáváním obchodních partnerů, vyjednáváním podmínek spolupráce, řízením projektů, kontrolou nákladů i reportingem výsledků zahraniční centrále.",
+      "p2": "Silverdahl má zároveň silné obchodní vazby na Skandinávii. Společnost byla založena švédským podnikatelem a dlouhodobě úzce spolupracuje se švédskou společností Silverhuset, která koordinuje obchodní aktivity společnosti Courlux na skandinávských trzích. Toto propojení nám umožňuje sdílet zkušenosti z různých evropských trhů a přispívá k hlubšímu porozumění potřebám mezinárodních obchodních společností.",
       "statement": "Naším cílem je tyto zkušenosti nabídnout dalším společnostem, které chtějí rozvíjet své podnikání na evropských trzích bez nutnosti budovat vlastní rozsáhlé lokální týmy."
     },
     "approach": {
@@ -307,10 +308,13 @@
         "bio": [
           "Michal má dlouholeté zkušenosti s projektovým řízením, koordinací obchodních partnerů a provozní podporou mezinárodních obchodních aktivit.",
           "Ve společnosti Silverdahl působí od roku 2008. Během své profesní dráhy se podílel na řízení obchodních a marketingových projektů, koordinaci externích dodavatelů a zajišťování provozních procesů pro zahraniční obchodní partnery.",
-          "Jeho specializací je organizace a řízení projektů, koordinace spolupráce mezi zahraniční centrálou a lokálními dodavateli a oblast provozního controllingu. Zaměřuje se na tvorbu a správu rozpočtů, pravidelný reporting, vyhodnocování obchodních výsledků a kontrolu ekonomické efektivity jednotlivých aktivit.",
-          "Vystudoval bakalářský program Marketingová komunikace a následně magisterský program Ekonomika a management, který absolvoval s vyznamenáním. Ve své profesní praxi propojuje ekonomické a manažerské znalosti s marketingovou odborností."
+          "Jeho specializací je organizace a řízení projektů, koordinace spolupráce mezi zahraniční centrálou a lokálními dodavateli a oblast provozního controllingu. Zaměřuje se na tvorbu a správu rozpočtů, pravidelný reporting, vyhodnocování obchodních výsledků a kontrolu ekonomické efektivity jednotlivých aktivit."
         ]
       }
+    },
+    "bridge": {
+      "title": "„Jsme mostem mezi vašimi cíli a spokojenými zákazníky“",
+      "alt": "Most přes Øresund spojující Kodaň a Malmö při západu slunce"
     },
     "quote": {
       "label": "Citát",
@@ -460,22 +464,22 @@
   },
   "marketEntry": {
     "seo": {
-      "title": "Vstup na český trh bez vlastní pobočky a týmu",
-      "description": "Jak vstoupit na český trh: výběr dodavatelů, účetnictví, logistika, zákaznický servis a řízení provozu. Silverdahl vše připraví a koordinuje za vás."
+      "title": "Vstup na nový evropský trh bez vlastní pobočky",
+      "description": "Plánujete vstup na nový evropský trh? Z Česka vybereme dodavatele, zajistíme účetnictví, logistiku i zákaznický servis a řídíme každodenní provoz."
     },
     "intro": {
-      "eyebrow": "Vstup na český trh",
-      "title": "Vstup na český trh bez budování vlastního týmu",
-      "text": "Chcete prodávat v České republice nebo odsud obsluhovat další trhy střední Evropy? Pomůžeme vám připravit provozní řešení, najít spolehlivé lokální dodavatele a převezmeme koordinaci každodenního provozu."
+      "eyebrow": "Vstup na nový trh",
+      "title": "Vstup na nový trh bez budování vlastního týmu",
+      "text": "Plánujete vstoupit na nový evropský trh nebo rozvíjet své obchodní aktivity ve více zemích? Využijte výhod České republiky jako strategického místa v srdci Evropy. Pomůžeme vám připravit efektivní provozní řešení, najít spolehlivé lokální partnery a zajistíme koordinaci každodenního provozu napříč evropskými trhy přímo z České republiky."
     },
     "why": {
       "eyebrow": "Proč Česká republika",
-      "title": "Výhodné místo pro start ve střední Evropě",
+      "title": "Strategické zázemí pro podnikání v Evropě",
       "items": [
         { "title": "Poloha v srdci Evropy", "text": "Dobrá dopravní dostupnost Německa, Rakouska, Polska, Slovenska i Maďarska." },
         { "title": "Jednotný trh EU", "text": "Členství v Evropské unii usnadňuje obchod, pohyb zboží i nastavení služeb." },
         { "title": "Zkušení dodavatelé služeb", "text": "Kontaktní centra, logistika, IT, účetnictví i marketing v potřebné kvalitě." },
-        { "title": "Výchozí bod pro region", "text": "Z jednoho místa lze koordinovat i provoz na Slovensku, v Polsku a Maďarsku." }
+        { "title": "Výchozí bod pro více trhů", "text": "Z jednoho místa lze koordinovat provoz v několika evropských zemích najednou." }
       ]
     },
     "needs": {
@@ -485,7 +489,7 @@
       "items": [
         { "title": "Právní a daňový rámec", "text": "ve spolupráci s ověřenými právníky a daňovými poradci." },
         { "title": "Účetnictví a mzdy", "text": "spolehlivá účetní kancelář a pravidelné výkazy pro centrálu." },
-        { "title": "Zákaznický servis", "text": "kontaktní centrum v češtině i dalších jazycích regionu." },
+        { "title": "Zákaznický servis", "text": "kontaktní centrum v jazycích cílových trhů." },
         { "title": "Logistika a sklad", "text": "skladování, fulfillment, doprava a poštovní služby." },
         { "title": "Marketing a lokalizace", "text": "překlady, lokalizace materiálů a místní marketingoví partneři." },
         { "title": "Clo a IT", "text": "celní deklarace, IT podpora a další specializované služby." }
@@ -516,18 +520,18 @@
   "faq": {
     "seo": {
       "title": "Časté dotazy – vstup na trh a řízení provozu",
-      "description": "Odpovědi na časté otázky: vstup na český trh bez pobočky, výběr dodavatelů, jazyky, reporting a délka přípravy. Silverdahl, Praha."
+      "description": "Odpovědi na časté otázky: vstup na nový trh bez pobočky, výběr dodavatelů, jazyky, reporting a délka přípravy. Silverdahl, Praha."
     },
-    "intro": "Odpovědi na nejčastější otázky ke vstupu na český a středoevropský trh, výběru dodavatelů a řízení lokálního provozu.",
+    "intro": "Odpovědi na nejčastější otázky ke vstupu na nový trh, výběru dodavatelů a řízení lokálního provozu.",
     "eyebrow": "Časté dotazy",
-    "title": "Otázky ke vstupu na český trh",
+    "title": "Otázky ke vstupu na nový trh",
     "items": [
-      { "q": "Potřebuji pro vstup na český trh vlastní pobočku a zaměstnance?", "a": "Ne nutně. Řadu činností – zákaznický servis, logistiku, účetnictví nebo marketing – lze zajistit prostřednictvím specializovaných dodavatelů. Silverdahl je vyhledá, nastaví spolupráci a dlouhodobě ji koordinuje, takže nemusíte budovat vlastní lokální tým." },
-      { "q": "Na kterých trzích můžete pomoci?", "a": "Dlouhodobé zkušenosti máme z České republiky, Slovenska, Polska a Maďarska. Podle povahy projektu umíme pomoci i na dalších evropských trzích." },
+      { "q": "Potřebuji pro vstup na nový trh vlastní pobočku a zaměstnance?", "a": "Ne nutně. Řadu činností – zákaznický servis, logistiku, účetnictví nebo marketing – lze zajistit prostřednictvím specializovaných dodavatelů. Silverdahl je vyhledá, nastaví spolupráci a dlouhodobě ji koordinuje, takže nemusíte budovat vlastní lokální tým." },
+      { "q": "Na kterých trzích můžete pomoci?", "a": "Naše zkušenosti sahají napříč evropskými trhy. Dlouhodobě koordinujeme projekty v České republice, na Slovensku, v Polsku a Maďarsku, přičemž zkušenosti s koordinací projektů máme také z Portugalska, Nizozemska a Belgie. Díky širokému geografickému záběru a znalosti specifik jednotlivých trhů dokážeme efektivně podporovat obchodní aktivity i v dalších evropských zemích." },
       { "q": "Jaké dodavatele dokážete zajistit?", "a": "Například kontaktní centra, marketingové a reklamní služby, tisk a distribuci, logistiku, skladování a fulfillment, IT, účetní a daňové služby, právní poradenství, celní služby, překlady a lokalizaci či personální služby. Výběr oblastí není uzavřený." },
       { "q": "Jak dlouho trvá příprava vstupu na trh?", "a": "Záleží na rozsahu projektu a počtu potřebných dodavatelů. Po úvodní analýze připravíme konkrétní harmonogram, abyste přesně věděli, kdy může provoz začít." },
       { "q": "Musím využít všechny vaše služby?", "a": "Ne. Můžeme zajistit jednorázový výběr dodavatele, kompletní přípravu vstupu na trh nebo dlouhodobé řízení provozu – podle toho, co právě potřebujete." },
-      { "q": "V jakém jazyce spolu budeme komunikovat?", "a": "Komunikujeme česky, anglicky a německy. Reporting připravujeme v jazyce a formátu, který vyhovuje vaší centrále." },
+      { "q": "V jakém jazyce spolu budeme komunikovat?", "a": "Komunikujeme česky a anglicky. Díky využití moderních AI nástrojů dokážeme efektivně pracovat i s dalšími evropskými jazyky a přizpůsobit komunikaci potřebám jednotlivých trhů. Reporting připravujeme v jazyce a formátu, který vyhovuje vaší centrále." },
       { "q": "Jak budu mít přehled o provozu a nákladech?", "a": "Poskytujeme pravidelný reporting – podle dohody denní, týdenní nebo měsíční – včetně vyhodnocení výkonnosti dodavatelů, nákladů a porovnání výsledků s plánem." }
     ]
   },

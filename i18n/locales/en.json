@@ -9,7 +9,7 @@
     "home": "Home",
     "services": "Services",
     "caseStudy": "Case study",
-    "marketEntry": "Czech market entry",
+    "marketEntry": "New market entry",
     "about": "About us",
     "contact": "Contact",
     "mainLabel": "Main navigation",
@@ -55,11 +55,11 @@
   },
   "home": {
     "seo": {
-      "title": "Czech market entry & local operations partner",
-      "description": "Silverdahl helps international companies enter the Czech and Central European markets, find reliable suppliers and manage local operations."
+      "title": "European market entry & operations partner",
+      "description": "Silverdahl helps international companies enter new European markets – from the Czech Republic we find reliable suppliers and manage local operations."
     },
     "hero": {
-      "eyebrow": "Czech market entry · suppliers · local operations",
+      "eyebrow": "New market entry · suppliers · local operations",
       "title1": "From strategy",
       "title2": "to successful operations",
       "lead": "We help international companies enter new markets, find reliable partners and manage local operational processes.",
@@ -83,7 +83,7 @@
       "question": "Are you planning to do business in the Czech Republic or expand into other European markets?",
       "strong": "You don’t need to build your own team here or find and manage a whole range of local suppliers yourself.",
       "text": "We help you find the right partners and set up the necessary processes – and we take care of their coordination, control and regular reporting.",
-      "link": "How Czech market entry works →"
+      "link": "How entering a new market works →"
     },
     "responsibility": {
       "eyebrow": "How we work",
@@ -96,14 +96,15 @@
       "text": "The Swiss trading company Courlux International SA relies on Silverdahl as its long-term partner for business and operational activities in the Czech Republic, Slovakia, Poland and Hungary.",
       "button": "Read the case study",
       "statYears": "years of long-term partnership",
-      "statMarkets": "markets – Czech Republic, Slovakia, Poland and Hungary",
+      "statMarketsValue": "4 markets",
+      "statMarkets": "Czech Republic, Slovakia, Poland and Hungary",
       "statHq": "Swiss headquarters and Central Europe"
     }
   },
   "services": {
     "seo": {
       "title": "Services: market entry, sourcing & operations",
-      "description": "Market Entry Support, Partner Sourcing & Management and Local Operations Management – entering the Czech market, finding suppliers, running operations."
+      "description": "Market Entry Support, Partner Sourcing & Management and Local Operations Management – entering new markets, finding suppliers, running operations."
     },
     "intro": {
       "eyebrow": "Our services",
@@ -224,14 +225,14 @@
       "p2": "As the market evolved, we gradually found and contracted external call centres. For each country we organised the supplier selection, compared offers, negotiated commercial terms and then took over the coordination of their work and the evaluation of results.",
       "highlightLabel": "Period of the largest scope of cooperation",
       "highlightTag": "Historical peak",
-      "highlight": "During the most intensive campaigns we coordinated up to four call centres in a single market, with total customer acquisition exceeding 30,000 new customers per month.",
+      "highlight": "During the most intensive acquisition campaigns we successfully coordinated activities in four markets, with total customer acquisition exceeding 50,000 new customers per month.",
       "p3": "Over time, we secured other specialised partners in a similar way – for example for IT support, customs declarations, postal and logistics services and legal advice."
     },
     "today": {
       "eyebrow": "Today",
       "title": "How the cooperation works today",
       "p1": "Today Silverdahl independently coordinates most of Courlux’s local business and operational processes in all four markets.",
-      "p2": "We manage the cooperation with external suppliers, continuously monitor their quality and costs, resolve operational issues and respond to changes in business requirements and legislation. One example is the successful implementation of GDPR-related processes.",
+      "p2": "We manage the cooperation with external suppliers, continuously monitor their quality and costs, resolve operational issues and respond to changes in business requirements and legislation. Successfully completed projects include the implementation of GDPR-related processes and the adaptation of logistics and customs processes to EU legislation, including the introduction of the IOSS (Import One Stop Shop) scheme, changes to the customs clearance of low value consignments up to EUR 150 and the implementation of changes to import duties.",
       "p3": "Our responsibilities also include preparing business budgets and evaluating them regularly. We provide the Swiss headquarters with daily, weekly and monthly reporting, including a comparison of actual results against the plan.",
       "p4": "Within approved budgets and delegated powers, we handle operational matters independently. The headquarters retains strategic and financial decisions, inventory management and the distribution of goods from Switzerland."
     },
@@ -248,15 +249,15 @@
         "title": "Long-term and today",
         "items": [
           { "value": "30+", "label": "years of long-term partnership" },
-          { "value": "4", "label": "markets – Czech Republic, Slovakia, Poland and Hungary" },
+          { "value": "4 markets", "label": "Czech Republic, Slovakia, Poland and Hungary" },
           { "value": "Thousands", "label": "of customer contacts per month in current operations" }
         ]
       },
       "peak": {
         "title": "At the peak of the cooperation",
         "items": [
-          { "value": "up to 4", "label": "call centres coordinated in a single market" },
-          { "value": "30,000+", "label": "new customers per month in the most intensive campaigns" }
+          { "value": "up to 4", "label": "external partners coordinated in each market for customer acquisition" },
+          { "value": "50,000+", "label": "new customers per month in the most intensive campaigns" }
         ]
       }
     },
@@ -280,7 +281,7 @@
     "experience": {
       "title": "Experience in international business",
       "p1": "Our experience comes above all from more than thirty years of cooperation with the Swiss company {company}, for which we provide comprehensive operational support in the Czech Republic, Slovakia, Poland and Hungary.",
-      "p2": "Over this time we have gained extensive experience in finding business partners, negotiating terms of cooperation, managing projects, controlling costs and reporting results to headquarters abroad.",
+      "p2": "Silverdahl also has strong business ties to Scandinavia. The company was founded by a Swedish entrepreneur and has long worked closely with the Swedish company Silverhuset, which coordinates Courlux’s business activities in the Scandinavian markets. This connection allows us to share experience from different European markets and contributes to a deeper understanding of the needs of international trading companies.",
       "statement": "Our aim is to offer this experience to other companies that want to grow their business in European markets without having to build large local teams of their own."
     },
     "approach": {
@@ -307,10 +308,13 @@
         "bio": [
           "Michal has many years of experience in project management, coordinating business partners and providing operational support for international business activities.",
           "He has worked at Silverdahl since 2008. During his career he has been involved in managing business and marketing projects, coordinating external suppliers and running operational processes for international business partners.",
-          "He specialises in organising and managing projects, coordinating cooperation between headquarters abroad and local suppliers, and operational controlling. His focus is on preparing and managing budgets, regular reporting, evaluating business results and monitoring the cost-effectiveness of individual activities.",
-          "He holds a bachelor’s degree in Marketing Communication and a master’s degree in Economics and Management, which he completed with honours. In his work he combines economic and management expertise with marketing know-how."
+          "He specialises in organising and managing projects, coordinating cooperation between headquarters abroad and local suppliers, and operational controlling. His focus is on preparing and managing budgets, regular reporting, evaluating business results and monitoring the cost-effectiveness of individual activities."
         ]
       }
+    },
+    "bridge": {
+      "title": "“We are the bridge between your goals and satisfied customers”",
+      "alt": "The Øresund Bridge connecting Copenhagen and Malmö at sunset"
     },
     "quote": {
       "label": "Quote",
@@ -460,22 +464,22 @@
   },
   "marketEntry": {
     "seo": {
-      "title": "Czech market entry without a local team",
-      "description": "How to enter the Czech market: supplier selection, accounting, logistics, customer service and local operations. Silverdahl prepares and coordinates it all."
+      "title": "European market entry without a local team",
+      "description": "Planning to enter a new European market? From the Czech Republic we select suppliers, arrange accounting, logistics and customer service and run operations."
     },
     "intro": {
-      "eyebrow": "Czech market entry",
-      "title": "Enter the Czech market without building your own team",
-      "text": "Want to sell in the Czech Republic or serve other Central European markets from here? We help you design the operating model, find reliable local suppliers and take over the coordination of day-to-day operations."
+      "eyebrow": "New market entry",
+      "title": "Enter a new market without building your own team",
+      "text": "Planning to enter a new European market or expand your business into several countries? Take advantage of the Czech Republic as a strategic location in the heart of Europe. We help you design an efficient operating model, find reliable local partners and coordinate day-to-day operations across European markets directly from the Czech Republic."
     },
     "why": {
       "eyebrow": "Why the Czech Republic",
-      "title": "A practical base for Central Europe",
+      "title": "A strategic base for doing business in Europe",
       "items": [
         { "title": "Location at the heart of Europe", "text": "Easy access to Germany, Austria, Poland, Slovakia and Hungary." },
         { "title": "EU single market", "text": "EU membership makes trade, the movement of goods and service set-up easier." },
         { "title": "Experienced service providers", "text": "Contact centres, logistics, IT, accounting and marketing at the quality you need." },
-        { "title": "A hub for the region", "text": "Operations in Slovakia, Poland and Hungary can be coordinated from one place." }
+        { "title": "A hub for several markets", "text": "Operations in several European countries can be coordinated from one place." }
       ]
     },
     "needs": {
@@ -485,7 +489,7 @@
       "items": [
         { "title": "Legal and tax framework", "text": "together with trusted lawyers and tax advisers." },
         { "title": "Accounting and payroll", "text": "a reliable accounting firm and regular reports for your headquarters." },
-        { "title": "Customer service", "text": "a contact centre in Czech and other regional languages." },
+        { "title": "Customer service", "text": "a contact centre in the languages of your target markets." },
         { "title": "Logistics and warehousing", "text": "storage, fulfilment, transport and postal services." },
         { "title": "Marketing and localisation", "text": "translations, localised materials and local marketing partners." },
         { "title": "Customs and IT", "text": "customs declarations, IT support and other specialist services." }
@@ -516,18 +520,18 @@
   "faq": {
     "seo": {
       "title": "FAQ – market entry and local operations",
-      "description": "Answers to common questions: entering the Czech market without a branch, supplier selection, languages, reporting and lead times."
+      "description": "Answers to common questions: entering a new market without a branch, supplier selection, languages, reporting and lead times."
     },
-    "intro": "Answers to the most common questions about entering the Czech and Central European market, selecting suppliers and managing local operations.",
+    "intro": "Answers to the most common questions about entering a new market, selecting suppliers and managing local operations.",
     "eyebrow": "FAQ",
-    "title": "Questions about entering the Czech market",
+    "title": "Questions about entering a new market",
     "items": [
-      { "q": "Do I need my own branch and employees to enter the Czech market?", "a": "Not necessarily. Many activities – customer service, logistics, accounting or marketing – can be provided by specialist suppliers. Silverdahl finds them, sets up the cooperation and coordinates it long term, so you do not need to build your own local team." },
-      { "q": "Which markets can you help with?", "a": "We have long-standing experience in the Czech Republic, Slovakia, Poland and Hungary. Depending on the project, we can also help in other European markets." },
+      { "q": "Do I need my own branch and employees to enter a new market?", "a": "Not necessarily. Many activities – customer service, logistics, accounting or marketing – can be provided by specialist suppliers. Silverdahl finds them, sets up the cooperation and coordinates it long term, so you do not need to build your own local team." },
+      { "q": "Which markets can you help with?", "a": "Our experience spans European markets. We have long coordinated projects in the Czech Republic, Slovakia, Poland and Hungary, and we also have experience coordinating projects in Portugal, the Netherlands and Belgium. Thanks to this broad geographic reach and our knowledge of each market’s specifics, we can effectively support business activities in other European countries too." },
       { "q": "What kind of suppliers can you arrange?", "a": "For example contact centres, marketing and advertising services, printing and distribution, logistics, warehousing and fulfilment, IT, accounting and tax services, legal advice, customs services, translation and localisation, or HR services. The list is not closed." },
       { "q": "How long does it take to prepare a market entry?", "a": "It depends on the scope of the project and the number of suppliers needed. After the initial analysis we prepare a concrete timeline so you know exactly when operations can start." },
       { "q": "Do I have to use all of your services?", "a": "No. We can handle a one-off supplier selection, the complete preparation of a market entry or the long-term management of operations – whatever you need right now." },
-      { "q": "Which languages do you work in?", "a": "We communicate in Czech, English and German. Reporting is prepared in the language and format that suits your headquarters." },
+      { "q": "Which languages do you work in?", "a": "We communicate in Czech and English. Using modern AI tools, we can also work efficiently with other European languages and adapt communication to the needs of each market. Reporting is prepared in the language and format that suits your headquarters." },
       { "q": "How will I keep track of operations and costs?", "a": "We provide regular reporting – daily, weekly or monthly as agreed – including supplier performance, costs and a comparison of actual results with the plan." }
     ]
   },
